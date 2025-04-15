@@ -1,0 +1,440 @@
+=================== (1) binutils cve_2017_6965 ===================
+SUCCESS (Exactly one patch invariant in the end) (Its correctness is not checked yet)
+
+Patch Invariants:
+1
+['_GSize_start - reloc->r_offset >= 4']
+
+=================== (2) binutils cve_2017_14745 ===================
+FAIL (More than one or no patch invariants in the end)
+
+Patch Invariants:
+2
+['dynrelcount <= 9', 'dynrelcount >= 2']
+
+=================== (3) binutils cve_2017_15025 ===================
+
+
+=================== (4) coreutils gnubug_19784 ===================
+SUCCESS (Exactly one patch invariant in the end) (Its correctness is not checked yet)
+
+Patch Invariants:
+1
+['_GSize_sieve - i >= 2']
+Generated Patch:
+--- /home/yuntong/vulnfix/data/coreutils/gnubug_19784/source/src/fix-file-backup.c	2022-12-08 03:17:30.609304197 +0000
++++ /home/yuntong/vulnfix/data/coreutils/gnubug_19784/source/src/make-prime-list.c	2022-12-08 05:31:48.889916765 +0000
+@@ -18,6 +18,7 @@
+ this program.  If not, see http://www.gnu.org/licenses/.  */
+ 
+ #include <config.h>
++#include "/home/yuntong/vulnfix/lib/ghost.c"
+ 
+ #include <limits.h>
+ #include <stdint.h>
+@@ -213,7 +214,7 @@
+       for (j = (p*p - 3)/2; j < size; j+= p)
+         sieve[j] = 0;
+ 
+-      while (i < size && sieve[++i] == 0)
++      while (generic_buffer_size(sieve) / 1 - i >= 2 && (i < size && sieve[++i] == 0))
+         ;
+     }
+ 
+
+
+=================== (5) coreutils gnubug_25003 ===================
+SUCCESS (Exactly one patch invariant in the end) (Its correctness is not checked yet)
+
+Patch Invariants:
+1
+['initial_read >= start']
+Generated Patch:
+--- /home/yuntong/vulnfix/data/coreutils/gnubug_25003/source/src/fix-file-backup.c	2022-12-08 03:22:04.734996138 +0000
++++ /home/yuntong/vulnfix/data/coreutils/gnubug_25003/source/src/split.c	2022-12-08 05:42:34.401515362 +0000
+@@ -983,7 +983,7 @@
+   start = (k - 1) * (file_size / n);
+   end = (k == n) ? file_size : k * (file_size / n);
+ 
+-  if (initial_read != SIZE_MAX || start < initial_read)
++  if (initial_read >= start && (initial_read != SIZE_MAX || start < initial_read))
+     {
+       memmove (buf, buf + start, initial_read - start);
+       initial_read -= start;
+
+
+=================== (6) coreutils gnubug_25023 ===================
+SUCCESS (Exactly one patch invariant in the end) (Its correctness is not checked yet)
+
+Patch Invariants:
+1
+['col_sep_length <= 2']
+Generated Patch:
+--- /home/yuntong/vulnfix/data/coreutils/gnubug_25023/source/src/fix-file-backup.c	2022-12-08 03:26:54.008683798 +0000
++++ /home/yuntong/vulnfix/data/coreutils/gnubug_25023/source/src/pr.c	2022-12-08 05:53:24.567404128 +0000
+@@ -1235,7 +1235,7 @@
+         }
+       /* It's rather pointless to define a TAB separator with column
+          alignment */
+-      else if (!join_lines && *col_sep_string == '\t')
++      else if (col_sep_length <= 2 && (!join_lines && *col_sep_string == '\t'))
+         col_sep_string = column_separator;
+ 
+       truncate_lines = true;
+
+
+=================== (7) coreutils gnubug_26545 ===================
+FAIL (More than one or no patch invariants in the end)
+
+Patch Invariants:
+0
+[]
+
+=================== (8) jasper cve_2016_8691 ===================
+SUCCESS (Exactly one patch invariant in the end) (Its correctness is not checked yet)
+
+Patch Invariants:
+1
+['cmpt->hstep >= 1']
+Generated Patch:
+--- /home/yuntong/vulnfix/data/jasper/cve_2016_8691/source/src/libjasper/jpc/fix-file-backup.c	2016-09-16 19:37:51.000000000 +0000
++++ /home/yuntong/vulnfix/data/jasper/cve_2016_8691/source/src/libjasper/jpc/jpc_dec.c	2022-12-08 06:14:46.938115154 +0000
+@@ -1191,6 +1191,7 @@
+ 		cmpt->sgnd = siz->comps[compno].sgnd;
+ 		cmpt->hstep = siz->comps[compno].hsamp;
+ 		cmpt->vstep = siz->comps[compno].vsamp;
++    if (!(cmpt->hstep >= 1)) exit(1);
+ 		cmpt->width = JPC_CEILDIV(dec->xend, cmpt->hstep) -
+ 		  JPC_CEILDIV(dec->xstart, cmpt->hstep);
+ 		cmpt->height = JPC_CEILDIV(dec->yend, cmpt->vstep) -
+
+
+=================== (9) jasper cve_2016_9557 ===================
+FAIL (More than one or no patch invariants in the end)
+
+Patch Invariants:
+0
+[]
+
+=================== (10) libarchive cve_2016_5844 ===================
+SUCCESS (Exactly one patch invariant in the end) (Its correctness is not checked yet)
+
+Patch Invariants:
+1
+['vd->location < 1048576']
+Generated Patch:
+--- /home/yuntong/vulnfix/data/libarchive/cve_2016_5844/source/libarchive/fix-file-backup.c	2016-02-13 19:09:33.000000000 +0000
++++ /home/yuntong/vulnfix/data/libarchive/cve_2016_5844/source/libarchive/archive_read_support_format_iso9660.c	2022-12-08 06:38:30.082153188 +0000
+@@ -1090,6 +1090,7 @@
+ 		vd->location > iso9660->joliet.location)
+ 		/* This condition is unlikely; by way of caution. */
+ 		vd = &(iso9660->joliet);
++    if (!(vd->location < 1048576)) exit(1);
+ 
+ 	skipsize = LOGICAL_BLOCK_SIZE * vd->location;
+ 	skipsize = __archive_read_consume(a, skipsize);
+
+
+=================== (11) libjpeg cve_2012_2806 ===================
+SUCCESS (Exactly one patch invariant in the end) (Its correctness is not checked yet)
+
+Patch Invariants:
+1
+['i <= 3']
+Generated Patch:
+--- /home/yuntong/vulnfix/data/libjpeg/cve_2012_2806/source/fix-file-backup.c	2022-12-08 03:38:48.375222547 +0000
++++ /home/yuntong/vulnfix/data/libjpeg/cve_2012_2806/source/jdmarker.c	2022-12-08 06:50:13.023457981 +0000
+@@ -323,7 +323,7 @@
+ 
+   /* Collect the component-spec parameters */
+ 
+-  for (i = 0; i < cinfo->num_components; i++)
++  for (i = 0;i <= 3 && ( i < cinfo->num_components); i++)
+     cinfo->cur_comp_info[i] = NULL;
+ 
+   for (i = 0; i < n; i++) {
+
+
+=================== (12) libjpeg cve_2017_15232 ===================
+SUCCESS (Exactly one patch invariant in the end) (Its correctness is not checked yet)
+
+Patch Invariants:
+1
+['output_buf != NULL']
+Generated Patch:
+--- /home/yuntong/vulnfix/data/libjpeg/cve_2017_15232/source/fix-file-backup.c	2022-12-08 03:39:02.191118690 +0000
++++ /home/yuntong/vulnfix/data/libjpeg/cve_2017_15232/source/jdpostct.c	2022-12-08 07:02:54.973704935 +0000
+@@ -131,6 +131,7 @@
+ {
+   my_post_ptr post = (my_post_ptr) cinfo->post;
+   JDIMENSION num_rows, max_rows;
++    if (!(output_buf != NULL)) exit(1);
+ 
+   /* Fill the buffer, but not more than what we can dump out in one go. */
+   /* Note we rely on the upsampler to detect bottom of image. */
+
+
+=================== (13) libjpeg cve_2018_19664 ===================
+FAIL (More than one or no patch invariants in the end)
+
+Patch Invariants:
+2
+['cinfo->image_width <= 21', '_GDiff_cinfo->comp_info - cinfo->image_width >= 11']
+
+=================== (14) libming cve_2016_9264 ===================
+SUCCESS (Exactly one patch invariant in the end) (Its correctness is not checked yet)
+
+Patch Invariants:
+1
+['samplerate_idx <= 2']
+Generated Patch:
+--- /home/yuntong/vulnfix/data/libming/cve_2016_9264/source/util/fix-file-backup.c	2022-12-08 03:39:28.166923526 +0000
++++ /home/yuntong/vulnfix/data/libming/cve_2016_9264/source/util/listmp3.c	2022-12-08 07:33:41.148311322 +0000
+@@ -121,6 +121,7 @@
+       default: error("unknown MP3 layer!");
+     }
+ 
++    if (!(samplerate_idx <= 2)) exit(1);
+     bitrateSum += bitrate;
+ 
+     if(version == 1)
+
+
+=================== (15) libtiff bugzilla_2633 ===================
+FAIL (More than one or no patch invariants in the end)
+
+Patch Invariants:
+115
+['samplesperpixel - nc >= 1', 'nc < samplesperpixel', 'samplesperpixel - res_unit >= 1', 'tf_bytesperrow - fd->_chain->_vtable_offset >= 16', 'photometric < samplesperpixel', 'samplesperpixel - printAll >= 4', 'samplesperpixel - planarconfiguration >= 3', 'tf_bytesperrow - *fd->_IO_buf_end >= 16', 'tf_bytesperrow - generateEPSF >= 15', 'samplesperpixel - photometric >= 2', 'tf_bytesperrow - h >= 15', 'tf_bytesperrow - fd->_offset >= 17', 'tf_bytesperrow - fd->_cur_column >= 16', 'tf_bytesperrow - PSduplex >= 16', 'tf_bytesperrow - fd->__pad5 >= 16', 'tf_bytesperrow - PStumble >= 16', 'tf_bytesperrow - w >= 12', 'samplesperpixel - PSduplex >= 4', 'tf_bytesperrow - fd->_flags2 >= 16', 'samplesperpixel == 4', 'samplesperpixel - compression >= 3', 'samplesperpixel - alpha >= 3', 'tf_bytesperrow == 16', 'tf_bytesperrow - bitspersample >= 8', 'samplesperpixel - fd->_offset >= 5', 'tf_bytesperrow - level2 >= 16', 'tf_bytesperrow - fd->_mode >= 17', 'samplesperpixel - fd->_chain->_fileno >= 4', 'tf_bytesperrow - tf_numberstrips >= 15', 'tf_bytesperrow - alpha >= 15', 'tf_bytesperrow - fd->_chain->_cur_column >= 16', 'interpolate < samplesperpixel', 'tf_bytesperrow - auto_rotate >= 16', 'samplesperpixel - fd->_chain->_mode >= 4', 'samplesperpixel - ascii85breaklen >= 4', 'samplesperpixel >= w', 'tf_bytesperrow - es >= 15', 'samplesperpixel >= 4', 'es < samplesperpixel', 'tf_bytesperrow - ascii85breaklen >= 16', 'tf_buf != NULL', 'tf_bytesperrow - fd->_chain->_fileno >= 16', 'tf_bytesperrow - ps_bytesperrow >= 4', 'tf_bytesperrow - fd->_vtable_offset >= 16', 'samplesperpixel - fd->_chain->_vtable_offset >= 4', 'compression < samplesperpixel', 'samplesperpixel - interpolate >= 3', 'samplesperpixel - fd->_old_offset >= 5', 'tf_bytesperrow - samplesperpixel >= 12', 'samplesperpixel - *fd->_IO_buf_end >= 4', 'tf_bytesperrow >= 16', 'tf_bytesperrow - interpolate >= 15', 'res_unit < samplesperpixel', 'tf_bytesperrow - fd->_chain->__pad5 >= 16', 'samplesperpixel - fd->_chain->_flags2 >= 4', 'samplesperpixel - generateEPSF >= 3', 'samplesperpixel - row >= 3', 'tf_bytesperrow - breaklen >= 13', 'samplesperpixel - tf_numberstrips >= 3', 'tf_bytesperrow - planarconfiguration >= 15', 'tf_bytesperrow - res_unit >= 13', 'samplesperpixel - ascii85 >= 4', 'extrasamples < samplesperpixel', 'ps_bytesperrow < tf_bytesperrow', 'tf_bytesperrow - fd->_chain->_mode >= 16', 'samplesperpixel - fd->_vtable_offset >= 4', 'tf_bytesperrow - fd->_chain->_old_offset >= 17', 'samplesperpixel - rotation >= 4', 'samplesperpixel - fd->_chain->_old_offset >= 5', 'tf_bytesperrow - fd->_chain->_offset >= 17', 'samplesperpixel - fd->_chain->_offset >= 5', 'samplesperpixel - breaklen >= 1', 'samplesperpixel - level3 >= 4', 'samplesperpixel - fd->_fileno >= 3', 'tf_bytesperrow - fd->_fileno >= 15', 'samplesperpixel - fd->__pad5 >= 4', 'samplesperpixel - es >= 3', 'samplesperpixel - fd->_mode >= 5', 'planarconfiguration < samplesperpixel', 'breaklen < samplesperpixel', 'tf_bytesperrow - fd->_old_offset >= 17', 'tf_bytesperrow - rotation >= 16', 'tf_rowsperstrip == 512', 'samplesperpixel - fd->_chain->_cur_column >= 4', 'generateEPSF < samplesperpixel', 'h < samplesperpixel', 'bitspersample < tf_bytesperrow', 'samplesperpixel - auto_rotate >= 4', 'tf_bytesperrow - photometric >= 14', 'samplesperpixel - fd->_flags2 >= 4', 'alpha < samplesperpixel', 'tf_bytesperrow - row >= 15', 'tf_bytesperrow - ascii85count >= 16', 'samplesperpixel - c >= 4', 'samplesperpixel - fd->_cur_column >= 4', 'tf_bytesperrow - level3 >= 16', 'fd->_fileno < samplesperpixel', 'samplesperpixel - PStumble >= 4', 'samplesperpixel - PSavoiddeadzone >= 4', 'row < samplesperpixel', 'tf_bytesperrow - PSavoiddeadzone >= 16', 'samplesperpixel - fd->_chain->__pad5 >= 4', 'tf_bytesperrow - ascii85 >= 16', 'tf_bytesperrow - extrasamples >= 15', 'tf_bytesperrow - fd->_chain->_flags2 >= 16', 'tf_bytesperrow - printAll >= 16', 'tf_bytesperrow - useImagemask >= 16', 'samplesperpixel - level2 >= 4', 'tf_bytesperrow - c >= 16', 'tf_bytesperrow - compression >= 15', 'samplesperpixel - extrasamples >= 3', 'samplesperpixel - useImagemask >= 4', 'samplesperpixel - ascii85count >= 4', 'tf_bytesperrow - nc >= 13', 'samplesperpixel - h >= 3']
+
+=================== (16) libtiff cve_2016_5321 ===================
+SUCCESS (Exactly one patch invariant in the end) (Its correctness is not checked yet)
+
+Patch Invariants:
+1
+['s <= 7']
+Generated Patch:
+--- /home/yuntong/vulnfix/data/libtiff/cve_2016_5321/source/tools/fix-file-backup.c	2015-09-12 19:50:39.000000000 +0000
++++ /home/yuntong/vulnfix/data/libtiff/cve_2016_5321/source/tools/tiffcrop.c	2022-12-08 07:58:43.715901880 +0000
+@@ -989,7 +989,7 @@
+     nrow = (row + tl > imagelength) ? imagelength - row : tl;
+     for (col = 0; col < imagewidth; col += tw)
+       {
+-      for (s = 0; s < spp; s++)
++      for (s = 0;s <= 7 && ( s < spp); s++)
+         {  /* Read each plane of a tile set into srcbuffs[s] */
+ 	tbytes = TIFFReadTile(in, srcbuffs[s], col, row, 0, s);
+         if (tbytes < 0  && !ignore)
+
+
+=================== (17) libtiff cve_2016_9532 ===================
+FAIL (More than one or no patch invariants in the end)
+
+Patch Invariants:
+34
+['out->tif_dir.td_planarconfig < rowstripsize', 'config < rowstripsize', 'out->tif_dir.td_orientation < rowstripsize', 'quality < rowstripsize', 'out->tif_dir.td_bitspersample < rowstripsize', 'bps < rowstripsize', 'length < rowstripsize', 'out->tif_encodestatus < rowstripsize', 'out->tif_dir.td_resolutionunit < rowstripsize', 'out->tif_dir.td_tilewidth < rowstripsize', 'out->tif_flags < rowstripsize', 'out->tif_dir.td_stripbytecountsorted < rowstripsize', 'out->tif_dir.td_imagewidth < rowstripsize', 'rowstripsize > stripsize', 'out->tif_dir.td_fillorder < rowstripsize', 'jpegcolormode < rowstripsize', 'out->tif_header_size < rowstripsize', 'compression < rowstripsize', 'little_endian < rowstripsize', 'rowstripsize > scanlinesize', 'out->tif_decodestatus < rowstripsize', 'out->tif_dir.td_imagelength < rowstripsize', 'rowstripsize > width', 'out->tif_mode < rowstripsize', 'out->tif_fd < rowstripsize', 'out->tif_dir.td_tiledepth < rowstripsize', '*out->tif_name < rowstripsize', 'out->tif_dir.td_imagedepth < rowstripsize', 'out->tif_dir.td_ycbcrpositioning < rowstripsize', 'bytes_per_sample < rowstripsize', 'out->tif_dir.td_compression < rowstripsize', 'out->tif_dir.td_threshholding < rowstripsize', 'dump->level < rowstripsize', 'out->tif_dir.td_sampleformat < rowstripsize']
+
+=================== (18) libtiff cve_2016_10094 ===================
+FAIL (More than one or no patch invariants in the end)
+
+Patch Invariants:
+11
+['t2p->tiff_datasize >= 3', 'input->tif_dir.td_imagelength < t2p->tiff_datasize', '*input->tif_dir.td_stripbytecount > t2p->tiff_length', '*input->tif_dir.td_stripbytecount > *jpt', 't2p->tiff_datasize > t2p->tiff_tiles->tiles_tilecounty', '*jpt < t2p->tiff_datasize', '_GSize_input->tif_name == 1164', 't2p->tiff_datasize > t2p->tiff_length', '*input->tif_dir.td_stripbytecount >= 3', '*input->tif_dir.td_stripbytecount > input->tif_dir.td_imagelength', '*input->tif_dir.td_stripbytecount > t2p->tiff_tiles->tiles_tilecounty']
+
+=================== (19) libtiff cve_2017_7595 ===================
+SUCCESS (Exactly one patch invariant in the end) (Its correctness is not checked yet)
+
+Patch Invariants:
+1
+['sp->v_sampling >= 1']
+Generated Patch:
+--- /home/yuntong/vulnfix/data/libtiff/cve_2017_7595/source/libtiff/fix-file-backup.c	2022-12-08 03:41:00.718229180 +0000
++++ /home/yuntong/vulnfix/data/libtiff/cve_2017_7595/source/libtiff/tif_jpeg.c	2022-12-08 08:35:47.365593965 +0000
+@@ -1631,6 +1631,7 @@
+ 		 * default value is inappropriate for YCbCr.  Fill in the
+ 		 * proper value if application didn't set it.
+ 		 */
++    if (!(sp->v_sampling >= 1)) exit(1);
+ 		{
+ 			float *ref;
+ 			if (!TIFFGetField(tif, TIFFTAG_REFERENCEBLACKWHITE,
+
+
+=================== (20) libtiff cve_2017_7599 ===================
+FAIL (More than one or no patch invariants in the end)
+
+Patch Invariants:
+0
+[]
+
+=================== (21) libtiff cve_2017_7600 ===================
+FAIL (More than one or no patch invariants in the end)
+
+Patch Invariants:
+0
+[]
+
+=================== (22) libtiff cve_2017_7601 ===================
+SUCCESS (Exactly one patch invariant in the end) (Its correctness is not checked yet)
+
+Patch Invariants:
+1
+['td->td_bitspersample <= 62']
+Generated Patch:
+--- /home/yuntong/vulnfix/data/libtiff/cve_2017_7601/source/libtiff/fix-file-backup.c	2022-12-08 03:41:40.869928396 +0000
++++ /home/yuntong/vulnfix/data/libtiff/cve_2017_7601/source/libtiff/tif_jpeg.c	2022-12-08 09:08:41.574383686 +0000
+@@ -1638,6 +1638,7 @@
+ 		 * default value is inappropriate for YCbCr.  Fill in the
+ 		 * proper value if application didn't set it.
+ 		 */
++    if (!(td->td_bitspersample <= 62)) exit(1);
+ 		{
+ 			float *ref;
+ 			if (!TIFFGetField(tif, TIFFTAG_REFERENCEBLACKWHITE,
+
+
+=================== (23) libxml2 cve_2012_5134 ===================
+SUCCESS (Exactly one patch invariant in the end) (Its correctness is not checked yet)
+
+Patch Invariants:
+1
+['len >= 1']
+Generated Patch:
+--- /home/yuntong/vulnfix/data/libxml2/cve_2012_5134/source/fix-file-backup.c	2022-12-08 03:42:03.641757917 +0000
++++ /home/yuntong/vulnfix/data/libxml2/cve_2012_5134/source/parser.c	2022-12-08 09:20:34.814884007 +0000
+@@ -4076,7 +4076,7 @@
+         goto error;
+ 
+     if ((in_space) && (normalize)) {
+-        while (buf[len - 1] == 0x20) len--;
++        while (len >= 1 && (buf[len - 1] == 0x20)) len--;
+     }
+     buf[len] = 0;
+     if (RAW == '<') {
+
+
+=================== (24) libxml2 cve_2016_1838 ===================
+
+
+=================== (25) libxml2 cve_2016_1839 ===================
+SUCCESS (Exactly one patch invariant in the end) (Its correctness is not checked yet)
+
+Patch Invariants:
+1
+['_GDiff_ctxt->input->cur >= len']
+Generated Patch:
+--- /home/yuntong/vulnfix/data/libxml2/cve_2016_1839/source/fix-file-backup.c	2022-12-08 03:43:21.005179277 +0000
++++ /home/yuntong/vulnfix/data/libxml2/cve_2016_1839/source/HTMLparser.c	2022-12-08 09:41:11.332955783 +0000
+@@ -8,6 +8,7 @@
+ 
+ #define IN_LIBXML
+ #include "libxml.h"
++#include "/home/yuntong/vulnfix/lib/ghost.c"
+ #ifdef LIBXML_HTML_ENABLED
+ 
+ #include <string.h>
+@@ -2514,6 +2515,7 @@
+ 	NEXTL(l);
+ 	c = CUR_CHAR(l);
+     }
++    if (!(( (void *)ctxt->input->cur - generic_buffer_base(ctxt->input->cur) ) >= len)) exit(1);
+     return(xmlDictLookup(ctxt->dict, ctxt->input->cur - len, len));
+ }
+ 
+
+
+=================== (26) libxml2 cve_2017_5969 ===================
+SUCCESS (Exactly one patch invariant in the end) (Its correctness is not checked yet)
+
+Patch Invariants:
+1
+['content->c2 != NULL']
+Generated Patch:
+--- /home/yuntong/vulnfix/data/libxml2/cve_2017_5969/source/fix-file-backup.c	2022-12-08 03:44:01.644875614 +0000
++++ /home/yuntong/vulnfix/data/libxml2/cve_2017_5969/source/valid.c	2022-12-08 09:53:44.925533977 +0000
+@@ -1178,9 +1178,9 @@
+ 	    else
+ 		xmlDumpElementContent(buf, content->c1, 0);
+             xmlBufferWriteChar(buf, " , ");
+-	    if ((content->c2->type == XML_ELEMENT_CONTENT_OR) ||
++	    if (content->c2 != NULL && ((content->c2->type == XML_ELEMENT_CONTENT_OR) ||
+ 	        ((content->c2->type == XML_ELEMENT_CONTENT_SEQ) &&
+-		 (content->c2->ocur != XML_ELEMENT_CONTENT_ONCE)))
++		 (content->c2->ocur != XML_ELEMENT_CONTENT_ONCE))))
+ 		xmlDumpElementContent(buf, content->c2, 1);
+ 	    else
+ 		xmlDumpElementContent(buf, content->c2, 0);
+
+
+=================== (27) potrace cve_2013_7437 ===================
+SUCCESS (Exactly one patch invariant in the end) (Its correctness is not checked yet)
+
+Patch Invariants:
+1
+['bmpinfo.w < 2147483648']
+Generated Patch:
+--- /home/yuntong/vulnfix/data/potrace/cve_2013_7437/source/src/fix-file-backup.c	2022-05-04 08:37:54.000000000 +0000
++++ /home/yuntong/vulnfix/data/potrace/cve_2013_7437/source/src/bitmap_io.c	2022-12-08 10:05:04.386811280 +0000
+@@ -479,6 +479,7 @@
+       TRY(bmp_readint(f, 4, &bmpinfo.BlueMask));
+       TRY(bmp_readint(f, 4, &bmpinfo.AlphaMask));
+     }
++    if (!(bmpinfo.w < 2147483648)) exit(1);
+     if ((signed int)bmpinfo.h < 0) {
+       bmpinfo.h = -bmpinfo.h;
+       bmpinfo.topdown = 1;
+
+
+=================== (28) zziplib cve_2017_5974 ===================
+SUCCESS (Exactly one patch invariant in the end) (Its correctness is not checked yet)
+
+Patch Invariants:
+1
+['_GSize_block >= 32']
+Generated Patch:
+--- /home/yuntong/vulnfix/data/zziplib/cve_2017_5974/source/zzip/fix-file-backup.c	2022-12-08 03:44:29.100670569 +0000
++++ /home/yuntong/vulnfix/data/zziplib/cve_2017_5974/source/zzip/memdisk.c	2022-12-08 10:15:36.576391030 +0000
+@@ -26,6 +26,7 @@
+ #define _ZZIP_DISK_FILE_STRUCT 1
+ 
+ #include <zzip/types.h>
++#include "/home/yuntong/vulnfix/lib/ghost.c"
+ 
+ #include <stdlib.h>
+ #include <stdio.h>
+@@ -218,6 +219,7 @@
+             zzip_mem_entry_extra_block(item, ZZIP_EXTRA_zip64);
+         if (block)
+         {
++    if (!(generic_buffer_size(block) >= 32)) exit(1);
+             item->zz_usize = ZZIP_GET64(block->z_usize);
+             item->zz_csize = ZZIP_GET64(block->z_csize);
+             item->zz_offset = ZZIP_GET64(block->z_offset);
+
+
+=================== (29) zziplib cve_2017_5975 ===================
+SUCCESS (Exactly one patch invariant in the end) (Its correctness is not checked yet)
+
+Patch Invariants:
+1
+['header != NULL']
+Generated Patch:
+--- /home/yuntong/vulnfix/data/zziplib/cve_2017_5975/source/zzip/fix-file-backup.c	2022-12-08 03:44:40.696583993 +0000
++++ /home/yuntong/vulnfix/data/zziplib/cve_2017_5975/source/zzip/memdisk.c	2022-12-08 10:28:15.298232439 +0000
+@@ -177,6 +177,7 @@
+      *  or the disk entry block. Theoretically some part may be missing
+      *  that exists in the other, ... but we will prefer the disk entry.
+      */
++    if (!(header != NULL)) exit(1);
+     item->zz_comment = zzip_disk_entry_strdup_comment(disk, entry);
+     item->zz_name = zzip_disk_entry_strdup_name(disk, entry);
+     item->zz_data = zzip_file_header_to_data(header);
+
+
+=================== (30) zziplib cve_2017_5976 ===================
+FAIL (More than one or no patch invariants in the end)
+
+Patch Invariants:
+0
+[]
+

@@ -1,0 +1,10 @@
+--- /home/yuntong/vulnfix/data/zziplib/cve_2017_5975/source/zzip/fix-file-backup.c	2022-12-08 03:44:40.696583993 +0000
++++ /home/yuntong/vulnfix/data/zziplib/cve_2017_5975/source/zzip/memdisk.c	2022-12-08 10:28:15.298232439 +0000
+@@ -177,6 +177,7 @@
+      *  or the disk entry block. Theoretically some part may be missing
+      *  that exists in the other, ... but we will prefer the disk entry.
+      */
++    if (!(header != NULL)) exit(1);
+     item->zz_comment = zzip_disk_entry_strdup_comment(disk, entry);
+     item->zz_name = zzip_disk_entry_strdup_name(disk, entry);
+     item->zz_data = zzip_file_header_to_data(header);

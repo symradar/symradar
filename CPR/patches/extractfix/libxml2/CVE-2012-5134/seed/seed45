@@ -1,0 +1,10 @@
+<bindings xmlns="http://www.lla.org/xbl">
+<binding id="a">
+<implementation>
+<constructor>
+  rameElement.parentNode.removeChild(window.frameElement);
+</constructor>
+</implementation>
+<content><dren/></content>
+</binding>
+</bindings>

@@ -1,0 +1,6 @@
+---
+BasedOnStyle:  LLVM
+Standard: Cpp11
+SortIncludes: false
+SortUsingDeclarations: true
+...

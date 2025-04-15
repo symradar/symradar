@@ -8,4 +8,4 @@ This directory contains benchmarks and scripts for preparing, running and analyz
 
 
 ### uni-klee
-uni-klee is our implementation of KLEE-based symbolic execution tool, which supports lazy initialization.
+UNI-KLEE (UNder-constraIned) is our implementation of KLEE-based symbolic execution tool, which supports lazy initialization.

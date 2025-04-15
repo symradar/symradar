@@ -1,0 +1,11 @@
+--- /home/yuntong/vulnfix/data/libjpeg/cve_2012_2806/source/fix-file-backup.c	2022-12-08 03:38:48.375222547 +0000
++++ /home/yuntong/vulnfix/data/libjpeg/cve_2012_2806/source/jdmarker.c	2022-12-08 06:50:13.023457981 +0000
+@@ -323,7 +323,7 @@
+ 
+   /* Collect the component-spec parameters */
+ 
+-  for (i = 0; i < cinfo->num_components; i++)
++  for (i = 0;i <= 3 && ( i < cinfo->num_components); i++)
+     cinfo->cur_comp_info[i] = NULL;
+ 
+   for (i = 0; i < n; i++) {

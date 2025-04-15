@@ -1,0 +1,202 @@
+[
+  {
+    "num": 1,
+    "lid": "978",
+    "patch": "(y == x)",
+    "codes": [
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  result = (y == x);\n"
+    ]
+  },
+  {
+    "num": 2,
+    "lid": "978",
+    "patch": "(x == x)",
+    "codes": [
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  result = (x == x);\n"
+    ]
+  },
+  {
+    "num": 3,
+    "lid": "978",
+    "patch": "(x <= y)",
+    "codes": [
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  result = (x <= y);\n"
+    ]
+  },
+  {
+    "num": 4,
+    "lid": "978",
+    "patch": "(y <= x)",
+    "codes": [
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  result = (y <= x);\n"
+    ]
+  },
+  {
+    "num": 5,
+    "lid": "978",
+    "patch": "(constant_a < x)",
+    "codes": [
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -10;\n  result = (constant_a < x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -9;\n  result = (constant_a < x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -8;\n  result = (constant_a < x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -7;\n  result = (constant_a < x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -6;\n  result = (constant_a < x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -5;\n  result = (constant_a < x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -4;\n  result = (constant_a < x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -3;\n  result = (constant_a < x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -2;\n  result = (constant_a < x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -1;\n  result = (constant_a < x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 0;\n  result = (constant_a < x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 1;\n  result = (constant_a < x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 2;\n  result = (constant_a < x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 3;\n  result = (constant_a < x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 4;\n  result = (constant_a < x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 5;\n  result = (constant_a < x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 6;\n  result = (constant_a < x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 7;\n  result = (constant_a < x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 8;\n  result = (constant_a < x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 9;\n  result = (constant_a < x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 10;\n  result = (constant_a < x);\n"
+    ]
+  },
+  {
+    "num": 6,
+    "lid": "978",
+    "patch": "(constant_a < y)",
+    "codes": [
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -10;\n  result = (constant_a < y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -9;\n  result = (constant_a < y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -8;\n  result = (constant_a < y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -7;\n  result = (constant_a < y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -6;\n  result = (constant_a < y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -5;\n  result = (constant_a < y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -4;\n  result = (constant_a < y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -3;\n  result = (constant_a < y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -2;\n  result = (constant_a < y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -1;\n  result = (constant_a < y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 0;\n  result = (constant_a < y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 1;\n  result = (constant_a < y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 2;\n  result = (constant_a < y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 3;\n  result = (constant_a < y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 4;\n  result = (constant_a < y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 5;\n  result = (constant_a < y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 6;\n  result = (constant_a < y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 7;\n  result = (constant_a < y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 8;\n  result = (constant_a < y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 9;\n  result = (constant_a < y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 10;\n  result = (constant_a < y);\n"
+    ]
+  },
+  {
+    "num": 7,
+    "lid": "978",
+    "patch": "(constant_a != x)",
+    "codes": [
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -10;\n  result = (constant_a != x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -9;\n  result = (constant_a != x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -8;\n  result = (constant_a != x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -7;\n  result = (constant_a != x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -6;\n  result = (constant_a != x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -5;\n  result = (constant_a != x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -4;\n  result = (constant_a != x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -3;\n  result = (constant_a != x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -2;\n  result = (constant_a != x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -1;\n  result = (constant_a != x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 0;\n  result = (constant_a != x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 1;\n  result = (constant_a != x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 2;\n  result = (constant_a != x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 3;\n  result = (constant_a != x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 4;\n  result = (constant_a != x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 5;\n  result = (constant_a != x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 6;\n  result = (constant_a != x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 7;\n  result = (constant_a != x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 8;\n  result = (constant_a != x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 9;\n  result = (constant_a != x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 10;\n  result = (constant_a != x);\n"
+    ]
+  },
+  {
+    "num": 8,
+    "lid": "978",
+    "patch": "(constant_a != y)",
+    "codes": [
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -10;\n  result = (constant_a != y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -9;\n  result = (constant_a != y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -8;\n  result = (constant_a != y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -7;\n  result = (constant_a != y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -6;\n  result = (constant_a != y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -5;\n  result = (constant_a != y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -4;\n  result = (constant_a != y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -3;\n  result = (constant_a != y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -2;\n  result = (constant_a != y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -1;\n  result = (constant_a != y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 0;\n  result = (constant_a != y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 1;\n  result = (constant_a != y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 2;\n  result = (constant_a != y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 3;\n  result = (constant_a != y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 4;\n  result = (constant_a != y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 5;\n  result = (constant_a != y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 6;\n  result = (constant_a != y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 7;\n  result = (constant_a != y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 8;\n  result = (constant_a != y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 9;\n  result = (constant_a != y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 10;\n  result = (constant_a != y);\n"
+    ]
+  },
+  {
+    "num": 9,
+    "lid": "978",
+    "patch": "(constant_a <= x)",
+    "codes": [
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -10;\n  result = (constant_a <= x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -9;\n  result = (constant_a <= x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -8;\n  result = (constant_a <= x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -7;\n  result = (constant_a <= x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -6;\n  result = (constant_a <= x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -5;\n  result = (constant_a <= x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -4;\n  result = (constant_a <= x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -3;\n  result = (constant_a <= x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -2;\n  result = (constant_a <= x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -1;\n  result = (constant_a <= x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 0;\n  result = (constant_a <= x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 1;\n  result = (constant_a <= x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 2;\n  result = (constant_a <= x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 3;\n  result = (constant_a <= x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 4;\n  result = (constant_a <= x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 5;\n  result = (constant_a <= x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 6;\n  result = (constant_a <= x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 7;\n  result = (constant_a <= x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 8;\n  result = (constant_a <= x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 9;\n  result = (constant_a <= x);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 10;\n  result = (constant_a <= x);\n"
+    ]
+  },
+  {
+    "num": 10,
+    "lid": "978",
+    "patch": "(constant_a <= y)",
+    "codes": [
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -10;\n  result = (constant_a <= y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -9;\n  result = (constant_a <= y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -8;\n  result = (constant_a <= y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -7;\n  result = (constant_a <= y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -6;\n  result = (constant_a <= y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -5;\n  result = (constant_a <= y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -4;\n  result = (constant_a <= y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -3;\n  result = (constant_a <= y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -2;\n  result = (constant_a <= y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = -1;\n  result = (constant_a <= y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 0;\n  result = (constant_a <= y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 1;\n  result = (constant_a <= y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 2;\n  result = (constant_a <= y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 3;\n  result = (constant_a <= y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 4;\n  result = (constant_a <= y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 5;\n  result = (constant_a <= y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 6;\n  result = (constant_a <= y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 7;\n  result = (constant_a <= y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 8;\n  result = (constant_a <= y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 9;\n  result = (constant_a <= y);\n",
+      "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long constant_a = 10;\n  result = (constant_a <= y);\n"
+    ]
+  }
+]

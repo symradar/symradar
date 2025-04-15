@@ -1,0 +1,17 @@
+binary=/root/projects/CPR/patches/extractfix/coreutils/bugzilla-26545/source/src/shred
+binary-dir=/root/projects/CPR/patches/extractfix/coreutils/bugzilla-26545/pacfix/src/shred
+cmd= 
+exploit=/root/projects/CPR/patches/extractfix/coreutils/bugzilla-26545/exploit.txt
+fix-location=shred.c:291
+crash-location=shred.c:294
+input-from-stdin=true
+runtime-dir=/root/projects/CPR/patches/extractfix/coreutils/bugzilla-26545/runtime
+source-dir=/root/projects/CPR/patches/extractfix/coreutils/bugzilla-26545/source
+instrument-dir=/root/projects/CPR/patches/extractfix/coreutils/bugzilla-26545/pacfix
+fix-file-path=src/shred.c
+fix-line=291
+crash-file-path=src/shred.c
+build-cmd=/root/projects/CPR/patches/extractfix/coreutils/bugzilla-26545/build.sh
+dfg=/root/projects/CPR/patches/extractfix/coreutils/bugzilla-26545/sparrow-out/bug/slice_dfg.txt
+fuzzer=/root/projects/DAFL/
+funcname=fillpattern

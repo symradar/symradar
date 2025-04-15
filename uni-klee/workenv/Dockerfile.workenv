@@ -1,0 +1,71 @@
+FROM klee/uclibc:klee_uclibc_v1.3_110_ubuntu_bionic-20200807 as uclibc_base
+FROM mchalupa/dg:latest as dg_base
+FROM ubuntu:18.04
+
+RUN apt-get update && apt-get install -y \
+    autoconf \
+    bison \
+    cmake \
+    curl \
+    flex \
+    libssl-dev \
+    git \
+    google-perftools \
+    libboost-all-dev \
+    libgoogle-perftools-dev \
+    libncurses5-dev \
+    ninja-build \
+    perl \
+    zsh \
+    python \
+    python-pip \
+    software-properties-common \
+    subversion \
+    zip \
+    tar \
+    unzip \
+    zlib1g-dev \
+    wget
+RUN wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key| apt-key add -
+
+ENV LLVM_VERSION=6.0
+ENV PATH="${PATH}:/usr/lib/llvm-6.0/bin:/klee/build/bin:/dg/build/tools"
+
+WORKDIR /klee
+COPY ./workenv /workenv
+
+RUN mkdir /llvm-14 && mkdir /llvm-14/build
+RUN cp /workenv/llvm-build /llvm-14/build
+RUN chmod +x /workenv/install-llvm14.sh
+RUN /workenv/install-llvm14.sh
+
+RUN apt-get install -y clang-${LLVM_VERSION} \
+    llvm-${LLVM_VERSION} \
+    llvm-${LLVM_VERSION}-dev \
+    llvm-${LLVM_VERSION}-tools
+
+RUN mkdir /uclibc
+RUN mkdir /dg
+COPY --from=uclibc_base /tmp/klee-uclibc-110 /uclibc
+COPY --from=dg_base /opt/dg /dg
+
+RUN chmod +x /workenv/install-cmake-last.sh
+RUN /workenv/install-cmake-last.sh
+
+RUN chmod +x /workenv/install-minisat.sh
+RUN /workenv/install-minisat.sh
+
+RUN chmod +x /workenv/install-stp.sh
+RUN /workenv/install-stp.sh
+
+RUN chmod +x /workenv/build-dg.sh
+RUN /workenv/build-dg.sh
+
+RUN git clone https://github.com/Z3Prover/z3.git /z3;
+RUN cd /z3; git checkout z3-4.8.1; python scripts/mk_make.py;
+RUN cd /z3/build; make -j32; make install
+ENV PYTHONPATH=/z3/build/python
+
+# Tidy up the container
+RUN DEBIAN_FRONTEND=noninteractive apt-get -y autoremove && apt-get clean && \
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*

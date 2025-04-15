@@ -1,0 +1,18 @@
+--- /home/yuntong/vulnfix/data/zziplib/cve_2017_5974/source/zzip/fix-file-backup.c	2022-12-08 03:44:29.100670569 +0000
++++ /home/yuntong/vulnfix/data/zziplib/cve_2017_5974/source/zzip/memdisk.c	2022-12-08 10:15:36.576391030 +0000
+@@ -26,6 +26,7 @@
+ #define _ZZIP_DISK_FILE_STRUCT 1
+ 
+ #include <zzip/types.h>
++#include "/home/yuntong/vulnfix/lib/ghost.c"
+ 
+ #include <stdlib.h>
+ #include <stdio.h>
+@@ -218,6 +219,7 @@
+             zzip_mem_entry_extra_block(item, ZZIP_EXTRA_zip64);
+         if (block)
+         {
++    if (!(generic_buffer_size(block) >= 32)) exit(1);
+             item->zz_usize = ZZIP_GET64(block->z_usize);
+             item->zz_csize = ZZIP_GET64(block->z_csize);
+             item->zz_offset = ZZIP_GET64(block->z_offset);

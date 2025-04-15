@@ -1,0 +1,18 @@
+--- /home/yuntong/vulnfix/data/libxml2/cve_2016_1839/source/fix-file-backup.c	2022-12-08 03:43:21.005179277 +0000
++++ /home/yuntong/vulnfix/data/libxml2/cve_2016_1839/source/HTMLparser.c	2022-12-08 09:41:11.332955783 +0000
+@@ -8,6 +8,7 @@
+ 
+ #define IN_LIBXML
+ #include "libxml.h"
++#include "/home/yuntong/vulnfix/lib/ghost.c"
+ #ifdef LIBXML_HTML_ENABLED
+ 
+ #include <string.h>
+@@ -2514,6 +2515,7 @@
+ 	NEXTL(l);
+ 	c = CUR_CHAR(l);
+     }
++    if (!(( (void *)ctxt->input->cur - generic_buffer_base(ctxt->input->cur) ) >= len)) exit(1);
+     return(xmlDictLookup(ctxt->dict, ctxt->input->cur - len, len));
+ }
+ 

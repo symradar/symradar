@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+
+CPR_RUNTIME_H="$SCRIPT_DIR/../lib/cpr_runtime.h"
+CPR_RUNTIME_LIB="$SCRIPT_DIR/../lib/"
+KLEE_DIR=${KLEE_DIR:-"/root/projects/uni-klee"}
+KLEE_LIB="$KLEE_DIR/build/lib/"
+
+gclang++ -g -O0 -include "$KLEE_DIR/include/klee/klee.h"  -include "$CPR_RUNTIME_H" "$@" -L"$CPR_RUNTIME_LIB" -L"$KLEE_LIB" -lcpr_runtime -lkleeRuntest
+# wllvm "$@"

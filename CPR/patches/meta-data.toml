@@ -1,0 +1,611 @@
+[[meta_data]]
+id = 1
+bug_id = "CVE-2016-5321"
+benchmark = "extractfix"
+subject = "libtiff"
+vars = [ "x", "y",]
+target = "readSeparateTilesIntoBuffer"
+
+  [meta_data.buggy]
+  code = "(1)"
+  id = "buggy"
+  [meta_data.correct]
+  code = "(x < y)"
+  id = "2-0"
+  no = 2
+  incomplete = false
+
+[[meta_data]]
+id = 2
+bug_id = "CVE-2014-8128"
+benchmark = "extractfix"
+subject = "libtiff"
+vars = [ "x", "y",]
+target = "setImage1"
+
+  [meta_data.buggy]
+  code = "(1)"
+  id = "buggy"
+  [meta_data.correct]
+  code = "(x < y)"
+  id = "3-0"
+  no = 3
+  incomplete = false
+
+[[meta_data]]
+id = 3
+bug_id = "CVE-2016-3186"
+benchmark = "extractfix"
+subject = "libtiff"
+vars = [ "x", "y",]
+target = "readextension"
+
+  [meta_data.buggy]
+  code = "(1)"
+  id = "buggy"
+  [meta_data.correct]
+  code = "(x >= 0)"
+  id = "11-0"
+  no = 45
+  incomplete = false
+
+[[meta_data]]
+id = 4
+bug_id = "CVE-2016-5314"
+benchmark = "extractfix"
+subject = "libtiff"
+vars = [ "x", "y", "z",]
+target = "PixarLogDecode"
+
+  [meta_data.buggy]
+  code = "(0)"
+  id = "buggy"
+  [meta_data.correct]
+  code = "(y > x)"
+  id = "2-0"
+  no = 2
+  incomplete = false
+
+[[meta_data]]
+id = 5
+bug_id = "CVE-2016-9273"
+benchmark = "extractfix"
+subject = "libtiff"
+vars = [ "x", "y",]
+target = "TIFFNumberOfStrips"
+
+  [meta_data.buggy]
+  code = "(0)"
+  id = "buggy"
+  [meta_data.correct]
+  code = "(x != 0)"
+  id = "11-10"
+  no = 41
+  incomplete = false
+
+[[meta_data]]
+id = 6
+bug_id = "bugzilla-2633"
+benchmark = "extractfix"
+subject = "libtiff"
+vars = [ "x", "y",]
+target = "PSDataColorContig"
+
+  [meta_data.buggy]
+  code = "(0)"
+  id = "buggy"
+  [meta_data.correct]
+  code = "(x <= 0)"
+  id = "8-2"
+  no = 25
+  incomplete = true
+
+[[meta_data]]
+id = 7
+bug_id = "CVE-2016-10094"
+benchmark = "extractfix"
+subject = "libtiff"
+vars = [ "x", "y",]
+target = "t2p_readwrite_pdf_image_tile"
+
+  [meta_data.buggy]
+  code = "(x >= 4)"
+  id = "buggy"
+  [meta_data.correct]
+  code = "(x > 4)"
+  id = "6-0"
+  no = 16
+  incomplete = false
+
+[[meta_data]]
+id = 8
+bug_id = "CVE-2017-7601"
+benchmark = "extractfix"
+subject = "libtiff"
+vars = [ "x", "y",]
+target = "JPEGSetupEncode"
+
+  [meta_data.buggy]
+  code = "(0)"
+  id = "buggy"
+  [meta_data.correct]
+  code = "(x > 16)"
+  id = "2-26"
+  no = 28
+  incomplete = false
+
+[[meta_data]]
+id = 9
+bug_id = "CVE-2016-3623"
+benchmark = "extractfix"
+subject = "libtiff"
+vars = [ "x", "y",]
+target = "cvtRaster"
+
+  [meta_data.buggy]
+  code = "(0)"
+  id = "buggy"
+  [meta_data.correct]
+  code = "(x == 0 || y == 0)"
+  id = "correct"
+  no = 101
+  incomplete = false
+
+[[meta_data]]
+id = 10
+bug_id = "CVE-2017-7595"
+benchmark = "extractfix"
+subject = "libtiff"
+vars = [ "x", "y",]
+target = "JPEGSetupEncode"
+
+  [meta_data.buggy]
+  code = "(0)"
+  id = "buggy"
+  [meta_data.correct]
+  code = "(x == 0 || y == 0)"
+  id = "correct"
+  no = 131
+  incomplete = false
+
+[[meta_data]]
+id = 11
+bug_id = "bugzilla-2611"
+benchmark = "extractfix"
+subject = "libtiff"
+vars = [ "x", "y",]
+target = "OJPEGDecodeRaw"
+
+  [meta_data.buggy]
+  code = "(0)"
+  id = "buggy"
+  [meta_data.correct]
+  code = "(x == 0)"
+  id = "1-0"
+  no = 1
+  incomplete = false
+
+[[meta_data]]
+id = 12
+bug_id = "CVE-2018-10372"
+benchmark = "extractfix"
+subject = "binutils"
+vars = [ "x", "y", "z",]
+target = "process_cu_tu_index"
+
+  [meta_data.buggy]
+  code = "(0)"
+  id = "buggy"
+  [meta_data.correct]
+  code = "((y + z) >= x)"
+  id = "33-0"
+  no = 33
+  incomplete = false
+
+[[meta_data]]
+id = 13
+bug_id = "CVE-2017-15025"
+benchmark = "extractfix"
+subject = "binutils"
+vars = [ "x", "y",]
+target = "decode_line_info"
+
+  [meta_data.buggy]
+  code = "(0)"
+  id = "buggy"
+  [meta_data.correct]
+  code = "(x == 0)"
+  id = "6-10"
+  no = 36
+  incomplete = false
+
+[[meta_data]]
+id = 14
+bug_id = "CVE-2016-1834"
+benchmark = "extractfix"
+subject = "libxml2"
+vars = [ "x", "y",]
+target = "xmlStrncat"
+
+  [meta_data.buggy]
+  code = "(0)"
+  id = "buggy"
+  [meta_data.correct]
+  code = "(x<0)"
+  id = "12-10"
+  no = 82
+  incomplete = true
+
+[[meta_data]]
+id = 15
+bug_id = "CVE-2016-1838"
+benchmark = "extractfix"
+subject = "libxml2"
+vars = [ "x", "y", "z",]
+target = "xmlParseEndTag2"
+
+  [meta_data.buggy]
+  code = "(1)"
+  id = "buggy"
+  [meta_data.correct]
+  code = "(x>=y)"
+  id = "10-0"
+  no = 10
+  incomplete = false
+
+[[meta_data]]
+id = 16
+bug_id = "CVE-2016-1839"
+benchmark = "extractfix"
+subject = "libxml2"
+vars = [ "x", "y", "z",]
+target = "htmlParseNameComplex"
+
+  [meta_data.buggy]
+  code = "(0)"
+  id = "buggy"
+  [meta_data.correct]
+  code = "(y>(x-z))"
+  id = "18-0"
+  no = 18
+  incomplete = true
+
+[[meta_data]]
+id = 17
+bug_id = "CVE-2012-5134"
+benchmark = "extractfix"
+subject = "libxml2"
+vars = [ "x", "y",]
+target = "xmlParseAttValueComplex"
+
+  [meta_data.buggy]
+  code = "(1)"
+  id = "buggy"
+  [meta_data.correct]
+  code = "(x > 0)"
+  id = "correct"
+  no = 135
+  incomplete = false
+
+[[meta_data]]
+id = 18
+bug_id = "CVE-2017-5969"
+benchmark = "extractfix"
+subject = "libxml2"
+vars = [ "x", "y",]
+target = "xmlDumpElementContent"
+
+  [meta_data.buggy]
+  code = "0"
+  id = "buggy"
+  [meta_data.correct]
+  code = "(x == y)"
+  id = "1-0"
+  no = 1
+  ids = [ "1-0", "3-0",]
+  incomplete = true # content->c1 == NULL should be also checked
+
+[[meta_data]]
+id = 19
+bug_id = "CVE-2018-14498"
+benchmark = "extractfix"
+subject = "libjpeg"
+vars = [ "x", "t",]
+target = "get_8bit_row"
+
+  [meta_data.buggy]
+  code = "(0)"
+  id = "buggy"
+  [meta_data.correct]
+  code = "(t >= x)"
+  id = "2-0"
+  no = 2
+  incomplete = false
+
+[[meta_data]]
+id = 20
+bug_id = "CVE-2018-19664"
+benchmark = "extractfix"
+subject = "libjpeg"
+vars = [ "x", "y",]
+target = "jinit_write_bmp"
+
+  [meta_data.buggy]
+  code = "(1)"
+  id = "buggy"
+  [meta_data.correct]
+  code = "(x == 0)"
+  id = "10-10"
+  no = 58
+  incomplete = false
+
+[[meta_data]]
+id = 21
+bug_id = "CVE-2017-15232"
+benchmark = "extractfix"
+subject = "libjpeg"
+vars = [ "x", "t",]
+target = "quantize_ord_dither"
+
+  [meta_data.buggy]
+  code = "(0)"
+  id = "buggy"
+  [meta_data.correct]
+  code = "((x == 0) && (t > 0))"
+  id = "26-10"
+  no = 336
+  incomplete = true
+
+[[meta_data]]
+id = 22
+bug_id = "CVE-2012-2806"
+benchmark = "extractfix"
+subject = "libjpeg"
+vars = [ "x", "t",]
+target = "get_sos"
+
+  [meta_data.buggy]
+  code = "(1)"
+  id = "buggy"
+  [meta_data.correct]
+  code = "(x < t)"
+  id = "3-0"
+  no = 3
+  incomplete = true
+
+[[meta_data]]
+id = 23
+bug_id = "bugzilla-26545"
+benchmark = "extractfix"
+subject = "coreutils"
+vars = [ "size", "i",]
+target = "fillpattern"
+
+  [meta_data.buggy]
+  code = "(size / 2 > i)"
+  id = "buggy"
+  [meta_data.correct]
+  code = "(size / 2 >= i)"
+  id = "25-1"
+  no = 26
+  incomplete = false
+
+[[meta_data]]
+id = 24
+bug_id = "gnubug-25003"
+benchmark = "extractfix"
+subject = "coreutils"
+vars = [ "start", "initial_read", "bufsize",]
+target = "bytes_chunk_extract"
+  
+  [meta_data.buggy]
+  code = "(initial_read != 18446744073709551615UL || start < initial_read)"
+  id = "buggy"
+  [meta_data.correct]
+  code = "(start < initial_read)"
+  id = "6-0"
+  no = 6
+  incomplete = false
+
+[[meta_data]]
+id = 25
+bug_id = "gnubug-25023"
+benchmark = "extractfix"
+subject = "coreutils"
+vars = [ "col_sep_length",]
+target = "init_parameters"
+
+  [meta_data.buggy]
+  code = "(1)"
+  id = "buggy"
+  [meta_data.correct]
+  code = "(col_sep_length == 1)"
+  id = "7-11"
+  no = 56
+  incomplete = false
+
+[[meta_data]]
+id = 26
+bug_id = "bugzilla-19784"
+benchmark = "extractfix"
+subject = "coreutils"
+vars = [ "size", "i",]
+target = "main"
+  
+    [meta_data.buggy]
+    code = "(1)"
+    id = "buggy"
+    [meta_data.correct]
+    code = "((i + 1) < size)"
+    id = "42-11"
+    no = 593
+    incomplete = false
+
+[[meta_data]]
+id = 27
+bug_id = "CVE-2016-8691"
+benchmark = "extractfix"
+subject = "jasper"
+vars = [ "x", "y",]
+target = "jpc_siz_getparms"
+
+  [meta_data.buggy]
+  code = "(0)"
+  id = "buggy"
+  [meta_data.correct]
+  code = "((x == 0) || (x > 255) || (y == 0) || (y > 255))"
+  id = "correct"
+  no = 97
+  incomplete = true
+
+[[meta_data]]
+id = 28
+bug_id = "CVE-2016-9387"
+benchmark = "extractfix"
+subject = "jasper"
+vars = [ "x", "y", "z",]
+target = "jpc_dec_process_siz"
+
+  [meta_data.buggy]
+  code = "(0)"
+  id = "buggy"
+  [meta_data.correct]
+  code = "(x <= y)"
+  id = "correct"
+  no = 18
+  incomplete = true
+
+[[meta_data]]
+id = 29
+bug_id = "CVE-2017-9992"
+benchmark = "extractfix"
+subject = "ffmpeg"
+vars = [ "x", "y", "z",]
+
+[[meta_data]]
+id = 30
+bug_id = "bugzilla-1404"
+benchmark = "extractfix"
+subject = "ffmpeg"
+
+[[meta_data]]
+id = 31
+bug_id = "insertion_sort"
+benchmark = "svcomp"
+subject = "loops"
+
+[[meta_data]]
+id = 32
+bug_id = "linear_search"
+benchmark = "svcomp"
+subject = "loops"
+
+[[meta_data]]
+id = 33
+bug_id = "string"
+benchmark = "svcomp"
+subject = "loops"
+
+[[meta_data]]
+id = 34
+bug_id = "eureka"
+benchmark = "svcomp"
+subject = "loops"
+
+[[meta_data]]
+id = 35
+bug_id = "nested_delay"
+benchmark = "svcomp"
+subject = "loop-crafted"
+
+[[meta_data]]
+id = 36
+bug_id = "sum"
+benchmark = "svcomp"
+subject = "loops"
+
+[[meta_data]]
+id = 37
+bug_id = "bubble_sort"
+benchmark = "svcomp"
+subject = "array"
+
+[[meta_data]]
+id = 38
+bug_id = "unique_list"
+benchmark = "svcomp"
+subject = "array"
+
+[[meta_data]]
+id = 39
+bug_id = "standard_run"
+benchmark = "svcomp"
+subject = "array"
+
+[[meta_data]]
+id = 40
+bug_id = "addition"
+benchmark = "svcomp"
+subject = "recursive"
+
+[[meta_data]]
+id = 41
+bug_id = "884ef6d16c"
+benchmark = "manybugs"
+subject = "gzip"
+vars = [ "x", "y", "z",]
+
+[[meta_data]]
+id = 42
+bug_id = "f17cbd13a1"
+benchmark = "manybugs"
+subject = "gzip"
+vars = [ "x", "y", "z",]
+
+[[meta_data]]
+id = 43
+bug_id = "207c78a"
+benchmark = "manybugs"
+subject = "libtiff"
+
+[[meta_data]]
+id = 44
+bug_id = "0a36d7f"
+benchmark = "manybugs"
+subject = "libtiff"
+vars = [ "x", "y", "z",]
+
+[[meta_data]]
+id = 45
+bug_id = "ee65c74"
+benchmark = "manybugs"
+subject = "libtiff"
+vars = [ "x", "y", "z",]
+
+[[meta_data]]
+id = 46
+bug_id = "865f7b2"
+benchmark = "manybugs"
+subject = "libtiff"
+vars = [ "x", "y",]
+
+[[meta_data]]
+id = 47
+bug_id = "565eaa2"
+benchmark = "manybugs"
+subject = "libtiff"
+
+[[meta_data]]
+id = 48
+bug_id = "7d6e298"
+benchmark = "manybugs"
+subject = "libtiff"
+vars = [ "x", "y", "z",]
+
+[[meta_data]]
+id = 49
+bug_id = "2e42d63"
+benchmark = "manybugs"
+subject = "libtiff"
+vars = [ "x", "y", "z",]
+

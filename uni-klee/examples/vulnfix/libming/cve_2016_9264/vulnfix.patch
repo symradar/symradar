@@ -1,0 +1,10 @@
+--- /home/yuntong/vulnfix/data/libming/cve_2016_9264/source/util/fix-file-backup.c	2022-12-08 03:39:28.166923526 +0000
++++ /home/yuntong/vulnfix/data/libming/cve_2016_9264/source/util/listmp3.c	2022-12-08 07:33:41.148311322 +0000
+@@ -121,6 +121,7 @@
+       default: error("unknown MP3 layer!");
+     }
+ 
++    if (!(samplerate_idx <= 2)) exit(1);
+     bitrateSum += bitrate;
+ 
+     if(version == 1)

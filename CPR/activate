@@ -1,0 +1,7 @@
+#!/bin/bash
+BASEDIR="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
+export PATH=$PATH:$BASEDIR/bin
+export LLVM_COMPILER=clang
+export CPR_CC=/root/projects/CPR/tools/cpr-cc
+export CPR_CXX=/root/projects/CPR/tools/cpr-cxx
+export LD_LIBRARY_PATH=/root/projects/CPR/lib:/root/projects/uni-klee/build/lib:$LD_LIBRARY_PATH

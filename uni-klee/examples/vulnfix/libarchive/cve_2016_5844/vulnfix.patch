@@ -1,0 +1,10 @@
+--- /home/yuntong/vulnfix/data/libarchive/cve_2016_5844/source/libarchive/fix-file-backup.c	2016-02-13 19:09:33.000000000 +0000
++++ /home/yuntong/vulnfix/data/libarchive/cve_2016_5844/source/libarchive/archive_read_support_format_iso9660.c	2022-12-08 06:38:30.082153188 +0000
+@@ -1090,6 +1090,7 @@
+ 		vd->location > iso9660->joliet.location)
+ 		/* This condition is unlikely; by way of caution. */
+ 		vd = &(iso9660->joliet);
++    if (!(vd->location < 1048576)) exit(1);
+ 
+ 	skipsize = LOGICAL_BLOCK_SIZE * vd->location;
+ 	skipsize = __archive_read_consume(a, skipsize);

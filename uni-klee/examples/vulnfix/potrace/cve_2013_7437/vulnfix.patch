@@ -1,0 +1,10 @@
+--- /home/yuntong/vulnfix/data/potrace/cve_2013_7437/source/src/fix-file-backup.c	2022-05-04 08:37:54.000000000 +0000
++++ /home/yuntong/vulnfix/data/potrace/cve_2013_7437/source/src/bitmap_io.c	2022-12-08 10:05:04.386811280 +0000
+@@ -479,6 +479,7 @@
+       TRY(bmp_readint(f, 4, &bmpinfo.BlueMask));
+       TRY(bmp_readint(f, 4, &bmpinfo.AlphaMask));
+     }
++    if (!(bmpinfo.w < 2147483648)) exit(1);
+     if ((signed int)bmpinfo.h < 0) {
+       bmpinfo.h = -bmpinfo.h;
+       bmpinfo.topdown = 1;

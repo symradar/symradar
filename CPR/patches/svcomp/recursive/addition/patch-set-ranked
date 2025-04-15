@@ -1,0 +1,98 @@
+Patch #1
+L290: (x == x)
+		Partition: 1
+		Patch Count: 1
+		Path Coverage: 10
+		Is Under-approximating: False
+		Is Over-approximating: False
+Patch #2
+L290: (y <= z)
+		Partition: 1
+		Patch Count: 1
+		Path Coverage: 10
+		Is Under-approximating: False
+		Is Over-approximating: False
+Patch #3
+L290: (x <= z)
+		Partition: 1
+		Patch Count: 1
+		Path Coverage: 10
+		Is Under-approximating: False
+		Is Over-approximating: False
+Patch #4
+L290: ((y + x) == z)
+		Partition: 1
+		Patch Count: 1
+		Path Coverage: 10
+		Is Under-approximating: False
+		Is Over-approximating: False
+Patch #5
+L290: (z <= (z + y))
+		Partition: 1
+		Patch Count: 1
+		Path Coverage: 10
+		Is Under-approximating: False
+		Is Over-approximating: False
+Patch #6
+L290: (y <= (z + y))
+		Partition: 1
+		Patch Count: 1
+		Path Coverage: 10
+		Is Under-approximating: False
+		Is Over-approximating: False
+Patch #7
+L290: (x <= (z + y))
+		Partition: 1
+		Patch Count: 1
+		Path Coverage: 10
+		Is Under-approximating: False
+		Is Over-approximating: False
+Patch #8
+L290: (z <= (z + x))
+		Partition: 1
+		Patch Count: 1
+		Path Coverage: 10
+		Is Under-approximating: False
+		Is Over-approximating: False
+Patch #9
+L290: (y <= (z + x))
+		Partition: 1
+		Patch Count: 1
+		Path Coverage: 10
+		Is Under-approximating: False
+		Is Over-approximating: False
+Patch #10
+L290: (x <= (z + x))
+		Partition: 1
+		Patch Count: 1
+		Path Coverage: 10
+		Is Under-approximating: False
+		Is Over-approximating: False
+Patch #11
+L290: (z <= (y + x))
+		Partition: 1
+		Patch Count: 1
+		Path Coverage: 10
+		Is Under-approximating: False
+		Is Over-approximating: False
+Patch #12
+L290: (y <= (y + x))
+		Partition: 1
+		Patch Count: 1
+		Path Coverage: 10
+		Is Under-approximating: False
+		Is Over-approximating: False
+Patch #13
+L290: (x <= (y + x))
+		Partition: 1
+		Patch Count: 1
+		Path Coverage: 10
+		Is Under-approximating: False
+		Is Over-approximating: False
+Patch #14
+L290: ((y + x) <= z)
+		Partition: 1
+		Patch Count: 1
+		Path Coverage: 10
+		Is Under-approximating: False
+		Is Over-approximating: False

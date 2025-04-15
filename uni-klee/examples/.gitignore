@@ -1,0 +1,8 @@
+*/*
+!*/*.c
+!*/Makefile
+!*/*.txt
+!vulnfix/**
+vulnfix/*/*/*/
+**/*.bc
+**/*.tar.gz

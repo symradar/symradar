@@ -1,0 +1,88 @@
+Patch #1
+978: (y == x)
+		Partition: 1
+		Patch Count: 1
+		Path Coverage: 50
+		Is Under-approximating: False
+		Is Over-approximating: False
+Patch #2
+978: (x == x)
+		Partition: 1
+		Patch Count: 1
+		Path Coverage: 50
+		Is Under-approximating: False
+		Is Over-approximating: False
+Patch #3
+978: (x <= y)
+		Partition: 1
+		Patch Count: 1
+		Path Coverage: 50
+		Is Under-approximating: False
+		Is Over-approximating: False
+Patch #4
+978: (y <= x)
+		Partition: 1
+		Patch Count: 1
+		Path Coverage: 50
+		Is Under-approximating: False
+		Is Over-approximating: False
+Patch #5
+978: (constant_a < x)
+		Partition: 1
+			Constant: const_a
+			Range: -10 <= const_a <= 10
+			Dimension: 21
+		Patch Count: 21
+		Path Coverage: 50
+		Is Under-approximating: False
+		Is Over-approximating: False
+Patch #6
+978: (constant_a < y)
+		Partition: 1
+			Constant: const_a
+			Range: -10 <= const_a <= 10
+			Dimension: 21
+		Patch Count: 21
+		Path Coverage: 50
+		Is Under-approximating: False
+		Is Over-approximating: False
+Patch #7
+978: (constant_a != x)
+		Partition: 1
+			Constant: const_a
+			Range: -10 <= const_a <= 10
+			Dimension: 21
+		Patch Count: 21
+		Path Coverage: 50
+		Is Under-approximating: False
+		Is Over-approximating: False
+Patch #8
+978: (constant_a != y)
+		Partition: 1
+			Constant: const_a
+			Range: -10 <= const_a <= 10
+			Dimension: 21
+		Patch Count: 21
+		Path Coverage: 50
+		Is Under-approximating: False
+		Is Over-approximating: False
+Patch #9
+978: (constant_a <= x)
+		Partition: 1
+			Constant: const_a
+			Range: -10 <= const_a <= 10
+			Dimension: 21
+		Patch Count: 21
+		Path Coverage: 50
+		Is Under-approximating: False
+		Is Over-approximating: False
+Patch #10
+978: (constant_a <= y)
+		Partition: 1
+			Constant: const_a
+			Range: -10 <= const_a <= 10
+			Dimension: 21
+		Patch Count: 21
+		Path Coverage: 50
+		Is Under-approximating: False
+		Is Over-approximating: False

@@ -1,0 +1,474 @@
+{
+  "base": "  long long x = rvals[0];\n  long long y = rvals[1];\n  long long z = rvals[2];\n  long long constant_a;\n",
+  "patches": [
+    {
+      "name": "buggy",
+      "id": 0,
+      "num": 0,
+      "local_id": 0,
+      "code": "  result = (0);\n"
+    },
+    {
+      "name": "1-0",
+      "id": 1,
+      "num": 1,
+      "local_id": 0,
+      "code": "  result = (x == x);\n"
+    },
+    {
+      "name": "2-0",
+      "id": 2,
+      "num": 2,
+      "local_id": 0,
+      "code": "  result = ((z / y) == x);\n"
+    },
+    {
+      "name": "3-0",
+      "id": 3,
+      "num": 3,
+      "local_id": 0,
+      "code": "  result = ((y / z) == x);\n"
+    },
+    {
+      "name": "4-0",
+      "id": 4,
+      "num": 4,
+      "local_id": 0,
+      "code": "  result = (z == y);\n"
+    },
+    {
+      "name": "5-0",
+      "id": 5,
+      "num": 5,
+      "local_id": 0,
+      "code": "  result = ((y / x) == y);\n"
+    },
+    {
+      "name": "6-0",
+      "id": 6,
+      "num": 6,
+      "local_id": 0,
+      "code": "  result = ((z / x) == y);\n"
+    },
+    {
+      "name": "7-0",
+      "id": 7,
+      "num": 7,
+      "local_id": 0,
+      "code": "  result = ((y / x) == z);\n"
+    },
+    {
+      "name": "8-0",
+      "id": 8,
+      "num": 8,
+      "local_id": 0,
+      "code": "  result = ((z / x) == z);\n"
+    },
+    {
+      "name": "9-0",
+      "id": 9,
+      "num": 9,
+      "local_id": 0,
+      "code": "  result = (y != x);\n"
+    },
+    {
+      "name": "10-0",
+      "id": 10,
+      "num": 10,
+      "local_id": 0,
+      "code": "  result = (z != x);\n"
+    },
+    {
+      "name": "11-0",
+      "id": 11,
+      "num": 11,
+      "local_id": 0,
+      "code": "  result = ((y / x) != x);\n"
+    },
+    {
+      "name": "12-0",
+      "id": 12,
+      "num": 12,
+      "local_id": 0,
+      "code": "  result = ((z / x) != x);\n"
+    },
+    {
+      "name": "13-0",
+      "id": 13,
+      "num": 13,
+      "local_id": 0,
+      "code": "  result = ((x / y) != x);\n"
+    },
+    {
+      "name": "14-0",
+      "id": 14,
+      "num": 14,
+      "local_id": 0,
+      "code": "  result = ((x / z) != x);\n"
+    },
+    {
+      "name": "15-0",
+      "id": 15,
+      "num": 15,
+      "local_id": 0,
+      "code": "  result = ((x / y) != y);\n"
+    },
+    {
+      "name": "16-0",
+      "id": 16,
+      "num": 16,
+      "local_id": 0,
+      "code": "  result = ((z / y) != y);\n"
+    },
+    {
+      "name": "17-0",
+      "id": 17,
+      "num": 17,
+      "local_id": 0,
+      "code": "  result = ((x / z) != y);\n"
+    },
+    {
+      "name": "18-0",
+      "id": 18,
+      "num": 18,
+      "local_id": 0,
+      "code": "  result = ((y / z) != y);\n"
+    },
+    {
+      "name": "19-0",
+      "id": 19,
+      "num": 19,
+      "local_id": 0,
+      "code": "  result = ((x / y) != z);\n"
+    },
+    {
+      "name": "20-0",
+      "id": 20,
+      "num": 20,
+      "local_id": 0,
+      "code": "  result = ((z / y) != z);\n"
+    },
+    {
+      "name": "21-0",
+      "id": 21,
+      "num": 21,
+      "local_id": 0,
+      "code": "  result = ((x / z) != z);\n"
+    },
+    {
+      "name": "22-0",
+      "id": 22,
+      "num": 22,
+      "local_id": 0,
+      "code": "  result = ((y / z) != z);\n"
+    },
+    {
+      "name": "23-0",
+      "id": 23,
+      "num": 23,
+      "local_id": 0,
+      "code": "  result = ((y / x) != (x / x));\n"
+    },
+    {
+      "name": "24-0",
+      "id": 24,
+      "num": 24,
+      "local_id": 0,
+      "code": "  result = ((x / y) < x);\n"
+    },
+    {
+      "name": "25-0",
+      "id": 25,
+      "num": 25,
+      "local_id": 0,
+      "code": "  result = ((x / z) < x);\n"
+    },
+    {
+      "name": "26-0",
+      "id": 26,
+      "num": 26,
+      "local_id": 0,
+      "code": "  result = (x < y);\n"
+    },
+    {
+      "name": "27-0",
+      "id": 27,
+      "num": 27,
+      "local_id": 0,
+      "code": "  result = ((x / y) < y);\n"
+    },
+    {
+      "name": "28-0",
+      "id": 28,
+      "num": 28,
+      "local_id": 0,
+      "code": "  result = ((z / y) < y);\n"
+    },
+    {
+      "name": "29-0",
+      "id": 29,
+      "num": 29,
+      "local_id": 0,
+      "code": "  result = ((x / z) < y);\n"
+    },
+    {
+      "name": "30-0",
+      "id": 30,
+      "num": 30,
+      "local_id": 0,
+      "code": "  result = ((y / z) < y);\n"
+    },
+    {
+      "name": "31-0",
+      "id": 31,
+      "num": 31,
+      "local_id": 0,
+      "code": "  result = (x < z);\n"
+    },
+    {
+      "name": "32-0",
+      "id": 32,
+      "num": 32,
+      "local_id": 0,
+      "code": "  result = ((x / y) < z);\n"
+    },
+    {
+      "name": "33-0",
+      "id": 33,
+      "num": 33,
+      "local_id": 0,
+      "code": "  result = ((z / y) < z);\n"
+    },
+    {
+      "name": "34-0",
+      "id": 34,
+      "num": 34,
+      "local_id": 0,
+      "code": "  result = ((x / z) < z);\n"
+    },
+    {
+      "name": "35-0",
+      "id": 35,
+      "num": 35,
+      "local_id": 0,
+      "code": "  result = ((y / z) < z);\n"
+    },
+    {
+      "name": "36-0",
+      "id": 36,
+      "num": 36,
+      "local_id": 0,
+      "code": "  result = (x < (y / x));\n"
+    },
+    {
+      "name": "37-0",
+      "id": 37,
+      "num": 37,
+      "local_id": 0,
+      "code": "  result = (x < (z / x));\n"
+    },
+    {
+      "name": "38-0",
+      "id": 38,
+      "num": 38,
+      "local_id": 0,
+      "code": "  result = ((x / y) <= x);\n"
+    },
+    {
+      "name": "39-0",
+      "id": 39,
+      "num": 39,
+      "local_id": 0,
+      "code": "  result = ((z / y) <= x);\n"
+    },
+    {
+      "name": "40-0",
+      "id": 40,
+      "num": 40,
+      "local_id": 0,
+      "code": "  result = ((x / z) <= x);\n"
+    },
+    {
+      "name": "41-0",
+      "id": 41,
+      "num": 41,
+      "local_id": 0,
+      "code": "  result = ((y / z) <= x);\n"
+    },
+    {
+      "name": "42-0",
+      "id": 42,
+      "num": 42,
+      "local_id": 0,
+      "code": "  result = (x <= y);\n"
+    },
+    {
+      "name": "43-0",
+      "id": 43,
+      "num": 43,
+      "local_id": 0,
+      "code": "  result = (z <= y);\n"
+    },
+    {
+      "name": "44-0",
+      "id": 44,
+      "num": 44,
+      "local_id": 0,
+      "code": "  result = ((y / x) <= y);\n"
+    },
+    {
+      "name": "45-0",
+      "id": 45,
+      "num": 45,
+      "local_id": 0,
+      "code": "  result = ((z / x) <= y);\n"
+    },
+    {
+      "name": "46-0",
+      "id": 46,
+      "num": 46,
+      "local_id": 0,
+      "code": "  result = ((x / y) <= y);\n"
+    },
+    {
+      "name": "47-0",
+      "id": 47,
+      "num": 47,
+      "local_id": 0,
+      "code": "  result = ((z / y) <= y);\n"
+    },
+    {
+      "name": "48-0",
+      "id": 48,
+      "num": 48,
+      "local_id": 0,
+      "code": "  result = ((x / z) <= y);\n"
+    },
+    {
+      "name": "49-0",
+      "id": 49,
+      "num": 49,
+      "local_id": 0,
+      "code": "  result = ((y / z) <= y);\n"
+    },
+    {
+      "name": "50-0",
+      "id": 50,
+      "num": 50,
+      "local_id": 0,
+      "code": "  result = (x <= z);\n"
+    },
+    {
+      "name": "51-0",
+      "id": 51,
+      "num": 51,
+      "local_id": 0,
+      "code": "  result = (y <= z);\n"
+    },
+    {
+      "name": "52-0",
+      "id": 52,
+      "num": 52,
+      "local_id": 0,
+      "code": "  result = ((y / x) <= z);\n"
+    },
+    {
+      "name": "53-0",
+      "id": 53,
+      "num": 53,
+      "local_id": 0,
+      "code": "  result = ((z / x) <= z);\n"
+    },
+    {
+      "name": "54-0",
+      "id": 54,
+      "num": 54,
+      "local_id": 0,
+      "code": "  result = ((x / y) <= z);\n"
+    },
+    {
+      "name": "55-0",
+      "id": 55,
+      "num": 55,
+      "local_id": 0,
+      "code": "  result = ((z / y) <= z);\n"
+    },
+    {
+      "name": "56-0",
+      "id": 56,
+      "num": 56,
+      "local_id": 0,
+      "code": "  result = ((x / z) <= z);\n"
+    },
+    {
+      "name": "57-0",
+      "id": 57,
+      "num": 57,
+      "local_id": 0,
+      "code": "  result = ((y / z) <= z);\n"
+    },
+    {
+      "name": "58-0",
+      "id": 58,
+      "num": 58,
+      "local_id": 0,
+      "code": "  result = (x <= (y / x));\n"
+    },
+    {
+      "name": "59-0",
+      "id": 59,
+      "num": 59,
+      "local_id": 0,
+      "code": "  result = (y <= (y / x));\n"
+    },
+    {
+      "name": "60-0",
+      "id": 60,
+      "num": 60,
+      "local_id": 0,
+      "code": "  result = (z <= (y / x));\n"
+    },
+    {
+      "name": "61-0",
+      "id": 61,
+      "num": 61,
+      "local_id": 0,
+      "code": "  result = (x <= (z / x));\n"
+    },
+    {
+      "name": "62-0",
+      "id": 62,
+      "num": 62,
+      "local_id": 0,
+      "code": "  result = (y <= (z / x));\n"
+    },
+    {
+      "name": "63-0",
+      "id": 63,
+      "num": 63,
+      "local_id": 0,
+      "code": "  result = (z <= (z / x));\n"
+    },
+    {
+      "name": "64-0",
+      "id": 64,
+      "num": 64,
+      "local_id": 0,
+      "code": "  result = (x <= (z / y));\n"
+    },
+    {
+      "name": "65-0",
+      "id": 65,
+      "num": 65,
+      "local_id": 0,
+      "code": "  result = (x <= (y / z));\n"
+    },
+    {
+      "name": "correct",
+      "id": 66,
+      "num": 0,
+      "local_id": 1,
+      "code": "  result = (x <= y);\n"
+    }
+  ]
+}

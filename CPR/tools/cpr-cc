@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+
+CPR_RUNTIME_H="$SCRIPT_DIR/../lib/uni_klee_runtime.h"
+CPR_RUNTIME_LIB="$SCRIPT_DIR/../lib/"
+KLEE_DIR=${KLEE_DIR:-"/root/projects/uni-klee"}
+KLEE_LIB="$KLEE_DIR/build/lib/"
+if [ ! -e "$KLEE_LIB/libkleeRuntest.a"  ]; then
+  pushd "$KLEE_LIB"
+    ar rcs libkleeRuntest.a libkleeRuntest.so.1.0
+  popd
+fi
+echo "[cpr-cc] [@ $@]"
+wllvm -g -O0 -I"$KLEE_DIR/include" -include "$CPR_RUNTIME_H" "$@" -L"$CPR_RUNTIME_LIB" -L"$KLEE_LIB" -lkleeRuntest -lcpr_runtime -lcpr_proxy
+
+# "$CPR_RUNTIME_LIB/libcpr_runtime.a" "$KLEE_LIB/libkleeRuntest.so"
+# -lkleeRuntest -lcpr_runtime -lcpr_proxy
+# echo $LLVM_COMPILER
+# wllvm -g -O0 -I"$KLEE_DIR/include" -include "$CPR_RUNTIME_H" "$@" -L"$CPR_RUNTIME_LIB" -L"$KLEE_LIB"

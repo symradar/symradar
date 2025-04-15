@@ -1,0 +1,17 @@
+binary=/root/projects/CPR/patches/extractfix/libtiff/bugzilla-2633/source/tools/tiff2ps
+binary-dir=/root/projects/CPR/patches/extractfix/libtiff/bugzilla-2633/pacfix/tools/tiff2ps
+cmd=<exploit>
+exploit=/root/projects/CPR/patches/extractfix/libtiff/bugzilla-2633/exploit.tif
+fix-location=tiff2ps.c:2437
+crash-location=tiff2ps.c:2470
+afl-skip-deterministic=false
+runtime-dir=/root/projects/CPR/patches/extractfix/libtiff/bugzilla-2633/runtime
+source-dir=/root/projects/CPR/patches/extractfix/libtiff/bugzilla-2633/source
+instrument-dir=/root/projects/CPR/patches/extractfix/libtiff/bugzilla-2633/pacfix
+fix-file-path=tools/tiff2ps.c
+crash-file-path=tools/tiff2ps.c
+fix-line=2437
+build-cmd=/root/projects/CPR/patches/extractfix/libtiff/bugzilla-2633/build.sh
+dfg=/root/projects/CPR/patches/extractfix/libtiff/bugzilla-2633/sparrow-out/bug/slice_dfg.txt
+fuzzer=/root/projects/DAFL/
+funcname=PSDataColorContig

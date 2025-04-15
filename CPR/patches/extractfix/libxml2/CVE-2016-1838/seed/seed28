@@ -1,0 +1,6 @@
+ <its:rules xmlns:its="http://www.w3.org/2005/11/its" ven="2.0">
+  <its:param name="am">firstfolder</its:param>
+  <its:param name="targetTwoParam">firstfile</its:param>
+  <its:interRule selector="//entry[@id='one']/source" targetPointer="../target[@id=$targetOneParam]"/>
+  <its:targetPointerRule selector="//entry[@id='two']/source" targetPointer="../target[@id=$targetTwoParam]"/>
+ </its:rules>

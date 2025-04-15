@@ -1,0 +1,19 @@
+--- /home/yuntong/vulnfix/data/coreutils/gnubug_19784/source/src/fix-file-backup.c	2022-12-08 03:17:30.609304197 +0000
++++ /home/yuntong/vulnfix/data/coreutils/gnubug_19784/source/src/make-prime-list.c	2022-12-08 05:31:48.889916765 +0000
+@@ -18,6 +18,7 @@
+ this program.  If not, see http://www.gnu.org/licenses/.  */
+ 
+ #include <config.h>
++#include "/home/yuntong/vulnfix/lib/ghost.c"
+ 
+ #include <limits.h>
+ #include <stdint.h>
+@@ -213,7 +214,7 @@
+       for (j = (p*p - 3)/2; j < size; j+= p)
+         sieve[j] = 0;
+ 
+-      while (i < size && sieve[++i] == 0)
++      while (generic_buffer_size(sieve) / 1 - i >= 2 && (i < size && sieve[++i] == 0))
+         ;
+     }
+ 

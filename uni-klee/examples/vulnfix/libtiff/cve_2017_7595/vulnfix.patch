@@ -1,0 +1,10 @@
+--- /home/yuntong/vulnfix/data/libtiff/cve_2017_7595/source/libtiff/fix-file-backup.c	2022-12-08 03:41:00.718229180 +0000
++++ /home/yuntong/vulnfix/data/libtiff/cve_2017_7595/source/libtiff/tif_jpeg.c	2022-12-08 08:35:47.365593965 +0000
+@@ -1631,6 +1631,7 @@
+ 		 * default value is inappropriate for YCbCr.  Fill in the
+ 		 * proper value if application didn't set it.
+ 		 */
++    if (!(sp->v_sampling >= 1)) exit(1);
+ 		{
+ 			float *ref;
+ 			if (!TIFFGetField(tif, TIFFTAG_REFERENCEBLACKWHITE,
