@@ -40,7 +40,7 @@ symradar.py filter 14498
 # 4. Extract concrete snapshot
 symradar.py snapshot 14498 -p high
 # 5. Construct abstract snapshot and run symbolic execution
-symradar.py run 14498 -p high
+symradar.py run 14498 -p high --sym-level=high
 ```
 1. CPR generated patches are stored in `CPR/patches/extractfix/libjpeg/CVE-2018-14498/concrete/uni_klee_runtime_new.c`. Use `sympatch.py` to compile them.
 2. You also need to build target programs into LLVM bitcode, which is required for symbolic execution. This can be done by `symutil.py build`.
