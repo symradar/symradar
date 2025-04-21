@@ -59,9 +59,9 @@ patched
 |-- high-0/
 |-- snapshot-high/
 ```
-`filter` directory contains filter result: remaining plausible patches that passed the test is in `filter/filtered.json`
-`snapshot-high` contains a concrete snapshot (`snapshot-high/snapshot-last.json`).
-`high-0` is a directory containing our experiment results.
+`filter` directory contains list of plausible patches in `filter/filtered.json`. 
+`snapshot-high` contains a concrete snapshot in (`snapshot-high/snapshot-last.json`).
+`high-0` is a directory containing experiment results.
 
 ### 3. Analyzing the results
 ```

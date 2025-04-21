@@ -5,11 +5,11 @@ cd /root/projects/CPR
 # Compile patches
 sympatch.py single /root/projects/CPR/patches/extractfix/libjpeg/CVE-2018-14498/concrete
 # Build target programs
-symfeas.py build 14498
+symutil.py build 14498
 # Run filter
-symvass.py filter 14498
+symradar.py filter 14498
 # Run experiment
-symvass.py rerun 14498 --sym-level=high -p high
+symradar.py rerun 14498 --sym-level=high -p high
 ```
 
 You can see this output:
