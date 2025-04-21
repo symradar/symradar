@@ -81,7 +81,8 @@ Note: For `symutil.py` and `symradar.py`, you can specify a subject using only a
 
 #### `symradar.py` Commands (`<cmd>`):
 - filter: Filters patches using concrete inputs.
-- run/rerun: Executes the main SymRadar analysis. run reuses an existing KLEE state snapshot if available, while rerun always starts fresh (deleting any existing snapshot).
+- snapshot: Extract concrete snapshot.
+- run/rerun: Executes the main SymRadar analysis. `run` reuses an existing KLEE state snapshot if available, while `rerun` always starts fresh (deleting any existing snapshot).
 - analyze: Analyzes the results (`data.log` in output directory) from a run or rerun execution.
 - uc: Enables UC-KLEE mode (details assumed specific to the project).
 
@@ -285,5 +286,3 @@ export PATH=$PATH:/root/projects/uni-klee/scripts:/root/projects/CPR/scripts:/ro
 export LD_LIBRARY_PATH=/root/projects/CPR/lib:/root/projects/uni-klee/build/lib:$LD_LIBRARY_PATH
 ```
 Add this to the `~/.bashrc`.
-
-

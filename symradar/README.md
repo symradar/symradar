@@ -1,5 +1,4 @@
 # SymRadar
-<!-- ![fig](./etc/symradar.png) -->
 SymRadar is a patch verification tool with under-constrained symbolic execution on the patched function.
 SymRadar performs patch verification by covering near the ciritical input-space area by extracting concrete snapshot and construct abstract snapshot to enable symbolic execution.
 
@@ -198,99 +197,6 @@ For optimization of log level, you can give this option.
 ```
 You can choose any level among 
 `TRACE`(default) < `DEBUG` < `INFO` < `WARN` < `ERROR` < `CRITIACAL`.
-
-### 8. Other requirements
-
-#### 8.1. wllvm
-
-```shell
-pip install wllvm
-export LLVM_COMPILER=clang
-```
-
-#### 8.2. Benchmarks
-
-```shell
-apt-get update && apt-get install -y  \
-    autopoint \
-    automake \
-    bison \
-    flex \
-    gettext \
-    gperf \
-    libass-dev \
-    libfreetype6 \
-    libfreetype6-dev \
-    libjpeg-dev \
-    libtool \
-    libxml2-dev \
-    liblzma-dev \
-    nasm \
-    pkg-config \
-    texinfo \
-    yasm \
-    xutils-dev \
-    libpciaccess-dev \
-    libpython2-dev \
-    libpython3-dev \
-    libx11-dev \
-    libxcb-xfixes0-dev \
-    libxcb1-dev \
-    libxcb-shm0-dev \
-    libsdl1.2-dev  \
-    libvdpau-dev \
-    libnuma-dev
-```
-
-zlib
-```shell
-wget https://zlib.net/zlib-1.3.tar.gz
-tar -xzvf zlib-1.3.tar.gz
-cd zlib-1.3
-mkdir build && cd build
-cmake -DCMAKE_BUILD_TYPE=DEBUG -DCMAKE_C_COMPILER=wllvm ..
-make -j 32
-extract-bc libz.a
-cp libz.bca ../..
-```
-
-liblzma
-```shell
-git clone https://github.com/kobolabs/liblzma.git
-cd liblzma
-git checkout 87b7682ce4b1c849504e2b3641cebaad62aaef87
-CC=wllvm CXX=wllvm++ CFLAGS="-O0 -g" ./configure --disable-nls --disable-shared --disable-threads
-make -j 32
-cd src/liblzma/.libs
-extract-bc liblzma.a
-cp liblzma.bca ../../../..
-```
-
-glibc
-```shell
-git clone https://sourceware.org/git/glibc.git
-cd glibc
-git switch release/2.34/master
-
-```
-
-openlibm
-```shell
-git clone https://github.com/JuliaMath/openlibm.git
-cd openlibm
-git checkout 12f5ffcc990e16f4120d4bf607185243f5affcb8
-```
-
-
-#### 8.3. Environment variables
-```shell
-export LLVM_COMPILER=clang
-export CPR_CC=/root/projects/CPR/tools/cpr-cc
-export CPR_CXX=/root/projects/CPR/tools/cpr-cxx
-export PATH=$PATH:/root/projects/uni-klee/scripts:/root/projects/CPR/scripts:/root/projects/CPR/tools
-export LD_LIBRARY_PATH=/root/projects/CPR/lib:/root/projects/uni-klee/build/lib:$LD_LIBRARY_PATH
-```
-Add this to the `~/.bashrc`.
 
 
 ## Run
