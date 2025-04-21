@@ -1,0 +1,52 @@
+ERROR StatusLogger No log4j2 configuration file found. Using default configuration: logging only errors to the console.
+Specified option VERBOSE
+Specified option OUTPUT_PATH
+Oldfile: libtiff/cve_2016_10094/buggy-tiff2pdf.c
+Newfile: libtiff/cve_2016_10094/patches/tiff2pdf-1.c
+Preprocessing...
+Parsing files...
+Extracting textual diff from the two files...
+
+Finding common functions...
+
+> FUNCTION:
+t2p_readwrite_pdf_image_tile - Oldfile: at line 2085 - Newfile: at line 2085
+
+> Generating function graphs...
+> Applying heuristics...
+modified_conditions: false: no modified conditions
+flow_restrictive: false: inserted_ifs is false
+> Security-related: false
+> {C_SENS_FUN=false, KNOWN_PATCHES=false, OFF_BY_ONE=false, FLOW_RESTRICTIVE=false, REMOVED_STUFF=false, INSERTED_IFS=false, MODIFIED_CONDITIONS=false, INIT_OR_ERROR=false, INSERTED_STMT=true, CONDITIONS=false, KERNEL_SYNCH=false}
+> {WIDENED_CONDITIONS_COUNT=0, INSERTED_IFS_COUNT=1, BI_IMPLICATIONS_COUNT=0, CHANGED_CONDITIONS_COUNT=0, INSERTED_STMTS_COUNT=1, RESTRICTED_CONDITIONS_COUNT=0}
+> END_FUNCTION.
+AFFECTED_FUNCTIONS=1
+Done.
+
+[{"function":"t2p_readwrite_pdf_image_tile","originalLine":2085,"newLine":2085,"heuristics":{"C_SENS_FUN":false,"KNOWN_PATCHES":false,"OFF_BY_ONE":false,"FLOW_RESTRICTIVE":false,"REMOVED_STUFF":false,"INSERTED_IFS":false,"MODIFIED_CONDITIONS":false,"INIT_OR_ERROR":false,"INSERTED_STMT":true,"CONDITIONS":false,"KERNEL_SYNCH":false},"features":{"WIDENED_CONDITIONS_COUNT":0,"INSERTED_IFS_COUNT":1,"BI_IMPLICATIONS_COUNT":0,"CHANGED_CONDITIONS_COUNT":0,"INSERTED_STMTS_COUNT":1,"RESTRICTED_CONDITIONS_COUNT":0},"security":false}]
+ERROR StatusLogger No log4j2 configuration file found. Using default configuration: logging only errors to the console.
+Specified option VERBOSE
+Specified option OUTPUT_PATH
+Oldfile: libtiff/cve_2016_10094/buggy-tiff2pdf.c
+Newfile: libtiff/cve_2016_10094/patches/tiff2pdf-2.c
+Preprocessing...
+Parsing files...
+Extracting textual diff from the two files...
+
+Finding common functions...
+
+> FUNCTION:
+t2p_readwrite_pdf_image_tile - Oldfile: at line 2085 - Newfile: at line 2085
+
+> Generating function graphs...
+> Applying heuristics...
+modified_conditions: false: no modified conditions
+flow_restrictive: false: inserted_ifs is false
+> Security-related: false
+> {C_SENS_FUN=false, KNOWN_PATCHES=false, OFF_BY_ONE=false, FLOW_RESTRICTIVE=false, REMOVED_STUFF=false, INSERTED_IFS=false, MODIFIED_CONDITIONS=false, INIT_OR_ERROR=false, INSERTED_STMT=true, CONDITIONS=false, KERNEL_SYNCH=false}
+> {WIDENED_CONDITIONS_COUNT=0, INSERTED_IFS_COUNT=1, BI_IMPLICATIONS_COUNT=0, CHANGED_CONDITIONS_COUNT=0, INSERTED_STMTS_COUNT=1, RESTRICTED_CONDITIONS_COUNT=0}
+> END_FUNCTION.
+AFFECTED_FUNCTIONS=1
+Done.
+
+[{"function":"t2p_readwrite_pdf_image_tile","originalLine":2085,"newLine":2085,"heuristics":{"C_SENS_FUN":false,"KNOWN_PATCHES":false,"OFF_BY_ONE":false,"FLOW_RESTRICTIVE":false,"REMOVED_STUFF":false,"INSERTED_IFS":false,"MODIFIED_CONDITIONS":false,"INIT_OR_ERROR":false,"INSERTED_STMT":true,"CONDITIONS":false,"KERNEL_SYNCH":false},"features":{"WIDENED_CONDITIONS_COUNT":0,"INSERTED_IFS_COUNT":1,"BI_IMPLICATIONS_COUNT":0,"CHANGED_CONDITIONS_COUNT":0,"INSERTED_STMTS_COUNT":1,"RESTRICTED_CONDITIONS_COUNT":0},"security":false}]

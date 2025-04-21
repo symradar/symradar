@@ -1,0 +1,164 @@
+<?xml version="1.0"?>
+<project name="Joern" default="jar" basedir=".">
+  <property environment="env"/>
+  <property name="src.dir" location="src" />
+  <property name="build.dir" location="bin" />
+  <property name="lib.dir" location="lib" />
+  <property name="test.dir" location="src" />
+  <property name="test.report.dir" location="testreport" />
+  <!-- Junit class path -->
+  <path id="junit.class.path">
+    <pathelement location="${lib.dir}/junit.jar" />
+    <pathelement location="${lib.dir}/hamcrest-core-1.3.jar" />
+    <pathelement location="${lib.dir}/geronimo-jta_1.1_spec-1.1.1.jar"/>
+    <pathelement location="${build.dir}" />
+  </path>
+  <!-- Add jars to the classpath -->
+  <path id="joern.classpath">
+    <fileset dir="${lib.dir}" includes="**/*.jar"/>
+    <!--<pathelement location="bin"/>
+    <path refid="junit.class.path"/>
+    <pathelement location="${lib.dir}/antlr4-runtime-4.2.1-SNAPSHOT.jar"/>
+	  <pathelement location="${lib.dir}/antlr4-annotations-4.2.1-SNAPSHOT.jar"/>
+	  <pathelement location="${lib.dir}/commons-cli-1.2.jar"/>
+    <pathelement location="${lib.dir}/hamcrest-core-1.3.jar"/>
+    <pathelement location="${lib.dir}/lucene-core-3.6.2.jar"/>
+    <pathelement location="${lib.dir}/neo4j-kernel-2.1.8.jar"/>
+    <pathelement location="${lib.dir}/neo4j-lucene-index-2.1.8.jar"/>
+	  <pathelement location="${lib.dir}/neo4j-primitive-collections-2.1.8.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/runtime-3.10.0-v20140318-2214.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/gen.css-2.1.0-SNAPSHOT.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/gen.js-2.1.0-SNAPSHOT.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/registry-3.5.400-v20140428-1507.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/reflections-0.9.10.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/app-1.3.200-v20130910-1609.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/gen.c-2.1.0-SNAPSHOT.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/commons-codec-1.10.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/rhino-1.7.7.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/gen.jdt-2.1.0-SNAPSHOT.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/commons-logging-1.2.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/jobs-3.6.0-v20140424-0053.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/trove4j-3.0.3.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/spring-aop-4.1.6.RELEASE.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/ph-css-5.0.1.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/jtidy-r938.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/nanohttpd-2.1.1.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/aopalliance-1.0.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/gen.antlr-r-2.1.0-SNAPSHOT.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/spring-webmvc-4.1.6.RELEASE.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/gen.antlr-php-2.1.0-SNAPSHOT.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/gen.antlr-2.1.0-SNAPSHOT.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/javax.inject-1.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/gen.antlr-xml-2.1.0-SNAPSHOT.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/antlr-runtime-3.5.2.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/spring-context-4.1.6.RELEASE.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/slf4j-api-1.7.21.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/contenttype-3.4.200-v20140207-1251.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/nanohttpd-webserver-2.1.1.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/org.eclipse.jdt.core-3.11.0.v20150602-1242.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/spring-web-4.1.6.RELEASE.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/ph-commons-8.3.0.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/guava-18.0.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/javassist-3.18.2-GA.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/junit-4.8.2.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/org.eclipse.core.resources-3.10.0.v20150423-0755.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/gen.srcml-2.1.0-SNAPSHOT.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/core-2.1.0-SNAPSHOT.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/osgi-3.10.0-v20140606-1445.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/spring-expression-4.1.6.RELEASE.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/antlr-3.5.2.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/gen.antlr-antlr-2.1.0-SNAPSHOT.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/commons-lang3-3.1.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/gen.antlr-json-2.1.0-SNAPSHOT.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/annotations-2.0.1.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/jrubyparser-0.5.3.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/jsr305-3.0.1.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/simmetrics-core-3.2.3.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/ST4-4.0.8.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/client.diff-2.1.0-SNAPSHOT.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/spring-core-4.1.6.RELEASE.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/guice-3.0.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/common-3.6.200-v20130402-1505.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/asm-3.1.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/client-2.1.0-SNAPSHOT.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/gson-2.4.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/servlet-api-2.4.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/commons-io-2.0.1.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/preferences-3.5.200-v20140224-1527.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/gen.ruby-2.1.0-SNAPSHOT.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/rendersnake-1.9.0.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/spring-beans-4.1.6.RELEASE.jar"/>
+  	<pathelement location="${lib.dir}/gumtree-20161006-2.1.0-SNAPSHOT/cglib-2.2.1-v20090111.jar"/>-->
+  </path>
+  <target name="clean">
+    <delete dir="${build.dir}" />
+    <delete dir="${test.report.dir}" />
+  </target>
+  <target name="makedir">
+    <mkdir dir="${build.dir}" />
+    <mkdir dir="${test.report.dir}" />
+  </target>
+  <target name="compile">
+    <javac srcdir="${src.dir}" destdir="${build.dir}" includeantruntime="false">
+	<src path="src"/>
+	<classpath refid="joern.classpath"/>
+    </javac>
+  </target>
+  <target name="jar" depends="clean,makedir,compile">
+    <jar destfile="${build.dir}/joern.jar"
+	 basedir="${build.dir}"
+	 includes="**/*.class">
+      <manifest>
+	<attribute name="Main-Class" value="tools.index.IndexMain" />
+      </manifest>
+      <fileset dir="${build.dir}" includes="**/*.class" />
+      <zipgroupfileset dir="${lib.dir}" includes="**/*.jar" />
+    </jar>
+  </target>
+  <target name="tools" depends="icfg,argumentTainter">
+  </target>
+  <target name="prepareTestDB" depends="tools">
+    <exec executable="${env.SHELL}">
+      <arg value="rebuildTestDB.sh"/>
+    </exec>
+  </target>
+  <target name="test" depends="jar, prepareTestDB">
+    <junit printsummary="yes" haltonfailure="false">
+      <classpath refid="joern.classpath" />
+      <formatter type="xml" />
+      <batchtest fork="yes" todir="${test.report.dir}" skipnontests="true">
+	<fileset dir="${test.dir}">
+	  <include name="tests/**/*.java" />
+	</fileset>
+      </batchtest>
+    </junit>
+    <junitreport todir="${test.report.dir}">
+      <fileset dir="${test.report.dir}">
+	<include name="TEST-*.xml"/>
+      </fileset>
+      <report format="frames" todir="${test.report.dir}/html"/>
+    </junitreport>
+  </target>
+  <target name="icfg" depends="compile">
+    <jar destfile="${build.dir}/icfg.jar"
+	 basedir="${build.dir}"
+	 includes="**/*.class">
+      <manifest>
+	<attribute name="Main-Class" value="tools.icfg.ICFGMain" />
+      </manifest>
+    <fileset dir="${build.dir}" includes="**/*.class" />
+    <zipgroupfileset dir="${lib.dir}" includes="**/*.jar" />
+    </jar>
+  </target>
+  <target name="argumentTainter" depends="compile">
+    <jar destfile="${build.dir}/argumentTainter.jar"
+	 basedir="${build.dir}"
+	 includes="**/*.class">
+      <manifest>
+	<attribute name="Main-Class" value="tools.argumentTainter.ArgumentTainterMain" />
+      </manifest>
+      <fileset dir="${build.dir}" includes="**/*.class" />
+      <zipgroupfileset dir="${lib.dir}" includes="**/*.jar" />
+    </jar>
+  </target>
+</project>

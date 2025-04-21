@@ -1,0 +1,28 @@
+ERROR StatusLogger No log4j2 configuration file found. Using default configuration: logging only errors to the console.
+Specified option VERBOSE
+Specified option OUTPUT_PATH
+Oldfile: libtiff/cve_2016_5314/buggy-tif_pixarlog.c
+Newfile: libtiff/cve_2016_5314/patches/tif_pixarlog-1.c
+Preprocessing...
+Parsing files...
+Extracting textual diff from the two files...
+
+Finding common functions...
+
+> FUNCTION:
+PixarLogDecode - Oldfile: at line 739 - Newfile: at line 739
+
+> Generating function graphs...
+> Applying heuristics...
+modified_conditions: false: no modified conditions
+inserted_if: true: no else and error handling block
+inserted_if: true: no else and error handling block
+flow_restrictive: true: matches all heuristics
+> Security-related: true
+> {INSERTED_IFS=true, INSERTED_STMT=false, KERNEL_SYNCH=false, KNOWN_PATCHES=false, INIT_OR_ERROR=false, CONDITIONS=false, REMOVED_STUFF=false, C_SENS_FUN=false, FLOW_RESTRICTIVE=true, OFF_BY_ONE=false, MODIFIED_CONDITIONS=false}
+> {CHANGED_CONDITIONS_COUNT=0, WIDENED_CONDITIONS_COUNT=0, INSERTED_IFS_COUNT=1, BI_IMPLICATIONS_COUNT=0, RESTRICTED_CONDITIONS_COUNT=0, INSERTED_STMTS_COUNT=0}
+> END_FUNCTION.
+AFFECTED_FUNCTIONS=1
+Done.
+
+[{"function":"PixarLogDecode","originalLine":739,"newLine":739,"heuristics":{"INSERTED_IFS":true,"INSERTED_STMT":false,"KERNEL_SYNCH":false,"KNOWN_PATCHES":false,"INIT_OR_ERROR":false,"CONDITIONS":false,"REMOVED_STUFF":false,"C_SENS_FUN":false,"FLOW_RESTRICTIVE":true,"OFF_BY_ONE":false,"MODIFIED_CONDITIONS":false},"features":{"CHANGED_CONDITIONS_COUNT":0,"WIDENED_CONDITIONS_COUNT":0,"INSERTED_IFS_COUNT":1,"BI_IMPLICATIONS_COUNT":0,"RESTRICTED_CONDITIONS_COUNT":0,"INSERTED_STMTS_COUNT":0},"security":true}]

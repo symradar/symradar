@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+PROGRAM=test
+
+cd "$(dirname "${BASH_SOURCE[0]}")"
+
+CPR_CC="$(realpath ../../main/cpr-cc)"
+
+if [ -f "$PROGRAM" ]; then
+   make clean
+fi
+
+rm -rf klee-*
+
+CC="$CPR_CC" make -e
+extract-bc "$PROGRAM"

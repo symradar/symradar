@@ -1,0 +1,1546 @@
+[
+  {
+    "num": 1,
+    "lid": "L290",
+    "patch": "((constant_a / i) == constant_a)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 0;\n  result = ((constant_a / i) == constant_a);\n"
+    ]
+  },
+  {
+    "num": 2,
+    "lid": "L290",
+    "patch": "((constant_a / size) == constant_a)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 0;\n  result = ((constant_a / size) == constant_a);\n"
+    ]
+  },
+  {
+    "num": 3,
+    "lid": "L290",
+    "patch": "(i == i)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  result = (i == i);\n"
+    ]
+  },
+  {
+    "num": 4,
+    "lid": "L290",
+    "patch": "(i < size)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  result = (i < size);\n"
+    ]
+  },
+  {
+    "num": 5,
+    "lid": "L290",
+    "patch": "(size != i)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  result = (size != i);\n"
+    ]
+  },
+  {
+    "num": 6,
+    "lid": "L290",
+    "patch": "(i <= size)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  result = (i <= size);\n"
+    ]
+  },
+  {
+    "num": 7,
+    "lid": "L290",
+    "patch": "((i / constant_a) == i)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 1;\n  result = ((i / constant_a) == i);\n"
+    ]
+  },
+  {
+    "num": 8,
+    "lid": "L290",
+    "patch": "(i <= (i / constant_a))",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 1;\n  result = (i <= (i / constant_a));\n"
+    ]
+  },
+  {
+    "num": 9,
+    "lid": "L290",
+    "patch": "((i / size) == constant_a)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 0;\n  result = ((i / size) == constant_a);\n"
+    ]
+  },
+  {
+    "num": 10,
+    "lid": "L290",
+    "patch": "(i < (size / constant_a))",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 1;\n  result = (i < (size / constant_a));\n"
+    ]
+  },
+  {
+    "num": 11,
+    "lid": "L290",
+    "patch": "((size / i) <= constant_a)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 10;\n  result = ((size / i) <= constant_a);\n"
+    ]
+  },
+  {
+    "num": 12,
+    "lid": "L290",
+    "patch": "((size / constant_a) == size)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 1;\n  result = ((size / constant_a) == size);\n"
+    ]
+  },
+  {
+    "num": 13,
+    "lid": "L290",
+    "patch": "(size <= (size / constant_a))",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 1;\n  result = (size <= (size / constant_a));\n"
+    ]
+  },
+  {
+    "num": 14,
+    "lid": "L290",
+    "patch": "((i / size) < i)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  result = ((i / size) < i);\n"
+    ]
+  },
+  {
+    "num": 15,
+    "lid": "L290",
+    "patch": "((size / i) != i)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  result = ((size / i) != i);\n"
+    ]
+  },
+  {
+    "num": 16,
+    "lid": "L290",
+    "patch": "((i / size) != i)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  result = ((i / size) != i);\n"
+    ]
+  },
+  {
+    "num": 17,
+    "lid": "L290",
+    "patch": "((i / size) <= i)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  result = ((i / size) <= i);\n"
+    ]
+  },
+  {
+    "num": 18,
+    "lid": "L290",
+    "patch": "((i / size) < size)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  result = ((i / size) < size);\n"
+    ]
+  },
+  {
+    "num": 19,
+    "lid": "L290",
+    "patch": "((size / i) < size)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  result = ((size / i) < size);\n"
+    ]
+  },
+  {
+    "num": 20,
+    "lid": "L290",
+    "patch": "((i / size) != size)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  result = ((i / size) != size);\n"
+    ]
+  },
+  {
+    "num": 21,
+    "lid": "L290",
+    "patch": "((size / i) != size)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  result = ((size / i) != size);\n"
+    ]
+  },
+  {
+    "num": 22,
+    "lid": "L290",
+    "patch": "((i / size) <= size)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  result = ((i / size) <= size);\n"
+    ]
+  },
+  {
+    "num": 23,
+    "lid": "L290",
+    "patch": "((size / i) <= size)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  result = ((size / i) <= size);\n"
+    ]
+  },
+  {
+    "num": 24,
+    "lid": "L290",
+    "patch": "((size / i) != (i / i))",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  result = ((size / i) != (i / i));\n"
+    ]
+  },
+  {
+    "num": 25,
+    "lid": "L290",
+    "patch": "(i <= (size / constant_a))",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 1;\n  result = (i <= (size / constant_a));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 2;\n  result = (i <= (size / constant_a));\n"
+    ]
+  },
+  {
+    "num": 26,
+    "lid": "L290",
+    "patch": "(i < constant_a)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 7;\n  result = (i < constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 8;\n  result = (i < constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 9;\n  result = (i < constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 10;\n  result = (i < constant_a);\n"
+    ]
+  },
+  {
+    "num": 27,
+    "lid": "L290",
+    "patch": "(i <= constant_a)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 6;\n  result = (i <= constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 7;\n  result = (i <= constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 8;\n  result = (i <= constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 9;\n  result = (i <= constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 10;\n  result = (i <= constant_a);\n"
+    ]
+  },
+  {
+    "num": 28,
+    "lid": "L290",
+    "patch": "(constant_a < (size / constant_a))",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -10;\n  result = (constant_a < (size / constant_a));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -9;\n  result = (constant_a < (size / constant_a));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -8;\n  result = (constant_a < (size / constant_a));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -7;\n  result = (constant_a < (size / constant_a));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -6;\n  result = (constant_a < (size / constant_a));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 1;\n  result = (constant_a < (size / constant_a));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 2;\n  result = (constant_a < (size / constant_a));\n"
+    ]
+  },
+  {
+    "num": 29,
+    "lid": "L290",
+    "patch": "(constant_a <= (size / constant_a))",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -10;\n  result = (constant_a <= (size / constant_a));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -9;\n  result = (constant_a <= (size / constant_a));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -8;\n  result = (constant_a <= (size / constant_a));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -7;\n  result = (constant_a <= (size / constant_a));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -6;\n  result = (constant_a <= (size / constant_a));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 1;\n  result = (constant_a <= (size / constant_a));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 2;\n  result = (constant_a <= (size / constant_a));\n"
+    ]
+  },
+  {
+    "num": 30,
+    "lid": "L290",
+    "patch": "((size / constant_a) < constant_a)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -2;\n  result = ((size / constant_a) < constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -1;\n  result = ((size / constant_a) < constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 0;\n  result = ((size / constant_a) < constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 6;\n  result = ((size / constant_a) < constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 7;\n  result = ((size / constant_a) < constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 8;\n  result = ((size / constant_a) < constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 9;\n  result = ((size / constant_a) < constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 10;\n  result = ((size / constant_a) < constant_a);\n"
+    ]
+  },
+  {
+    "num": 31,
+    "lid": "L290",
+    "patch": "((size / constant_a) <= constant_a)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -2;\n  result = ((size / constant_a) <= constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -1;\n  result = ((size / constant_a) <= constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 0;\n  result = ((size / constant_a) <= constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 6;\n  result = ((size / constant_a) <= constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 7;\n  result = ((size / constant_a) <= constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 8;\n  result = ((size / constant_a) <= constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 9;\n  result = ((size / constant_a) <= constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 10;\n  result = ((size / constant_a) <= constant_a);\n"
+    ]
+  },
+  {
+    "num": 32,
+    "lid": "L290",
+    "patch": "(constant_a < (i / constant_a))",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -10;\n  result = (constant_a < (i / constant_a));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -9;\n  result = (constant_a < (i / constant_a));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -8;\n  result = (constant_a < (i / constant_a));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -7;\n  result = (constant_a < (i / constant_a));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -6;\n  result = (constant_a < (i / constant_a));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -5;\n  result = (constant_a < (i / constant_a));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -4;\n  result = (constant_a < (i / constant_a));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -3;\n  result = (constant_a < (i / constant_a));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 1;\n  result = (constant_a < (i / constant_a));\n"
+    ]
+  },
+  {
+    "num": 33,
+    "lid": "L290",
+    "patch": "(constant_a <= (i / constant_a))",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -10;\n  result = (constant_a <= (i / constant_a));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -9;\n  result = (constant_a <= (i / constant_a));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -8;\n  result = (constant_a <= (i / constant_a));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -7;\n  result = (constant_a <= (i / constant_a));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -6;\n  result = (constant_a <= (i / constant_a));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -5;\n  result = (constant_a <= (i / constant_a));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -4;\n  result = (constant_a <= (i / constant_a));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -3;\n  result = (constant_a <= (i / constant_a));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 1;\n  result = (constant_a <= (i / constant_a));\n"
+    ]
+  },
+  {
+    "num": 34,
+    "lid": "L290",
+    "patch": "((i / constant_a) < constant_a)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -1;\n  result = ((i / constant_a) < constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 0;\n  result = ((i / constant_a) < constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 3;\n  result = ((i / constant_a) < constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 4;\n  result = ((i / constant_a) < constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 5;\n  result = ((i / constant_a) < constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 6;\n  result = ((i / constant_a) < constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 7;\n  result = ((i / constant_a) < constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 8;\n  result = ((i / constant_a) < constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 9;\n  result = ((i / constant_a) < constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 10;\n  result = ((i / constant_a) < constant_a);\n"
+    ]
+  },
+  {
+    "num": 35,
+    "lid": "L290",
+    "patch": "(constant_a < (constant_a / i))",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -10;\n  result = (constant_a < (constant_a / i));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -9;\n  result = (constant_a < (constant_a / i));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -8;\n  result = (constant_a < (constant_a / i));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -7;\n  result = (constant_a < (constant_a / i));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -6;\n  result = (constant_a < (constant_a / i));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -5;\n  result = (constant_a < (constant_a / i));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -4;\n  result = (constant_a < (constant_a / i));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -3;\n  result = (constant_a < (constant_a / i));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -2;\n  result = (constant_a < (constant_a / i));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -1;\n  result = (constant_a < (constant_a / i));\n"
+    ]
+  },
+  {
+    "num": 36,
+    "lid": "L290",
+    "patch": "((constant_a / i) < constant_a)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 1;\n  result = ((constant_a / i) < constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 2;\n  result = ((constant_a / i) < constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 3;\n  result = ((constant_a / i) < constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 4;\n  result = ((constant_a / i) < constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 5;\n  result = ((constant_a / i) < constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 6;\n  result = ((constant_a / i) < constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 7;\n  result = ((constant_a / i) < constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 8;\n  result = ((constant_a / i) < constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 9;\n  result = ((constant_a / i) < constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 10;\n  result = ((constant_a / i) < constant_a);\n"
+    ]
+  },
+  {
+    "num": 37,
+    "lid": "L290",
+    "patch": "((i / constant_a) <= constant_a)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -1;\n  result = ((i / constant_a) <= constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 0;\n  result = ((i / constant_a) <= constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 3;\n  result = ((i / constant_a) <= constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 4;\n  result = ((i / constant_a) <= constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 5;\n  result = ((i / constant_a) <= constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 6;\n  result = ((i / constant_a) <= constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 7;\n  result = ((i / constant_a) <= constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 8;\n  result = ((i / constant_a) <= constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 9;\n  result = ((i / constant_a) <= constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 10;\n  result = ((i / constant_a) <= constant_a);\n"
+    ]
+  },
+  {
+    "num": 38,
+    "lid": "L290",
+    "patch": "((constant_a / size) < constant_a)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 1;\n  result = ((constant_a / size) < constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 2;\n  result = ((constant_a / size) < constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 3;\n  result = ((constant_a / size) < constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 4;\n  result = ((constant_a / size) < constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 5;\n  result = ((constant_a / size) < constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 6;\n  result = ((constant_a / size) < constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 7;\n  result = ((constant_a / size) < constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 8;\n  result = ((constant_a / size) < constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 9;\n  result = ((constant_a / size) < constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 10;\n  result = ((constant_a / size) < constant_a);\n"
+    ]
+  },
+  {
+    "num": 39,
+    "lid": "L290",
+    "patch": "(constant_a < (constant_a / size))",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -10;\n  result = (constant_a < (constant_a / size));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -9;\n  result = (constant_a < (constant_a / size));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -8;\n  result = (constant_a < (constant_a / size));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -7;\n  result = (constant_a < (constant_a / size));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -6;\n  result = (constant_a < (constant_a / size));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -5;\n  result = (constant_a < (constant_a / size));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -4;\n  result = (constant_a < (constant_a / size));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -3;\n  result = (constant_a < (constant_a / size));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -2;\n  result = (constant_a < (constant_a / size));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -1;\n  result = (constant_a < (constant_a / size));\n"
+    ]
+  },
+  {
+    "num": 40,
+    "lid": "L290",
+    "patch": "(constant_a < (i / size))",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -10;\n  result = (constant_a < (i / size));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -9;\n  result = (constant_a < (i / size));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -8;\n  result = (constant_a < (i / size));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -7;\n  result = (constant_a < (i / size));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -6;\n  result = (constant_a < (i / size));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -5;\n  result = (constant_a < (i / size));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -4;\n  result = (constant_a < (i / size));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -3;\n  result = (constant_a < (i / size));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -2;\n  result = (constant_a < (i / size));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -1;\n  result = (constant_a < (i / size));\n"
+    ]
+  },
+  {
+    "num": 41,
+    "lid": "L290",
+    "patch": "((i / size) < constant_a)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 1;\n  result = ((i / size) < constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 2;\n  result = ((i / size) < constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 3;\n  result = ((i / size) < constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 4;\n  result = ((i / size) < constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 5;\n  result = ((i / size) < constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 6;\n  result = ((i / size) < constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 7;\n  result = ((i / size) < constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 8;\n  result = ((i / size) < constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 9;\n  result = ((i / size) < constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 10;\n  result = ((i / size) < constant_a);\n"
+    ]
+  },
+  {
+    "num": 42,
+    "lid": "L290",
+    "patch": "(constant_a <= (constant_a / i))",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -10;\n  result = (constant_a <= (constant_a / i));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -9;\n  result = (constant_a <= (constant_a / i));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -8;\n  result = (constant_a <= (constant_a / i));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -7;\n  result = (constant_a <= (constant_a / i));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -6;\n  result = (constant_a <= (constant_a / i));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -5;\n  result = (constant_a <= (constant_a / i));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -4;\n  result = (constant_a <= (constant_a / i));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -3;\n  result = (constant_a <= (constant_a / i));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -2;\n  result = (constant_a <= (constant_a / i));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -1;\n  result = (constant_a <= (constant_a / i));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 0;\n  result = (constant_a <= (constant_a / i));\n"
+    ]
+  },
+  {
+    "num": 43,
+    "lid": "L290",
+    "patch": "((constant_a / i) <= constant_a)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 0;\n  result = ((constant_a / i) <= constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 1;\n  result = ((constant_a / i) <= constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 2;\n  result = ((constant_a / i) <= constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 3;\n  result = ((constant_a / i) <= constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 4;\n  result = ((constant_a / i) <= constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 5;\n  result = ((constant_a / i) <= constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 6;\n  result = ((constant_a / i) <= constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 7;\n  result = ((constant_a / i) <= constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 8;\n  result = ((constant_a / i) <= constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 9;\n  result = ((constant_a / i) <= constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 10;\n  result = ((constant_a / i) <= constant_a);\n"
+    ]
+  },
+  {
+    "num": 44,
+    "lid": "L290",
+    "patch": "(constant_a <= (constant_a / size))",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -10;\n  result = (constant_a <= (constant_a / size));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -9;\n  result = (constant_a <= (constant_a / size));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -8;\n  result = (constant_a <= (constant_a / size));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -7;\n  result = (constant_a <= (constant_a / size));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -6;\n  result = (constant_a <= (constant_a / size));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -5;\n  result = (constant_a <= (constant_a / size));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -4;\n  result = (constant_a <= (constant_a / size));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -3;\n  result = (constant_a <= (constant_a / size));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -2;\n  result = (constant_a <= (constant_a / size));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -1;\n  result = (constant_a <= (constant_a / size));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 0;\n  result = (constant_a <= (constant_a / size));\n"
+    ]
+  },
+  {
+    "num": 45,
+    "lid": "L290",
+    "patch": "((constant_a / size) <= constant_a)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 0;\n  result = ((constant_a / size) <= constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 1;\n  result = ((constant_a / size) <= constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 2;\n  result = ((constant_a / size) <= constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 3;\n  result = ((constant_a / size) <= constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 4;\n  result = ((constant_a / size) <= constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 5;\n  result = ((constant_a / size) <= constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 6;\n  result = ((constant_a / size) <= constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 7;\n  result = ((constant_a / size) <= constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 8;\n  result = ((constant_a / size) <= constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 9;\n  result = ((constant_a / size) <= constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 10;\n  result = ((constant_a / size) <= constant_a);\n"
+    ]
+  },
+  {
+    "num": 46,
+    "lid": "L290",
+    "patch": "((size / constant_a) < i)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -10;\n  result = ((size / constant_a) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -9;\n  result = ((size / constant_a) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -8;\n  result = ((size / constant_a) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -7;\n  result = ((size / constant_a) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -6;\n  result = ((size / constant_a) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -5;\n  result = ((size / constant_a) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -4;\n  result = ((size / constant_a) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -3;\n  result = ((size / constant_a) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -2;\n  result = ((size / constant_a) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -1;\n  result = ((size / constant_a) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 0;\n  result = ((size / constant_a) < i);\n"
+    ]
+  },
+  {
+    "num": 47,
+    "lid": "L290",
+    "patch": "((i / size) <= constant_a)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 0;\n  result = ((i / size) <= constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 1;\n  result = ((i / size) <= constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 2;\n  result = ((i / size) <= constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 3;\n  result = ((i / size) <= constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 4;\n  result = ((i / size) <= constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 5;\n  result = ((i / size) <= constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 6;\n  result = ((i / size) <= constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 7;\n  result = ((i / size) <= constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 8;\n  result = ((i / size) <= constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 9;\n  result = ((i / size) <= constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 10;\n  result = ((i / size) <= constant_a);\n"
+    ]
+  },
+  {
+    "num": 48,
+    "lid": "L290",
+    "patch": "(constant_a <= (i / size))",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -10;\n  result = (constant_a <= (i / size));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -9;\n  result = (constant_a <= (i / size));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -8;\n  result = (constant_a <= (i / size));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -7;\n  result = (constant_a <= (i / size));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -6;\n  result = (constant_a <= (i / size));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -5;\n  result = (constant_a <= (i / size));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -4;\n  result = (constant_a <= (i / size));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -3;\n  result = (constant_a <= (i / size));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -2;\n  result = (constant_a <= (i / size));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -1;\n  result = (constant_a <= (i / size));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 0;\n  result = (constant_a <= (i / size));\n"
+    ]
+  },
+  {
+    "num": 49,
+    "lid": "L290",
+    "patch": "(constant_a < (size / i))",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -10;\n  result = (constant_a < (size / i));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -9;\n  result = (constant_a < (size / i));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -8;\n  result = (constant_a < (size / i));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -7;\n  result = (constant_a < (size / i));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -6;\n  result = (constant_a < (size / i));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -5;\n  result = (constant_a < (size / i));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -4;\n  result = (constant_a < (size / i));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -3;\n  result = (constant_a < (size / i));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -2;\n  result = (constant_a < (size / i));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -1;\n  result = (constant_a < (size / i));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 0;\n  result = (constant_a < (size / i));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 1;\n  result = (constant_a < (size / i));\n"
+    ]
+  },
+  {
+    "num": 50,
+    "lid": "L290",
+    "patch": "(constant_a < i)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -10;\n  result = (constant_a < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -9;\n  result = (constant_a < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -8;\n  result = (constant_a < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -7;\n  result = (constant_a < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -6;\n  result = (constant_a < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -5;\n  result = (constant_a < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -4;\n  result = (constant_a < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -3;\n  result = (constant_a < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -2;\n  result = (constant_a < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -1;\n  result = (constant_a < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 0;\n  result = (constant_a < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 1;\n  result = (constant_a < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 2;\n  result = (constant_a < i);\n"
+    ]
+  },
+  {
+    "num": 51,
+    "lid": "L290",
+    "patch": "((size / constant_a) <= i)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -10;\n  result = ((size / constant_a) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -9;\n  result = ((size / constant_a) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -8;\n  result = ((size / constant_a) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -7;\n  result = ((size / constant_a) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -6;\n  result = ((size / constant_a) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -5;\n  result = ((size / constant_a) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -4;\n  result = ((size / constant_a) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -3;\n  result = ((size / constant_a) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -2;\n  result = ((size / constant_a) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -1;\n  result = ((size / constant_a) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 0;\n  result = ((size / constant_a) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 9;\n  result = ((size / constant_a) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 10;\n  result = ((size / constant_a) <= i);\n"
+    ]
+  },
+  {
+    "num": 52,
+    "lid": "L290",
+    "patch": "(constant_a <= (size / i))",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -10;\n  result = (constant_a <= (size / i));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -9;\n  result = (constant_a <= (size / i));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -8;\n  result = (constant_a <= (size / i));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -7;\n  result = (constant_a <= (size / i));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -6;\n  result = (constant_a <= (size / i));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -5;\n  result = (constant_a <= (size / i));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -4;\n  result = (constant_a <= (size / i));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -3;\n  result = (constant_a <= (size / i));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -2;\n  result = (constant_a <= (size / i));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -1;\n  result = (constant_a <= (size / i));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 0;\n  result = (constant_a <= (size / i));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 1;\n  result = (constant_a <= (size / i));\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 2;\n  result = (constant_a <= (size / i));\n"
+    ]
+  },
+  {
+    "num": 53,
+    "lid": "L290",
+    "patch": "(constant_a <= i)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -10;\n  result = (constant_a <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -9;\n  result = (constant_a <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -8;\n  result = (constant_a <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -7;\n  result = (constant_a <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -6;\n  result = (constant_a <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -5;\n  result = (constant_a <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -4;\n  result = (constant_a <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -3;\n  result = (constant_a <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -2;\n  result = (constant_a <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -1;\n  result = (constant_a <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 0;\n  result = (constant_a <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 1;\n  result = (constant_a <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 2;\n  result = (constant_a <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 3;\n  result = (constant_a <= i);\n"
+    ]
+  },
+  {
+    "num": 54,
+    "lid": "L290",
+    "patch": "(constant_a < size)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -10;\n  result = (constant_a < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -9;\n  result = (constant_a < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -8;\n  result = (constant_a < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -7;\n  result = (constant_a < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -6;\n  result = (constant_a < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -5;\n  result = (constant_a < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -4;\n  result = (constant_a < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -3;\n  result = (constant_a < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -2;\n  result = (constant_a < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -1;\n  result = (constant_a < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 0;\n  result = (constant_a < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 1;\n  result = (constant_a < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 2;\n  result = (constant_a < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 3;\n  result = (constant_a < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 4;\n  result = (constant_a < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 5;\n  result = (constant_a < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 6;\n  result = (constant_a < size);\n"
+    ]
+  },
+  {
+    "num": 55,
+    "lid": "L290",
+    "patch": "((size / constant_a) != i)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -10;\n  result = ((size / constant_a) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -9;\n  result = ((size / constant_a) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -8;\n  result = ((size / constant_a) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -7;\n  result = ((size / constant_a) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -6;\n  result = ((size / constant_a) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -5;\n  result = ((size / constant_a) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -4;\n  result = ((size / constant_a) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -3;\n  result = ((size / constant_a) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -2;\n  result = ((size / constant_a) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -1;\n  result = ((size / constant_a) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 0;\n  result = ((size / constant_a) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 1;\n  result = ((size / constant_a) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 3;\n  result = ((size / constant_a) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 4;\n  result = ((size / constant_a) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 6;\n  result = ((size / constant_a) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 7;\n  result = ((size / constant_a) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 8;\n  result = ((size / constant_a) != i);\n"
+    ]
+  },
+  {
+    "num": 56,
+    "lid": "L290",
+    "patch": "(constant_a <= size)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -10;\n  result = (constant_a <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -9;\n  result = (constant_a <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -8;\n  result = (constant_a <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -7;\n  result = (constant_a <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -6;\n  result = (constant_a <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -5;\n  result = (constant_a <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -4;\n  result = (constant_a <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -3;\n  result = (constant_a <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -2;\n  result = (constant_a <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -1;\n  result = (constant_a <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 0;\n  result = (constant_a <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 1;\n  result = (constant_a <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 2;\n  result = (constant_a <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 3;\n  result = (constant_a <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 4;\n  result = (constant_a <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 5;\n  result = (constant_a <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 6;\n  result = (constant_a <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 7;\n  result = (constant_a <= size);\n"
+    ]
+  },
+  {
+    "num": 57,
+    "lid": "L290",
+    "patch": "((size / i) != constant_a)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -10;\n  result = ((size / i) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -9;\n  result = ((size / i) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -8;\n  result = ((size / i) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -7;\n  result = ((size / i) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -6;\n  result = ((size / i) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -5;\n  result = ((size / i) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -4;\n  result = ((size / i) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -3;\n  result = ((size / i) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -2;\n  result = ((size / i) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -1;\n  result = ((size / i) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 0;\n  result = ((size / i) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 1;\n  result = ((size / i) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 3;\n  result = ((size / i) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 4;\n  result = ((size / i) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 6;\n  result = ((size / i) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 7;\n  result = ((size / i) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 8;\n  result = ((size / i) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 9;\n  result = ((size / i) != constant_a);\n"
+    ]
+  },
+  {
+    "num": 58,
+    "lid": "L290",
+    "patch": "(constant_a != i)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -10;\n  result = (constant_a != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -9;\n  result = (constant_a != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -8;\n  result = (constant_a != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -7;\n  result = (constant_a != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -6;\n  result = (constant_a != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -5;\n  result = (constant_a != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -4;\n  result = (constant_a != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -3;\n  result = (constant_a != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -2;\n  result = (constant_a != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -1;\n  result = (constant_a != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 0;\n  result = (constant_a != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 1;\n  result = (constant_a != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 2;\n  result = (constant_a != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 4;\n  result = (constant_a != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 5;\n  result = (constant_a != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 7;\n  result = (constant_a != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 8;\n  result = (constant_a != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 9;\n  result = (constant_a != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 10;\n  result = (constant_a != i);\n"
+    ]
+  },
+  {
+    "num": 59,
+    "lid": "L290",
+    "patch": "((constant_a / i) < i)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -10;\n  result = ((constant_a / i) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -9;\n  result = ((constant_a / i) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -8;\n  result = ((constant_a / i) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -7;\n  result = ((constant_a / i) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -6;\n  result = ((constant_a / i) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -5;\n  result = ((constant_a / i) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -4;\n  result = ((constant_a / i) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -3;\n  result = ((constant_a / i) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -2;\n  result = ((constant_a / i) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -1;\n  result = ((constant_a / i) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 0;\n  result = ((constant_a / i) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 1;\n  result = ((constant_a / i) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 2;\n  result = ((constant_a / i) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 3;\n  result = ((constant_a / i) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 4;\n  result = ((constant_a / i) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 5;\n  result = ((constant_a / i) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 6;\n  result = ((constant_a / i) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 7;\n  result = ((constant_a / i) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 8;\n  result = ((constant_a / i) < i);\n"
+    ]
+  },
+  {
+    "num": 60,
+    "lid": "L290",
+    "patch": "((constant_a / i) != i)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -10;\n  result = ((constant_a / i) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -9;\n  result = ((constant_a / i) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -8;\n  result = ((constant_a / i) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -7;\n  result = ((constant_a / i) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -6;\n  result = ((constant_a / i) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -5;\n  result = ((constant_a / i) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -4;\n  result = ((constant_a / i) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -3;\n  result = ((constant_a / i) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -2;\n  result = ((constant_a / i) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -1;\n  result = ((constant_a / i) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 0;\n  result = ((constant_a / i) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 1;\n  result = ((constant_a / i) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 2;\n  result = ((constant_a / i) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 3;\n  result = ((constant_a / i) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 4;\n  result = ((constant_a / i) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 5;\n  result = ((constant_a / i) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 6;\n  result = ((constant_a / i) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 7;\n  result = ((constant_a / i) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 8;\n  result = ((constant_a / i) != i);\n"
+    ]
+  },
+  {
+    "num": 61,
+    "lid": "L290",
+    "patch": "(constant_a != size)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -10;\n  result = (constant_a != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -9;\n  result = (constant_a != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -8;\n  result = (constant_a != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -7;\n  result = (constant_a != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -6;\n  result = (constant_a != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -5;\n  result = (constant_a != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -4;\n  result = (constant_a != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -3;\n  result = (constant_a != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -2;\n  result = (constant_a != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -1;\n  result = (constant_a != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 0;\n  result = (constant_a != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 1;\n  result = (constant_a != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 2;\n  result = (constant_a != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 3;\n  result = (constant_a != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 4;\n  result = (constant_a != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 5;\n  result = (constant_a != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 6;\n  result = (constant_a != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 8;\n  result = (constant_a != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 9;\n  result = (constant_a != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 10;\n  result = (constant_a != size);\n"
+    ]
+  },
+  {
+    "num": 62,
+    "lid": "L290",
+    "patch": "((constant_a / i) != constant_a)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -10;\n  result = ((constant_a / i) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -9;\n  result = ((constant_a / i) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -8;\n  result = ((constant_a / i) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -7;\n  result = ((constant_a / i) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -6;\n  result = ((constant_a / i) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -5;\n  result = ((constant_a / i) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -4;\n  result = ((constant_a / i) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -3;\n  result = ((constant_a / i) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -2;\n  result = ((constant_a / i) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -1;\n  result = ((constant_a / i) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 1;\n  result = ((constant_a / i) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 2;\n  result = ((constant_a / i) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 3;\n  result = ((constant_a / i) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 4;\n  result = ((constant_a / i) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 5;\n  result = ((constant_a / i) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 6;\n  result = ((constant_a / i) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 7;\n  result = ((constant_a / i) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 8;\n  result = ((constant_a / i) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 9;\n  result = ((constant_a / i) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 10;\n  result = ((constant_a / i) != constant_a);\n"
+    ]
+  },
+  {
+    "num": 63,
+    "lid": "L290",
+    "patch": "((constant_a / size) != constant_a)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -10;\n  result = ((constant_a / size) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -9;\n  result = ((constant_a / size) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -8;\n  result = ((constant_a / size) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -7;\n  result = ((constant_a / size) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -6;\n  result = ((constant_a / size) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -5;\n  result = ((constant_a / size) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -4;\n  result = ((constant_a / size) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -3;\n  result = ((constant_a / size) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -2;\n  result = ((constant_a / size) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -1;\n  result = ((constant_a / size) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 1;\n  result = ((constant_a / size) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 2;\n  result = ((constant_a / size) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 3;\n  result = ((constant_a / size) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 4;\n  result = ((constant_a / size) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 5;\n  result = ((constant_a / size) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 6;\n  result = ((constant_a / size) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 7;\n  result = ((constant_a / size) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 8;\n  result = ((constant_a / size) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 9;\n  result = ((constant_a / size) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 10;\n  result = ((constant_a / size) != constant_a);\n"
+    ]
+  },
+  {
+    "num": 64,
+    "lid": "L290",
+    "patch": "((i / constant_a) < i)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -10;\n  result = ((i / constant_a) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -9;\n  result = ((i / constant_a) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -8;\n  result = ((i / constant_a) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -7;\n  result = ((i / constant_a) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -6;\n  result = ((i / constant_a) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -5;\n  result = ((i / constant_a) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -4;\n  result = ((i / constant_a) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -3;\n  result = ((i / constant_a) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -2;\n  result = ((i / constant_a) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -1;\n  result = ((i / constant_a) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 0;\n  result = ((i / constant_a) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 2;\n  result = ((i / constant_a) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 3;\n  result = ((i / constant_a) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 4;\n  result = ((i / constant_a) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 5;\n  result = ((i / constant_a) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 6;\n  result = ((i / constant_a) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 7;\n  result = ((i / constant_a) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 8;\n  result = ((i / constant_a) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 9;\n  result = ((i / constant_a) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 10;\n  result = ((i / constant_a) < i);\n"
+    ]
+  },
+  {
+    "num": 65,
+    "lid": "L290",
+    "patch": "((i / constant_a) != i)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -10;\n  result = ((i / constant_a) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -9;\n  result = ((i / constant_a) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -8;\n  result = ((i / constant_a) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -7;\n  result = ((i / constant_a) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -6;\n  result = ((i / constant_a) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -5;\n  result = ((i / constant_a) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -4;\n  result = ((i / constant_a) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -3;\n  result = ((i / constant_a) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -2;\n  result = ((i / constant_a) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -1;\n  result = ((i / constant_a) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 0;\n  result = ((i / constant_a) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 2;\n  result = ((i / constant_a) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 3;\n  result = ((i / constant_a) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 4;\n  result = ((i / constant_a) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 5;\n  result = ((i / constant_a) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 6;\n  result = ((i / constant_a) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 7;\n  result = ((i / constant_a) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 8;\n  result = ((i / constant_a) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 9;\n  result = ((i / constant_a) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 10;\n  result = ((i / constant_a) != i);\n"
+    ]
+  },
+  {
+    "num": 66,
+    "lid": "L290",
+    "patch": "((i / size) != constant_a)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -10;\n  result = ((i / size) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -9;\n  result = ((i / size) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -8;\n  result = ((i / size) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -7;\n  result = ((i / size) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -6;\n  result = ((i / size) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -5;\n  result = ((i / size) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -4;\n  result = ((i / size) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -3;\n  result = ((i / size) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -2;\n  result = ((i / size) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -1;\n  result = ((i / size) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 1;\n  result = ((i / size) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 2;\n  result = ((i / size) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 3;\n  result = ((i / size) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 4;\n  result = ((i / size) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 5;\n  result = ((i / size) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 6;\n  result = ((i / size) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 7;\n  result = ((i / size) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 8;\n  result = ((i / size) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 9;\n  result = ((i / size) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 10;\n  result = ((i / size) != constant_a);\n"
+    ]
+  },
+  {
+    "num": 67,
+    "lid": "L290",
+    "patch": "((size / constant_a) < size)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -10;\n  result = ((size / constant_a) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -9;\n  result = ((size / constant_a) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -8;\n  result = ((size / constant_a) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -7;\n  result = ((size / constant_a) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -6;\n  result = ((size / constant_a) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -5;\n  result = ((size / constant_a) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -4;\n  result = ((size / constant_a) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -3;\n  result = ((size / constant_a) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -2;\n  result = ((size / constant_a) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -1;\n  result = ((size / constant_a) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 0;\n  result = ((size / constant_a) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 2;\n  result = ((size / constant_a) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 3;\n  result = ((size / constant_a) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 4;\n  result = ((size / constant_a) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 5;\n  result = ((size / constant_a) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 6;\n  result = ((size / constant_a) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 7;\n  result = ((size / constant_a) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 8;\n  result = ((size / constant_a) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 9;\n  result = ((size / constant_a) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 10;\n  result = ((size / constant_a) < size);\n"
+    ]
+  },
+  {
+    "num": 68,
+    "lid": "L290",
+    "patch": "((size / constant_a) != size)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -10;\n  result = ((size / constant_a) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -9;\n  result = ((size / constant_a) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -8;\n  result = ((size / constant_a) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -7;\n  result = ((size / constant_a) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -6;\n  result = ((size / constant_a) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -5;\n  result = ((size / constant_a) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -4;\n  result = ((size / constant_a) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -3;\n  result = ((size / constant_a) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -2;\n  result = ((size / constant_a) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -1;\n  result = ((size / constant_a) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 0;\n  result = ((size / constant_a) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 2;\n  result = ((size / constant_a) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 3;\n  result = ((size / constant_a) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 4;\n  result = ((size / constant_a) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 5;\n  result = ((size / constant_a) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 6;\n  result = ((size / constant_a) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 7;\n  result = ((size / constant_a) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 8;\n  result = ((size / constant_a) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 9;\n  result = ((size / constant_a) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 10;\n  result = ((size / constant_a) != size);\n"
+    ]
+  },
+  {
+    "num": 69,
+    "lid": "L290",
+    "patch": "((i / constant_a) != constant_a)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -10;\n  result = ((i / constant_a) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -9;\n  result = ((i / constant_a) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -8;\n  result = ((i / constant_a) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -7;\n  result = ((i / constant_a) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -6;\n  result = ((i / constant_a) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -5;\n  result = ((i / constant_a) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -4;\n  result = ((i / constant_a) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -3;\n  result = ((i / constant_a) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -2;\n  result = ((i / constant_a) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -1;\n  result = ((i / constant_a) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 0;\n  result = ((i / constant_a) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 1;\n  result = ((i / constant_a) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 2;\n  result = ((i / constant_a) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 3;\n  result = ((i / constant_a) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 4;\n  result = ((i / constant_a) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 5;\n  result = ((i / constant_a) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 6;\n  result = ((i / constant_a) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 7;\n  result = ((i / constant_a) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 8;\n  result = ((i / constant_a) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 9;\n  result = ((i / constant_a) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 10;\n  result = ((i / constant_a) != constant_a);\n"
+    ]
+  },
+  {
+    "num": 70,
+    "lid": "L290",
+    "patch": "((size / constant_a) != constant_a)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -10;\n  result = ((size / constant_a) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -9;\n  result = ((size / constant_a) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -8;\n  result = ((size / constant_a) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -7;\n  result = ((size / constant_a) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -6;\n  result = ((size / constant_a) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -5;\n  result = ((size / constant_a) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -4;\n  result = ((size / constant_a) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -3;\n  result = ((size / constant_a) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -2;\n  result = ((size / constant_a) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -1;\n  result = ((size / constant_a) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 0;\n  result = ((size / constant_a) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 1;\n  result = ((size / constant_a) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 2;\n  result = ((size / constant_a) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 3;\n  result = ((size / constant_a) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 4;\n  result = ((size / constant_a) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 5;\n  result = ((size / constant_a) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 6;\n  result = ((size / constant_a) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 7;\n  result = ((size / constant_a) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 8;\n  result = ((size / constant_a) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 9;\n  result = ((size / constant_a) != constant_a);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 10;\n  result = ((size / constant_a) != constant_a);\n"
+    ]
+  },
+  {
+    "num": 71,
+    "lid": "L290",
+    "patch": "((i / constant_a) <= i)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -10;\n  result = ((i / constant_a) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -9;\n  result = ((i / constant_a) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -8;\n  result = ((i / constant_a) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -7;\n  result = ((i / constant_a) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -6;\n  result = ((i / constant_a) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -5;\n  result = ((i / constant_a) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -4;\n  result = ((i / constant_a) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -3;\n  result = ((i / constant_a) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -2;\n  result = ((i / constant_a) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -1;\n  result = ((i / constant_a) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 0;\n  result = ((i / constant_a) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 1;\n  result = ((i / constant_a) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 2;\n  result = ((i / constant_a) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 3;\n  result = ((i / constant_a) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 4;\n  result = ((i / constant_a) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 5;\n  result = ((i / constant_a) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 6;\n  result = ((i / constant_a) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 7;\n  result = ((i / constant_a) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 8;\n  result = ((i / constant_a) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 9;\n  result = ((i / constant_a) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 10;\n  result = ((i / constant_a) <= i);\n"
+    ]
+  },
+  {
+    "num": 72,
+    "lid": "L290",
+    "patch": "((constant_a / i) <= i)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -10;\n  result = ((constant_a / i) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -9;\n  result = ((constant_a / i) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -8;\n  result = ((constant_a / i) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -7;\n  result = ((constant_a / i) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -6;\n  result = ((constant_a / i) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -5;\n  result = ((constant_a / i) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -4;\n  result = ((constant_a / i) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -3;\n  result = ((constant_a / i) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -2;\n  result = ((constant_a / i) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -1;\n  result = ((constant_a / i) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 0;\n  result = ((constant_a / i) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 1;\n  result = ((constant_a / i) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 2;\n  result = ((constant_a / i) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 3;\n  result = ((constant_a / i) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 4;\n  result = ((constant_a / i) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 5;\n  result = ((constant_a / i) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 6;\n  result = ((constant_a / i) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 7;\n  result = ((constant_a / i) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 8;\n  result = ((constant_a / i) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 9;\n  result = ((constant_a / i) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 10;\n  result = ((constant_a / i) <= i);\n"
+    ]
+  },
+  {
+    "num": 73,
+    "lid": "L290",
+    "patch": "((i / constant_a) < size)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -10;\n  result = ((i / constant_a) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -9;\n  result = ((i / constant_a) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -8;\n  result = ((i / constant_a) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -7;\n  result = ((i / constant_a) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -6;\n  result = ((i / constant_a) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -5;\n  result = ((i / constant_a) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -4;\n  result = ((i / constant_a) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -3;\n  result = ((i / constant_a) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -2;\n  result = ((i / constant_a) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -1;\n  result = ((i / constant_a) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 0;\n  result = ((i / constant_a) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 1;\n  result = ((i / constant_a) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 2;\n  result = ((i / constant_a) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 3;\n  result = ((i / constant_a) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 4;\n  result = ((i / constant_a) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 5;\n  result = ((i / constant_a) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 6;\n  result = ((i / constant_a) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 7;\n  result = ((i / constant_a) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 8;\n  result = ((i / constant_a) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 9;\n  result = ((i / constant_a) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 10;\n  result = ((i / constant_a) < size);\n"
+    ]
+  },
+  {
+    "num": 74,
+    "lid": "L290",
+    "patch": "((constant_a / i) < size)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -10;\n  result = ((constant_a / i) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -9;\n  result = ((constant_a / i) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -8;\n  result = ((constant_a / i) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -7;\n  result = ((constant_a / i) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -6;\n  result = ((constant_a / i) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -5;\n  result = ((constant_a / i) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -4;\n  result = ((constant_a / i) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -3;\n  result = ((constant_a / i) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -2;\n  result = ((constant_a / i) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -1;\n  result = ((constant_a / i) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 0;\n  result = ((constant_a / i) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 1;\n  result = ((constant_a / i) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 2;\n  result = ((constant_a / i) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 3;\n  result = ((constant_a / i) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 4;\n  result = ((constant_a / i) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 5;\n  result = ((constant_a / i) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 6;\n  result = ((constant_a / i) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 7;\n  result = ((constant_a / i) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 8;\n  result = ((constant_a / i) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 9;\n  result = ((constant_a / i) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 10;\n  result = ((constant_a / i) < size);\n"
+    ]
+  },
+  {
+    "num": 75,
+    "lid": "L290",
+    "patch": "((constant_a / size) < i)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -10;\n  result = ((constant_a / size) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -9;\n  result = ((constant_a / size) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -8;\n  result = ((constant_a / size) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -7;\n  result = ((constant_a / size) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -6;\n  result = ((constant_a / size) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -5;\n  result = ((constant_a / size) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -4;\n  result = ((constant_a / size) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -3;\n  result = ((constant_a / size) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -2;\n  result = ((constant_a / size) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -1;\n  result = ((constant_a / size) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 0;\n  result = ((constant_a / size) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 1;\n  result = ((constant_a / size) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 2;\n  result = ((constant_a / size) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 3;\n  result = ((constant_a / size) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 4;\n  result = ((constant_a / size) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 5;\n  result = ((constant_a / size) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 6;\n  result = ((constant_a / size) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 7;\n  result = ((constant_a / size) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 8;\n  result = ((constant_a / size) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 9;\n  result = ((constant_a / size) < i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 10;\n  result = ((constant_a / size) < i);\n"
+    ]
+  },
+  {
+    "num": 76,
+    "lid": "L290",
+    "patch": "((i / constant_a) != size)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -10;\n  result = ((i / constant_a) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -9;\n  result = ((i / constant_a) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -8;\n  result = ((i / constant_a) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -7;\n  result = ((i / constant_a) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -6;\n  result = ((i / constant_a) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -5;\n  result = ((i / constant_a) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -4;\n  result = ((i / constant_a) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -3;\n  result = ((i / constant_a) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -2;\n  result = ((i / constant_a) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -1;\n  result = ((i / constant_a) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 0;\n  result = ((i / constant_a) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 1;\n  result = ((i / constant_a) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 2;\n  result = ((i / constant_a) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 3;\n  result = ((i / constant_a) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 4;\n  result = ((i / constant_a) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 5;\n  result = ((i / constant_a) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 6;\n  result = ((i / constant_a) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 7;\n  result = ((i / constant_a) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 8;\n  result = ((i / constant_a) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 9;\n  result = ((i / constant_a) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 10;\n  result = ((i / constant_a) != size);\n"
+    ]
+  },
+  {
+    "num": 77,
+    "lid": "L290",
+    "patch": "((constant_a / i) != size)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -10;\n  result = ((constant_a / i) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -9;\n  result = ((constant_a / i) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -8;\n  result = ((constant_a / i) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -7;\n  result = ((constant_a / i) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -6;\n  result = ((constant_a / i) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -5;\n  result = ((constant_a / i) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -4;\n  result = ((constant_a / i) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -3;\n  result = ((constant_a / i) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -2;\n  result = ((constant_a / i) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -1;\n  result = ((constant_a / i) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 0;\n  result = ((constant_a / i) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 1;\n  result = ((constant_a / i) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 2;\n  result = ((constant_a / i) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 3;\n  result = ((constant_a / i) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 4;\n  result = ((constant_a / i) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 5;\n  result = ((constant_a / i) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 6;\n  result = ((constant_a / i) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 7;\n  result = ((constant_a / i) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 8;\n  result = ((constant_a / i) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 9;\n  result = ((constant_a / i) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 10;\n  result = ((constant_a / i) != size);\n"
+    ]
+  },
+  {
+    "num": 78,
+    "lid": "L290",
+    "patch": "((constant_a / size) != i)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -10;\n  result = ((constant_a / size) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -9;\n  result = ((constant_a / size) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -8;\n  result = ((constant_a / size) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -7;\n  result = ((constant_a / size) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -6;\n  result = ((constant_a / size) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -5;\n  result = ((constant_a / size) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -4;\n  result = ((constant_a / size) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -3;\n  result = ((constant_a / size) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -2;\n  result = ((constant_a / size) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -1;\n  result = ((constant_a / size) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 0;\n  result = ((constant_a / size) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 1;\n  result = ((constant_a / size) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 2;\n  result = ((constant_a / size) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 3;\n  result = ((constant_a / size) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 4;\n  result = ((constant_a / size) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 5;\n  result = ((constant_a / size) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 6;\n  result = ((constant_a / size) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 7;\n  result = ((constant_a / size) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 8;\n  result = ((constant_a / size) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 9;\n  result = ((constant_a / size) != i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 10;\n  result = ((constant_a / size) != i);\n"
+    ]
+  },
+  {
+    "num": 79,
+    "lid": "L290",
+    "patch": "((i / constant_a) <= size)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -10;\n  result = ((i / constant_a) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -9;\n  result = ((i / constant_a) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -8;\n  result = ((i / constant_a) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -7;\n  result = ((i / constant_a) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -6;\n  result = ((i / constant_a) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -5;\n  result = ((i / constant_a) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -4;\n  result = ((i / constant_a) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -3;\n  result = ((i / constant_a) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -2;\n  result = ((i / constant_a) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -1;\n  result = ((i / constant_a) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 0;\n  result = ((i / constant_a) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 1;\n  result = ((i / constant_a) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 2;\n  result = ((i / constant_a) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 3;\n  result = ((i / constant_a) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 4;\n  result = ((i / constant_a) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 5;\n  result = ((i / constant_a) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 6;\n  result = ((i / constant_a) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 7;\n  result = ((i / constant_a) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 8;\n  result = ((i / constant_a) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 9;\n  result = ((i / constant_a) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 10;\n  result = ((i / constant_a) <= size);\n"
+    ]
+  },
+  {
+    "num": 80,
+    "lid": "L290",
+    "patch": "((constant_a / i) <= size)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -10;\n  result = ((constant_a / i) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -9;\n  result = ((constant_a / i) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -8;\n  result = ((constant_a / i) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -7;\n  result = ((constant_a / i) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -6;\n  result = ((constant_a / i) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -5;\n  result = ((constant_a / i) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -4;\n  result = ((constant_a / i) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -3;\n  result = ((constant_a / i) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -2;\n  result = ((constant_a / i) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -1;\n  result = ((constant_a / i) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 0;\n  result = ((constant_a / i) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 1;\n  result = ((constant_a / i) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 2;\n  result = ((constant_a / i) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 3;\n  result = ((constant_a / i) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 4;\n  result = ((constant_a / i) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 5;\n  result = ((constant_a / i) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 6;\n  result = ((constant_a / i) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 7;\n  result = ((constant_a / i) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 8;\n  result = ((constant_a / i) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 9;\n  result = ((constant_a / i) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 10;\n  result = ((constant_a / i) <= size);\n"
+    ]
+  },
+  {
+    "num": 81,
+    "lid": "L290",
+    "patch": "((constant_a / size) <= i)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -10;\n  result = ((constant_a / size) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -9;\n  result = ((constant_a / size) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -8;\n  result = ((constant_a / size) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -7;\n  result = ((constant_a / size) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -6;\n  result = ((constant_a / size) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -5;\n  result = ((constant_a / size) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -4;\n  result = ((constant_a / size) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -3;\n  result = ((constant_a / size) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -2;\n  result = ((constant_a / size) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -1;\n  result = ((constant_a / size) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 0;\n  result = ((constant_a / size) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 1;\n  result = ((constant_a / size) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 2;\n  result = ((constant_a / size) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 3;\n  result = ((constant_a / size) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 4;\n  result = ((constant_a / size) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 5;\n  result = ((constant_a / size) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 6;\n  result = ((constant_a / size) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 7;\n  result = ((constant_a / size) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 8;\n  result = ((constant_a / size) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 9;\n  result = ((constant_a / size) <= i);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 10;\n  result = ((constant_a / size) <= i);\n"
+    ]
+  },
+  {
+    "num": 82,
+    "lid": "L290",
+    "patch": "((constant_a / size) < size)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -10;\n  result = ((constant_a / size) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -9;\n  result = ((constant_a / size) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -8;\n  result = ((constant_a / size) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -7;\n  result = ((constant_a / size) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -6;\n  result = ((constant_a / size) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -5;\n  result = ((constant_a / size) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -4;\n  result = ((constant_a / size) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -3;\n  result = ((constant_a / size) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -2;\n  result = ((constant_a / size) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -1;\n  result = ((constant_a / size) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 0;\n  result = ((constant_a / size) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 1;\n  result = ((constant_a / size) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 2;\n  result = ((constant_a / size) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 3;\n  result = ((constant_a / size) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 4;\n  result = ((constant_a / size) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 5;\n  result = ((constant_a / size) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 6;\n  result = ((constant_a / size) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 7;\n  result = ((constant_a / size) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 8;\n  result = ((constant_a / size) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 9;\n  result = ((constant_a / size) < size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 10;\n  result = ((constant_a / size) < size);\n"
+    ]
+  },
+  {
+    "num": 83,
+    "lid": "L290",
+    "patch": "((constant_a / size) != size)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -10;\n  result = ((constant_a / size) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -9;\n  result = ((constant_a / size) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -8;\n  result = ((constant_a / size) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -7;\n  result = ((constant_a / size) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -6;\n  result = ((constant_a / size) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -5;\n  result = ((constant_a / size) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -4;\n  result = ((constant_a / size) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -3;\n  result = ((constant_a / size) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -2;\n  result = ((constant_a / size) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -1;\n  result = ((constant_a / size) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 0;\n  result = ((constant_a / size) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 1;\n  result = ((constant_a / size) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 2;\n  result = ((constant_a / size) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 3;\n  result = ((constant_a / size) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 4;\n  result = ((constant_a / size) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 5;\n  result = ((constant_a / size) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 6;\n  result = ((constant_a / size) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 7;\n  result = ((constant_a / size) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 8;\n  result = ((constant_a / size) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 9;\n  result = ((constant_a / size) != size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 10;\n  result = ((constant_a / size) != size);\n"
+    ]
+  },
+  {
+    "num": 84,
+    "lid": "L290",
+    "patch": "((size / constant_a) <= size)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -10;\n  result = ((size / constant_a) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -9;\n  result = ((size / constant_a) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -8;\n  result = ((size / constant_a) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -7;\n  result = ((size / constant_a) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -6;\n  result = ((size / constant_a) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -5;\n  result = ((size / constant_a) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -4;\n  result = ((size / constant_a) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -3;\n  result = ((size / constant_a) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -2;\n  result = ((size / constant_a) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -1;\n  result = ((size / constant_a) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 0;\n  result = ((size / constant_a) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 1;\n  result = ((size / constant_a) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 2;\n  result = ((size / constant_a) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 3;\n  result = ((size / constant_a) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 4;\n  result = ((size / constant_a) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 5;\n  result = ((size / constant_a) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 6;\n  result = ((size / constant_a) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 7;\n  result = ((size / constant_a) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 8;\n  result = ((size / constant_a) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 9;\n  result = ((size / constant_a) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 10;\n  result = ((size / constant_a) <= size);\n"
+    ]
+  },
+  {
+    "num": 85,
+    "lid": "L290",
+    "patch": "((constant_a / size) <= size)",
+    "codes": [
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -10;\n  result = ((constant_a / size) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -9;\n  result = ((constant_a / size) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -8;\n  result = ((constant_a / size) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -7;\n  result = ((constant_a / size) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -6;\n  result = ((constant_a / size) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -5;\n  result = ((constant_a / size) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -4;\n  result = ((constant_a / size) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -3;\n  result = ((constant_a / size) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -2;\n  result = ((constant_a / size) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = -1;\n  result = ((constant_a / size) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 0;\n  result = ((constant_a / size) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 1;\n  result = ((constant_a / size) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 2;\n  result = ((constant_a / size) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 3;\n  result = ((constant_a / size) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 4;\n  result = ((constant_a / size) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 5;\n  result = ((constant_a / size) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 6;\n  result = ((constant_a / size) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 7;\n  result = ((constant_a / size) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 8;\n  result = ((constant_a / size) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 9;\n  result = ((constant_a / size) <= size);\n",
+      "  long long size = rvals[0];\n  long long i = rvals[1];\n  long long constant_a = 10;\n  result = ((constant_a / size) <= size);\n"
+    ]
+  }
+]

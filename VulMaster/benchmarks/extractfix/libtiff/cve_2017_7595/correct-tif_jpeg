@@ -1,0 +1,1 @@
+<vul-start> ) ) { if (sp->v_sampling == 0 || sp->h_sampling == 0) return 0;

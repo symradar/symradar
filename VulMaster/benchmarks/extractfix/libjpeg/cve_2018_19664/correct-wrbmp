@@ -1,0 +1,1 @@
+<vul-start>else if ( ( <vul-start> out_color_space == JCS_CMYK ) && cinfo->quantize_colors == 0

@@ -1,0 +1,140 @@
+ERROR StatusLogger No log4j2 configuration file found. Using default configuration: logging only errors to the console.
+Specified option VERBOSE
+Specified option OUTPUT_PATH
+Oldfile: jasper/cve_2016_8691/buggy-jpc_cs.c
+Newfile: jasper/cve_2016_8691/patches/jpc_cs-3.c
+Preprocessing...
+Parsing files...
+Extracting textual diff from the two files...
+
+Finding common functions...
+
+> FUNCTION:
+jpc_siz_getparms - Oldfile: at line 479 - Newfile: at line 479
+
+> Generating function graphs...
+> Applying heuristics...
+modified_conditions: false: no modified conditions
+inserted_if: true: no else and error handling block
+inserted_if: true: no else and error handling block
+flow_restrictive: true: matches all heuristics
+> Security-related: true
+> {OFF_BY_ONE=false, INSERTED_STMT=false, C_SENS_FUN=false, KNOWN_PATCHES=false, KERNEL_SYNCH=false, INIT_OR_ERROR=false, MODIFIED_CONDITIONS=false, CONDITIONS=false, FLOW_RESTRICTIVE=true, REMOVED_STUFF=false, INSERTED_IFS=true}
+> {INSERTED_IFS_COUNT=1, WIDENED_CONDITIONS_COUNT=0, CHANGED_CONDITIONS_COUNT=0, RESTRICTED_CONDITIONS_COUNT=0, BI_IMPLICATIONS_COUNT=0, INSERTED_STMTS_COUNT=0}
+> END_FUNCTION.
+AFFECTED_FUNCTIONS=1
+Done.
+
+[{"function":"jpc_siz_getparms","originalLine":479,"newLine":479,"heuristics":{"OFF_BY_ONE":false,"INSERTED_STMT":false,"C_SENS_FUN":false,"KNOWN_PATCHES":false,"KERNEL_SYNCH":false,"INIT_OR_ERROR":false,"MODIFIED_CONDITIONS":false,"CONDITIONS":false,"FLOW_RESTRICTIVE":true,"REMOVED_STUFF":false,"INSERTED_IFS":true},"features":{"INSERTED_IFS_COUNT":1,"WIDENED_CONDITIONS_COUNT":0,"CHANGED_CONDITIONS_COUNT":0,"RESTRICTED_CONDITIONS_COUNT":0,"BI_IMPLICATIONS_COUNT":0,"INSERTED_STMTS_COUNT":0},"security":true}]
+ERROR StatusLogger No log4j2 configuration file found. Using default configuration: logging only errors to the console.
+Specified option VERBOSE
+Specified option OUTPUT_PATH
+Oldfile: jasper/cve_2016_8691/buggy-jpc_cs.c
+Newfile: jasper/cve_2016_8691/patches/jpc_cs-5.c
+Preprocessing...
+Parsing files...
+Extracting textual diff from the two files...
+
+Finding common functions...
+
+> FUNCTION:
+jpc_siz_getparms - Oldfile: at line 479 - Newfile: at line 479
+
+> Generating function graphs...
+> Applying heuristics...
+modified_conditions: false: no modified conditions
+inserted_if: true: no else and error handling block
+inserted_if: true: no else and error handling block
+flow_restrictive: true: matches all heuristics
+> Security-related: true
+> {OFF_BY_ONE=false, INSERTED_STMT=false, C_SENS_FUN=false, KNOWN_PATCHES=false, KERNEL_SYNCH=false, INIT_OR_ERROR=false, MODIFIED_CONDITIONS=false, CONDITIONS=false, FLOW_RESTRICTIVE=true, REMOVED_STUFF=false, INSERTED_IFS=true}
+> {INSERTED_IFS_COUNT=1, WIDENED_CONDITIONS_COUNT=0, CHANGED_CONDITIONS_COUNT=0, RESTRICTED_CONDITIONS_COUNT=0, BI_IMPLICATIONS_COUNT=0, INSERTED_STMTS_COUNT=0}
+> END_FUNCTION.
+AFFECTED_FUNCTIONS=1
+Done.
+
+[{"function":"jpc_siz_getparms","originalLine":479,"newLine":479,"heuristics":{"OFF_BY_ONE":false,"INSERTED_STMT":false,"C_SENS_FUN":false,"KNOWN_PATCHES":false,"KERNEL_SYNCH":false,"INIT_OR_ERROR":false,"MODIFIED_CONDITIONS":false,"CONDITIONS":false,"FLOW_RESTRICTIVE":true,"REMOVED_STUFF":false,"INSERTED_IFS":true},"features":{"INSERTED_IFS_COUNT":1,"WIDENED_CONDITIONS_COUNT":0,"CHANGED_CONDITIONS_COUNT":0,"RESTRICTED_CONDITIONS_COUNT":0,"BI_IMPLICATIONS_COUNT":0,"INSERTED_STMTS_COUNT":0},"security":true}]
+ERROR StatusLogger No log4j2 configuration file found. Using default configuration: logging only errors to the console.
+Specified option VERBOSE
+Specified option OUTPUT_PATH
+Oldfile: jasper/cve_2016_8691/buggy-jpc_cs.c
+Newfile: jasper/cve_2016_8691/patches/jpc_cs-1.c
+Preprocessing...
+Parsing files...
+Extracting textual diff from the two files...
+
+Finding common functions...
+
+> FUNCTION:
+jpc_siz_getparms - Oldfile: at line 479 - Newfile: at line 479
+
+> Generating function graphs...
+> Applying heuristics...
+modified_conditions: false: no modified conditions
+inserted_if: true: no else and error handling block
+inserted_if: true: no else and error handling block
+flow_restrictive: true: matches all heuristics
+> Security-related: true
+> {INSERTED_IFS=true, KERNEL_SYNCH=false, INIT_OR_ERROR=false, OFF_BY_ONE=false, CONDITIONS=false, REMOVED_STUFF=false, KNOWN_PATCHES=false, INSERTED_STMT=false, C_SENS_FUN=false, FLOW_RESTRICTIVE=true, MODIFIED_CONDITIONS=false}
+> {CHANGED_CONDITIONS_COUNT=0, RESTRICTED_CONDITIONS_COUNT=0, BI_IMPLICATIONS_COUNT=0, INSERTED_STMTS_COUNT=0, WIDENED_CONDITIONS_COUNT=0, INSERTED_IFS_COUNT=1}
+> END_FUNCTION.
+AFFECTED_FUNCTIONS=1
+Done.
+
+[{"function":"jpc_siz_getparms","originalLine":479,"newLine":479,"heuristics":{"INSERTED_IFS":true,"KERNEL_SYNCH":false,"INIT_OR_ERROR":false,"OFF_BY_ONE":false,"CONDITIONS":false,"REMOVED_STUFF":false,"KNOWN_PATCHES":false,"INSERTED_STMT":false,"C_SENS_FUN":false,"FLOW_RESTRICTIVE":true,"MODIFIED_CONDITIONS":false},"features":{"CHANGED_CONDITIONS_COUNT":0,"RESTRICTED_CONDITIONS_COUNT":0,"BI_IMPLICATIONS_COUNT":0,"INSERTED_STMTS_COUNT":0,"WIDENED_CONDITIONS_COUNT":0,"INSERTED_IFS_COUNT":1},"security":true}]
+ERROR StatusLogger No log4j2 configuration file found. Using default configuration: logging only errors to the console.
+Specified option VERBOSE
+Specified option OUTPUT_PATH
+Oldfile: jasper/cve_2016_8691/buggy-jpc_cs.c
+Newfile: jasper/cve_2016_8691/patches/jpc_cs-4.c
+Preprocessing...
+Parsing files...
+Extracting textual diff from the two files...
+
+Finding common functions...
+
+> FUNCTION:
+jpc_siz_getparms - Oldfile: at line 479 - Newfile: at line 479
+
+> Generating function graphs...
+> Applying heuristics...
+modified_conditions: false: no modified conditions
+inserted_if: true: no else and error handling block
+inserted_if: true: no else and error handling block
+flow_restrictive: true: matches all heuristics
+> Security-related: true
+> {OFF_BY_ONE=false, INSERTED_STMT=false, C_SENS_FUN=false, KNOWN_PATCHES=false, KERNEL_SYNCH=false, INIT_OR_ERROR=false, MODIFIED_CONDITIONS=false, CONDITIONS=false, FLOW_RESTRICTIVE=true, REMOVED_STUFF=false, INSERTED_IFS=true}
+> {INSERTED_IFS_COUNT=1, WIDENED_CONDITIONS_COUNT=0, CHANGED_CONDITIONS_COUNT=0, RESTRICTED_CONDITIONS_COUNT=0, BI_IMPLICATIONS_COUNT=0, INSERTED_STMTS_COUNT=0}
+> END_FUNCTION.
+AFFECTED_FUNCTIONS=1
+Done.
+
+[{"function":"jpc_siz_getparms","originalLine":479,"newLine":479,"heuristics":{"OFF_BY_ONE":false,"INSERTED_STMT":false,"C_SENS_FUN":false,"KNOWN_PATCHES":false,"KERNEL_SYNCH":false,"INIT_OR_ERROR":false,"MODIFIED_CONDITIONS":false,"CONDITIONS":false,"FLOW_RESTRICTIVE":true,"REMOVED_STUFF":false,"INSERTED_IFS":true},"features":{"INSERTED_IFS_COUNT":1,"WIDENED_CONDITIONS_COUNT":0,"CHANGED_CONDITIONS_COUNT":0,"RESTRICTED_CONDITIONS_COUNT":0,"BI_IMPLICATIONS_COUNT":0,"INSERTED_STMTS_COUNT":0},"security":true}]
+ERROR StatusLogger No log4j2 configuration file found. Using default configuration: logging only errors to the console.
+Specified option VERBOSE
+Specified option OUTPUT_PATH
+Oldfile: jasper/cve_2016_8691/buggy-jpc_cs.c
+Newfile: jasper/cve_2016_8691/patches/jpc_cs-2.c
+Preprocessing...
+Parsing files...
+Extracting textual diff from the two files...
+
+Finding common functions...
+
+> FUNCTION:
+jpc_siz_getparms - Oldfile: at line 479 - Newfile: at line 479
+
+> Generating function graphs...
+> Applying heuristics...
+modified_conditions: false: no modified conditions
+inserted_if: true: no else and error handling block
+inserted_if: true: no else and error handling block
+flow_restrictive: true: matches all heuristics
+> Security-related: true
+> {OFF_BY_ONE=false, INSERTED_STMT=false, C_SENS_FUN=false, KNOWN_PATCHES=false, KERNEL_SYNCH=false, INIT_OR_ERROR=false, MODIFIED_CONDITIONS=false, CONDITIONS=false, FLOW_RESTRICTIVE=true, REMOVED_STUFF=false, INSERTED_IFS=true}
+> {INSERTED_IFS_COUNT=1, WIDENED_CONDITIONS_COUNT=0, CHANGED_CONDITIONS_COUNT=0, RESTRICTED_CONDITIONS_COUNT=0, BI_IMPLICATIONS_COUNT=0, INSERTED_STMTS_COUNT=0}
+> END_FUNCTION.
+AFFECTED_FUNCTIONS=1
+Done.
+
+[{"function":"jpc_siz_getparms","originalLine":479,"newLine":479,"heuristics":{"OFF_BY_ONE":false,"INSERTED_STMT":false,"C_SENS_FUN":false,"KNOWN_PATCHES":false,"KERNEL_SYNCH":false,"INIT_OR_ERROR":false,"MODIFIED_CONDITIONS":false,"CONDITIONS":false,"FLOW_RESTRICTIVE":true,"REMOVED_STUFF":false,"INSERTED_IFS":true},"features":{"INSERTED_IFS_COUNT":1,"WIDENED_CONDITIONS_COUNT":0,"CHANGED_CONDITIONS_COUNT":0,"RESTRICTED_CONDITIONS_COUNT":0,"BI_IMPLICATIONS_COUNT":0,"INSERTED_STMTS_COUNT":0},"security":true}]

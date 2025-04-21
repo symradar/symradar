@@ -1,0 +1,28 @@
+ERROR StatusLogger No log4j2 configuration file found. Using default configuration: logging only errors to the console.
+Specified option VERBOSE
+Specified option OUTPUT_PATH
+Oldfile: coreutils/gnubug_25023/buggy-pr.c
+Newfile: coreutils/gnubug_25023/patches/pr-1.c
+Preprocessing...
+Parsing files...
+Extracting textual diff from the two files...
+
+Finding common functions...
+
+> FUNCTION:
+init_parameters - Oldfile: at line 1190 - Newfile: at line 1190
+
+> Generating function graphs...
+> Applying heuristics...
+modified_conditions: false: modified conditions don't imply each other
+inserted_ifs: false: no inserted ifs
+modified_conditions: false: modified conditions don't imply each other
+flow_restrictive: false: modified_conditions is false
+> Security-related: false
+> {CONDITIONS=false, INIT_OR_ERROR=false, KNOWN_PATCHES=false, INSERTED_STMT=false, INSERTED_IFS=false, FLOW_RESTRICTIVE=false, MODIFIED_CONDITIONS=false, REMOVED_STUFF=false, OFF_BY_ONE=false, KERNEL_SYNCH=false, C_SENS_FUN=false}
+> {WIDENED_CONDITIONS_COUNT=0, INSERTED_IFS_COUNT=0, RESTRICTED_CONDITIONS_COUNT=0, CHANGED_CONDITIONS_COUNT=1, INSERTED_STMTS_COUNT=0, BI_IMPLICATIONS_COUNT=0}
+> END_FUNCTION.
+AFFECTED_FUNCTIONS=1
+Done.
+
+[{"function":"init_parameters","originalLine":1190,"newLine":1190,"heuristics":{"CONDITIONS":false,"INIT_OR_ERROR":false,"KNOWN_PATCHES":false,"INSERTED_STMT":false,"INSERTED_IFS":false,"FLOW_RESTRICTIVE":false,"MODIFIED_CONDITIONS":false,"REMOVED_STUFF":false,"OFF_BY_ONE":false,"KERNEL_SYNCH":false,"C_SENS_FUN":false},"features":{"WIDENED_CONDITIONS_COUNT":0,"INSERTED_IFS_COUNT":0,"RESTRICTED_CONDITIONS_COUNT":0,"CHANGED_CONDITIONS_COUNT":1,"INSERTED_STMTS_COUNT":0,"BI_IMPLICATIONS_COUNT":0},"security":false}]

@@ -1,0 +1,28 @@
+Patch #1
+L290: y
+		Partition: 1
+		Patch Count: 1
+		Path Coverage: 270
+		Is Under-approximating: False
+		Is Over-approximating: False
+Patch #2
+L290: (y + x)
+		Partition: 1
+		Patch Count: 1
+		Path Coverage: 270
+		Is Under-approximating: False
+		Is Over-approximating: False
+Patch #3
+L290: ((y + x) + y)
+		Partition: 1
+		Patch Count: 1
+		Path Coverage: 270
+		Is Under-approximating: False
+		Is Over-approximating: False
+Patch #4
+L290: ((y + x) + x)
+		Partition: 1
+		Patch Count: 1
+		Path Coverage: 270
+		Is Under-approximating: False
+		Is Over-approximating: False

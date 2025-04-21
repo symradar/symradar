@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+   PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "xhttransitional.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>NIST DOest - BaseFont</title>
+</head>
+<body onload="parloadComplete()">
+<font color="#000000" face="arial,h" size="4">Test Tables</font>
+</body>
+</html>

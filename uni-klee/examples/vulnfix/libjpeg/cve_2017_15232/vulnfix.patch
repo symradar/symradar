@@ -1,0 +1,10 @@
+--- /home/yuntong/vulnfix/data/libjpeg/cve_2017_15232/source/fix-file-backup.c	2022-12-08 03:39:02.191118690 +0000
++++ /home/yuntong/vulnfix/data/libjpeg/cve_2017_15232/source/jdpostct.c	2022-12-08 07:02:54.973704935 +0000
+@@ -131,6 +131,7 @@
+ {
+   my_post_ptr post = (my_post_ptr) cinfo->post;
+   JDIMENSION num_rows, max_rows;
++    if (!(output_buf != NULL)) exit(1);
+ 
+   /* Fill the buffer, but not more than what we can dump out in one go. */
+   /* Note we rely on the upsampler to detect bottom of image. */

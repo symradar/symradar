@@ -1,0 +1,13 @@
+[submodule "thirdparty/klee-uclibc"]
+	path = thirdparty/klee-uclibc
+	url = https://github.com/klee/klee-uclibc.git
+	ignore = dirty
+[submodule "thirdparty/minisat"]
+	path = thirdparty/minisat
+	url = https://github.com/stp/minisat.git
+[submodule "thirdparty/stp"]
+	path = thirdparty/stp
+	url = https://github.com/stp/stp.git
+[submodule "thirdparty/z3"]
+	path = thirdparty/z3
+	url = https://github.com/Z3Prover/z3.git

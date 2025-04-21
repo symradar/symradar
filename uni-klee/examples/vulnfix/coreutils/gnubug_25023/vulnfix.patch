@@ -1,0 +1,11 @@
+--- /home/yuntong/vulnfix/data/coreutils/gnubug_25023/source/src/fix-file-backup.c	2022-12-08 03:26:54.008683798 +0000
++++ /home/yuntong/vulnfix/data/coreutils/gnubug_25023/source/src/pr.c	2022-12-08 05:53:24.567404128 +0000
+@@ -1235,7 +1235,7 @@
+         }
+       /* It's rather pointless to define a TAB separator with column
+          alignment */
+-      else if (!join_lines && *col_sep_string == '\t')
++      else if (col_sep_length <= 2 && (!join_lines && *col_sep_string == '\t'))
+         col_sep_string = column_separator;
+ 
+       truncate_lines = true;

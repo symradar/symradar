@@ -1,0 +1,10 @@
+{
+  "exclude": [
+    "./patches", 
+    "./out", 
+    "./lib",
+    "./experiments",
+    "./logs"
+  ],
+  "typeCheckingMode": "off"
+}

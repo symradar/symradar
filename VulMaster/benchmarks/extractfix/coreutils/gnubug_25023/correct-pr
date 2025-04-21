@@ -1,0 +1,1 @@
+<vul-start> == '\t' && col_sep_length == 1 <vul-end> col_sep_string = column_separator

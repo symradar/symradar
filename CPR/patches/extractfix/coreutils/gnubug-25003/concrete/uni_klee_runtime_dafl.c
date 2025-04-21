@@ -1,0 +1,1592 @@
+#include "uni_klee_runtime.h"
+#include <stdlib.h>
+#include <stdio.h>
+
+int uni_klee_patch_id;
+
+void klee_select_patch(int *patch_id) {
+  *patch_id = atoi(getenv("DAFL_PATCH_ID"));
+}
+
+void uni_klee_add_patch(int *patch_results, int patch_id, int result) {
+  patch_results[patch_id] = result;
+}
+
+int uni_klee_choice(int *patch_results, int patch_id) {
+  FILE *fp=fopen(getenv("DAFL_RESULT_FILE"),"a");
+  if (fp == NULL) {
+    fprintf(stderr, "Error opening file!\n");
+    exit(1);
+  }
+  fprintf(fp, "%d ", patch_results[patch_id]);
+  fclose(fp);
+  return patch_results[patch_id];
+}
+
+// UNI_KLEE_START
+int __cpr_choice(char* lid, char* typestr,
+                     long long* rvals, char** rvals_ids, int rvals_size,
+                     int** lvals, char** lvals_ids, int lvals_size){
+  // int patch_results[4096];
+  int result;
+  long long start = rvals[0];
+  long long initial_read = rvals[1];
+  long long bufsize = rvals[2];
+  long long constant_a;
+  int patch_results[390];
+  // Patch buggy # 0
+  result = (initial_read != 18446744073709551615UL || start < initial_read);
+  uni_klee_add_patch(patch_results, 0, result);
+  // Patch 1-0 # 1
+  result = (initial_read == start);
+  uni_klee_add_patch(patch_results, 1, result);
+  // Patch 2-0 # 2
+  result = (bufsize == start);
+  uni_klee_add_patch(patch_results, 2, result);
+  // Patch 3-0 # 3
+  constant_a = -10;
+  result = (constant_a == start);
+  uni_klee_add_patch(patch_results, 3, result);
+  // Patch 3-1 # 4
+  constant_a = -9;
+  result = (constant_a == start);
+  uni_klee_add_patch(patch_results, 4, result);
+  // Patch 3-2 # 5
+  constant_a = -8;
+  result = (constant_a == start);
+  uni_klee_add_patch(patch_results, 5, result);
+  // Patch 3-3 # 6
+  constant_a = -7;
+  result = (constant_a == start);
+  uni_klee_add_patch(patch_results, 6, result);
+  // Patch 3-4 # 7
+  constant_a = -6;
+  result = (constant_a == start);
+  uni_klee_add_patch(patch_results, 7, result);
+  // Patch 3-5 # 8
+  constant_a = -5;
+  result = (constant_a == start);
+  uni_klee_add_patch(patch_results, 8, result);
+  // Patch 3-6 # 9
+  constant_a = -4;
+  result = (constant_a == start);
+  uni_klee_add_patch(patch_results, 9, result);
+  // Patch 3-7 # 10
+  constant_a = -3;
+  result = (constant_a == start);
+  uni_klee_add_patch(patch_results, 10, result);
+  // Patch 3-8 # 11
+  constant_a = -2;
+  result = (constant_a == start);
+  uni_klee_add_patch(patch_results, 11, result);
+  // Patch 3-9 # 12
+  constant_a = -1;
+  result = (constant_a == start);
+  uni_klee_add_patch(patch_results, 12, result);
+  // Patch 3-10 # 13
+  constant_a = 0;
+  result = (constant_a == start);
+  uni_klee_add_patch(patch_results, 13, result);
+  // Patch 3-11 # 14
+  constant_a = 1;
+  result = (constant_a == start);
+  uni_klee_add_patch(patch_results, 14, result);
+  // Patch 3-12 # 15
+  constant_a = 2;
+  result = (constant_a == start);
+  uni_klee_add_patch(patch_results, 15, result);
+  // Patch 3-13 # 16
+  constant_a = 3;
+  result = (constant_a == start);
+  uni_klee_add_patch(patch_results, 16, result);
+  // Patch 3-14 # 17
+  constant_a = 4;
+  result = (constant_a == start);
+  uni_klee_add_patch(patch_results, 17, result);
+  // Patch 3-15 # 18
+  constant_a = 5;
+  result = (constant_a == start);
+  uni_klee_add_patch(patch_results, 18, result);
+  // Patch 3-16 # 19
+  constant_a = 6;
+  result = (constant_a == start);
+  uni_klee_add_patch(patch_results, 19, result);
+  // Patch 3-17 # 20
+  constant_a = 7;
+  result = (constant_a == start);
+  uni_klee_add_patch(patch_results, 20, result);
+  // Patch 3-18 # 21
+  constant_a = 8;
+  result = (constant_a == start);
+  uni_klee_add_patch(patch_results, 21, result);
+  // Patch 3-19 # 22
+  constant_a = 9;
+  result = (constant_a == start);
+  uni_klee_add_patch(patch_results, 22, result);
+  // Patch 3-20 # 23
+  constant_a = 10;
+  result = (constant_a == start);
+  uni_klee_add_patch(patch_results, 23, result);
+  // Patch 4-0 # 24
+  result = (bufsize == initial_read);
+  uni_klee_add_patch(patch_results, 24, result);
+  // Patch 5-0 # 25
+  constant_a = -10;
+  result = (constant_a == initial_read);
+  uni_klee_add_patch(patch_results, 25, result);
+  // Patch 5-1 # 26
+  constant_a = -9;
+  result = (constant_a == initial_read);
+  uni_klee_add_patch(patch_results, 26, result);
+  // Patch 5-2 # 27
+  constant_a = -8;
+  result = (constant_a == initial_read);
+  uni_klee_add_patch(patch_results, 27, result);
+  // Patch 5-3 # 28
+  constant_a = -7;
+  result = (constant_a == initial_read);
+  uni_klee_add_patch(patch_results, 28, result);
+  // Patch 5-4 # 29
+  constant_a = -6;
+  result = (constant_a == initial_read);
+  uni_klee_add_patch(patch_results, 29, result);
+  // Patch 5-5 # 30
+  constant_a = -5;
+  result = (constant_a == initial_read);
+  uni_klee_add_patch(patch_results, 30, result);
+  // Patch 5-6 # 31
+  constant_a = -4;
+  result = (constant_a == initial_read);
+  uni_klee_add_patch(patch_results, 31, result);
+  // Patch 5-7 # 32
+  constant_a = -3;
+  result = (constant_a == initial_read);
+  uni_klee_add_patch(patch_results, 32, result);
+  // Patch 5-8 # 33
+  constant_a = -2;
+  result = (constant_a == initial_read);
+  uni_klee_add_patch(patch_results, 33, result);
+  // Patch 5-9 # 34
+  constant_a = -1;
+  result = (constant_a == initial_read);
+  uni_klee_add_patch(patch_results, 34, result);
+  // Patch 5-10 # 35
+  constant_a = 0;
+  result = (constant_a == initial_read);
+  uni_klee_add_patch(patch_results, 35, result);
+  // Patch 5-11 # 36
+  constant_a = 1;
+  result = (constant_a == initial_read);
+  uni_klee_add_patch(patch_results, 36, result);
+  // Patch 5-12 # 37
+  constant_a = 2;
+  result = (constant_a == initial_read);
+  uni_klee_add_patch(patch_results, 37, result);
+  // Patch 5-13 # 38
+  constant_a = 3;
+  result = (constant_a == initial_read);
+  uni_klee_add_patch(patch_results, 38, result);
+  // Patch 5-14 # 39
+  constant_a = 4;
+  result = (constant_a == initial_read);
+  uni_klee_add_patch(patch_results, 39, result);
+  // Patch 5-15 # 40
+  constant_a = 5;
+  result = (constant_a == initial_read);
+  uni_klee_add_patch(patch_results, 40, result);
+  // Patch 5-16 # 41
+  constant_a = 6;
+  result = (constant_a == initial_read);
+  uni_klee_add_patch(patch_results, 41, result);
+  // Patch 5-17 # 42
+  constant_a = 7;
+  result = (constant_a == initial_read);
+  uni_klee_add_patch(patch_results, 42, result);
+  // Patch 5-18 # 43
+  constant_a = 8;
+  result = (constant_a == initial_read);
+  uni_klee_add_patch(patch_results, 43, result);
+  // Patch 5-19 # 44
+  constant_a = 9;
+  result = (constant_a == initial_read);
+  uni_klee_add_patch(patch_results, 44, result);
+  // Patch 5-20 # 45
+  constant_a = 10;
+  result = (constant_a == initial_read);
+  uni_klee_add_patch(patch_results, 45, result);
+  // Patch 6-0 # 46
+  constant_a = -10;
+  result = (constant_a == bufsize);
+  uni_klee_add_patch(patch_results, 46, result);
+  // Patch 6-1 # 47
+  constant_a = -9;
+  result = (constant_a == bufsize);
+  uni_klee_add_patch(patch_results, 47, result);
+  // Patch 6-2 # 48
+  constant_a = -8;
+  result = (constant_a == bufsize);
+  uni_klee_add_patch(patch_results, 48, result);
+  // Patch 6-3 # 49
+  constant_a = -7;
+  result = (constant_a == bufsize);
+  uni_klee_add_patch(patch_results, 49, result);
+  // Patch 6-4 # 50
+  constant_a = -6;
+  result = (constant_a == bufsize);
+  uni_klee_add_patch(patch_results, 50, result);
+  // Patch 6-5 # 51
+  constant_a = -5;
+  result = (constant_a == bufsize);
+  uni_klee_add_patch(patch_results, 51, result);
+  // Patch 6-6 # 52
+  constant_a = -4;
+  result = (constant_a == bufsize);
+  uni_klee_add_patch(patch_results, 52, result);
+  // Patch 6-7 # 53
+  constant_a = -3;
+  result = (constant_a == bufsize);
+  uni_klee_add_patch(patch_results, 53, result);
+  // Patch 6-8 # 54
+  constant_a = -2;
+  result = (constant_a == bufsize);
+  uni_klee_add_patch(patch_results, 54, result);
+  // Patch 6-9 # 55
+  constant_a = -1;
+  result = (constant_a == bufsize);
+  uni_klee_add_patch(patch_results, 55, result);
+  // Patch 6-10 # 56
+  constant_a = 0;
+  result = (constant_a == bufsize);
+  uni_klee_add_patch(patch_results, 56, result);
+  // Patch 6-11 # 57
+  constant_a = 1;
+  result = (constant_a == bufsize);
+  uni_klee_add_patch(patch_results, 57, result);
+  // Patch 6-12 # 58
+  constant_a = 2;
+  result = (constant_a == bufsize);
+  uni_klee_add_patch(patch_results, 58, result);
+  // Patch 6-13 # 59
+  constant_a = 3;
+  result = (constant_a == bufsize);
+  uni_klee_add_patch(patch_results, 59, result);
+  // Patch 6-14 # 60
+  constant_a = 4;
+  result = (constant_a == bufsize);
+  uni_klee_add_patch(patch_results, 60, result);
+  // Patch 6-15 # 61
+  constant_a = 5;
+  result = (constant_a == bufsize);
+  uni_klee_add_patch(patch_results, 61, result);
+  // Patch 6-16 # 62
+  constant_a = 6;
+  result = (constant_a == bufsize);
+  uni_klee_add_patch(patch_results, 62, result);
+  // Patch 6-17 # 63
+  constant_a = 7;
+  result = (constant_a == bufsize);
+  uni_klee_add_patch(patch_results, 63, result);
+  // Patch 6-18 # 64
+  constant_a = 8;
+  result = (constant_a == bufsize);
+  uni_klee_add_patch(patch_results, 64, result);
+  // Patch 6-19 # 65
+  constant_a = 9;
+  result = (constant_a == bufsize);
+  uni_klee_add_patch(patch_results, 65, result);
+  // Patch 6-20 # 66
+  constant_a = 10;
+  result = (constant_a == bufsize);
+  uni_klee_add_patch(patch_results, 66, result);
+  // Patch 7-0 # 67
+  result = (start != start);
+  uni_klee_add_patch(patch_results, 67, result);
+  // Patch 8-0 # 68
+  constant_a = -10;
+  result = (constant_a != start);
+  uni_klee_add_patch(patch_results, 68, result);
+  // Patch 8-1 # 69
+  constant_a = -9;
+  result = (constant_a != start);
+  uni_klee_add_patch(patch_results, 69, result);
+  // Patch 8-2 # 70
+  constant_a = -8;
+  result = (constant_a != start);
+  uni_klee_add_patch(patch_results, 70, result);
+  // Patch 8-3 # 71
+  constant_a = -7;
+  result = (constant_a != start);
+  uni_klee_add_patch(patch_results, 71, result);
+  // Patch 8-4 # 72
+  constant_a = -6;
+  result = (constant_a != start);
+  uni_klee_add_patch(patch_results, 72, result);
+  // Patch 8-5 # 73
+  constant_a = -5;
+  result = (constant_a != start);
+  uni_klee_add_patch(patch_results, 73, result);
+  // Patch 8-6 # 74
+  constant_a = -4;
+  result = (constant_a != start);
+  uni_klee_add_patch(patch_results, 74, result);
+  // Patch 8-7 # 75
+  constant_a = -3;
+  result = (constant_a != start);
+  uni_klee_add_patch(patch_results, 75, result);
+  // Patch 8-8 # 76
+  constant_a = -2;
+  result = (constant_a != start);
+  uni_klee_add_patch(patch_results, 76, result);
+  // Patch 8-9 # 77
+  constant_a = -1;
+  result = (constant_a != start);
+  uni_klee_add_patch(patch_results, 77, result);
+  // Patch 8-10 # 78
+  constant_a = 0;
+  result = (constant_a != start);
+  uni_klee_add_patch(patch_results, 78, result);
+  // Patch 8-11 # 79
+  constant_a = 1;
+  result = (constant_a != start);
+  uni_klee_add_patch(patch_results, 79, result);
+  // Patch 8-12 # 80
+  constant_a = 2;
+  result = (constant_a != start);
+  uni_klee_add_patch(patch_results, 80, result);
+  // Patch 8-13 # 81
+  constant_a = 3;
+  result = (constant_a != start);
+  uni_klee_add_patch(patch_results, 81, result);
+  // Patch 8-14 # 82
+  constant_a = 4;
+  result = (constant_a != start);
+  uni_klee_add_patch(patch_results, 82, result);
+  // Patch 8-15 # 83
+  constant_a = 5;
+  result = (constant_a != start);
+  uni_klee_add_patch(patch_results, 83, result);
+  // Patch 8-16 # 84
+  constant_a = 6;
+  result = (constant_a != start);
+  uni_klee_add_patch(patch_results, 84, result);
+  // Patch 8-17 # 85
+  constant_a = 7;
+  result = (constant_a != start);
+  uni_klee_add_patch(patch_results, 85, result);
+  // Patch 8-18 # 86
+  constant_a = 8;
+  result = (constant_a != start);
+  uni_klee_add_patch(patch_results, 86, result);
+  // Patch 8-19 # 87
+  constant_a = 9;
+  result = (constant_a != start);
+  uni_klee_add_patch(patch_results, 87, result);
+  // Patch 8-20 # 88
+  constant_a = 10;
+  result = (constant_a != start);
+  uni_klee_add_patch(patch_results, 88, result);
+  // Patch 9-0 # 89
+  constant_a = -10;
+  result = (constant_a != initial_read);
+  uni_klee_add_patch(patch_results, 89, result);
+  // Patch 9-1 # 90
+  constant_a = -9;
+  result = (constant_a != initial_read);
+  uni_klee_add_patch(patch_results, 90, result);
+  // Patch 9-2 # 91
+  constant_a = -8;
+  result = (constant_a != initial_read);
+  uni_klee_add_patch(patch_results, 91, result);
+  // Patch 9-3 # 92
+  constant_a = -7;
+  result = (constant_a != initial_read);
+  uni_klee_add_patch(patch_results, 92, result);
+  // Patch 9-4 # 93
+  constant_a = -6;
+  result = (constant_a != initial_read);
+  uni_klee_add_patch(patch_results, 93, result);
+  // Patch 9-5 # 94
+  constant_a = -5;
+  result = (constant_a != initial_read);
+  uni_klee_add_patch(patch_results, 94, result);
+  // Patch 9-6 # 95
+  constant_a = -4;
+  result = (constant_a != initial_read);
+  uni_klee_add_patch(patch_results, 95, result);
+  // Patch 9-7 # 96
+  constant_a = -3;
+  result = (constant_a != initial_read);
+  uni_klee_add_patch(patch_results, 96, result);
+  // Patch 9-8 # 97
+  constant_a = -2;
+  result = (constant_a != initial_read);
+  uni_klee_add_patch(patch_results, 97, result);
+  // Patch 9-9 # 98
+  constant_a = -1;
+  result = (constant_a != initial_read);
+  uni_klee_add_patch(patch_results, 98, result);
+  // Patch 9-10 # 99
+  constant_a = 0;
+  result = (constant_a != initial_read);
+  uni_klee_add_patch(patch_results, 99, result);
+  // Patch 9-11 # 100
+  constant_a = 1;
+  result = (constant_a != initial_read);
+  uni_klee_add_patch(patch_results, 100, result);
+  // Patch 9-12 # 101
+  constant_a = 2;
+  result = (constant_a != initial_read);
+  uni_klee_add_patch(patch_results, 101, result);
+  // Patch 9-13 # 102
+  constant_a = 3;
+  result = (constant_a != initial_read);
+  uni_klee_add_patch(patch_results, 102, result);
+  // Patch 9-14 # 103
+  constant_a = 4;
+  result = (constant_a != initial_read);
+  uni_klee_add_patch(patch_results, 103, result);
+  // Patch 9-15 # 104
+  constant_a = 5;
+  result = (constant_a != initial_read);
+  uni_klee_add_patch(patch_results, 104, result);
+  // Patch 9-16 # 105
+  constant_a = 6;
+  result = (constant_a != initial_read);
+  uni_klee_add_patch(patch_results, 105, result);
+  // Patch 9-17 # 106
+  constant_a = 7;
+  result = (constant_a != initial_read);
+  uni_klee_add_patch(patch_results, 106, result);
+  // Patch 9-18 # 107
+  constant_a = 8;
+  result = (constant_a != initial_read);
+  uni_klee_add_patch(patch_results, 107, result);
+  // Patch 9-19 # 108
+  constant_a = 9;
+  result = (constant_a != initial_read);
+  uni_klee_add_patch(patch_results, 108, result);
+  // Patch 9-20 # 109
+  constant_a = 10;
+  result = (constant_a != initial_read);
+  uni_klee_add_patch(patch_results, 109, result);
+  // Patch 10-0 # 110
+  constant_a = -10;
+  result = (constant_a != bufsize);
+  uni_klee_add_patch(patch_results, 110, result);
+  // Patch 10-1 # 111
+  constant_a = -9;
+  result = (constant_a != bufsize);
+  uni_klee_add_patch(patch_results, 111, result);
+  // Patch 10-2 # 112
+  constant_a = -8;
+  result = (constant_a != bufsize);
+  uni_klee_add_patch(patch_results, 112, result);
+  // Patch 10-3 # 113
+  constant_a = -7;
+  result = (constant_a != bufsize);
+  uni_klee_add_patch(patch_results, 113, result);
+  // Patch 10-4 # 114
+  constant_a = -6;
+  result = (constant_a != bufsize);
+  uni_klee_add_patch(patch_results, 114, result);
+  // Patch 10-5 # 115
+  constant_a = -5;
+  result = (constant_a != bufsize);
+  uni_klee_add_patch(patch_results, 115, result);
+  // Patch 10-6 # 116
+  constant_a = -4;
+  result = (constant_a != bufsize);
+  uni_klee_add_patch(patch_results, 116, result);
+  // Patch 10-7 # 117
+  constant_a = -3;
+  result = (constant_a != bufsize);
+  uni_klee_add_patch(patch_results, 117, result);
+  // Patch 10-8 # 118
+  constant_a = -2;
+  result = (constant_a != bufsize);
+  uni_klee_add_patch(patch_results, 118, result);
+  // Patch 10-9 # 119
+  constant_a = -1;
+  result = (constant_a != bufsize);
+  uni_klee_add_patch(patch_results, 119, result);
+  // Patch 10-10 # 120
+  constant_a = 0;
+  result = (constant_a != bufsize);
+  uni_klee_add_patch(patch_results, 120, result);
+  // Patch 10-11 # 121
+  constant_a = 1;
+  result = (constant_a != bufsize);
+  uni_klee_add_patch(patch_results, 121, result);
+  // Patch 10-12 # 122
+  constant_a = 2;
+  result = (constant_a != bufsize);
+  uni_klee_add_patch(patch_results, 122, result);
+  // Patch 10-13 # 123
+  constant_a = 3;
+  result = (constant_a != bufsize);
+  uni_klee_add_patch(patch_results, 123, result);
+  // Patch 10-14 # 124
+  constant_a = 4;
+  result = (constant_a != bufsize);
+  uni_klee_add_patch(patch_results, 124, result);
+  // Patch 10-15 # 125
+  constant_a = 5;
+  result = (constant_a != bufsize);
+  uni_klee_add_patch(patch_results, 125, result);
+  // Patch 10-16 # 126
+  constant_a = 6;
+  result = (constant_a != bufsize);
+  uni_klee_add_patch(patch_results, 126, result);
+  // Patch 10-17 # 127
+  constant_a = 7;
+  result = (constant_a != bufsize);
+  uni_klee_add_patch(patch_results, 127, result);
+  // Patch 10-18 # 128
+  constant_a = 8;
+  result = (constant_a != bufsize);
+  uni_klee_add_patch(patch_results, 128, result);
+  // Patch 10-19 # 129
+  constant_a = 9;
+  result = (constant_a != bufsize);
+  uni_klee_add_patch(patch_results, 129, result);
+  // Patch 10-20 # 130
+  constant_a = 10;
+  result = (constant_a != bufsize);
+  uni_klee_add_patch(patch_results, 130, result);
+  // Patch 11-0 # 131
+  result = (bufsize < start);
+  uni_klee_add_patch(patch_results, 131, result);
+  // Patch 12-0 # 132
+  constant_a = -10;
+  result = (constant_a < start);
+  uni_klee_add_patch(patch_results, 132, result);
+  // Patch 12-1 # 133
+  constant_a = -9;
+  result = (constant_a < start);
+  uni_klee_add_patch(patch_results, 133, result);
+  // Patch 12-2 # 134
+  constant_a = -8;
+  result = (constant_a < start);
+  uni_klee_add_patch(patch_results, 134, result);
+  // Patch 12-3 # 135
+  constant_a = -7;
+  result = (constant_a < start);
+  uni_klee_add_patch(patch_results, 135, result);
+  // Patch 12-4 # 136
+  constant_a = -6;
+  result = (constant_a < start);
+  uni_klee_add_patch(patch_results, 136, result);
+  // Patch 12-5 # 137
+  constant_a = -5;
+  result = (constant_a < start);
+  uni_klee_add_patch(patch_results, 137, result);
+  // Patch 12-6 # 138
+  constant_a = -4;
+  result = (constant_a < start);
+  uni_klee_add_patch(patch_results, 138, result);
+  // Patch 12-7 # 139
+  constant_a = -3;
+  result = (constant_a < start);
+  uni_klee_add_patch(patch_results, 139, result);
+  // Patch 12-8 # 140
+  constant_a = -2;
+  result = (constant_a < start);
+  uni_klee_add_patch(patch_results, 140, result);
+  // Patch 12-9 # 141
+  constant_a = -1;
+  result = (constant_a < start);
+  uni_klee_add_patch(patch_results, 141, result);
+  // Patch 12-10 # 142
+  constant_a = 0;
+  result = (constant_a < start);
+  uni_klee_add_patch(patch_results, 142, result);
+  // Patch 12-11 # 143
+  constant_a = 1;
+  result = (constant_a < start);
+  uni_klee_add_patch(patch_results, 143, result);
+  // Patch 12-12 # 144
+  constant_a = 2;
+  result = (constant_a < start);
+  uni_klee_add_patch(patch_results, 144, result);
+  // Patch 12-13 # 145
+  constant_a = 3;
+  result = (constant_a < start);
+  uni_klee_add_patch(patch_results, 145, result);
+  // Patch 12-14 # 146
+  constant_a = 4;
+  result = (constant_a < start);
+  uni_klee_add_patch(patch_results, 146, result);
+  // Patch 12-15 # 147
+  constant_a = 5;
+  result = (constant_a < start);
+  uni_klee_add_patch(patch_results, 147, result);
+  // Patch 12-16 # 148
+  constant_a = 6;
+  result = (constant_a < start);
+  uni_klee_add_patch(patch_results, 148, result);
+  // Patch 12-17 # 149
+  constant_a = 7;
+  result = (constant_a < start);
+  uni_klee_add_patch(patch_results, 149, result);
+  // Patch 12-18 # 150
+  constant_a = 8;
+  result = (constant_a < start);
+  uni_klee_add_patch(patch_results, 150, result);
+  // Patch 12-19 # 151
+  constant_a = 9;
+  result = (constant_a < start);
+  uni_klee_add_patch(patch_results, 151, result);
+  // Patch 12-20 # 152
+  constant_a = 10;
+  result = (constant_a < start);
+  uni_klee_add_patch(patch_results, 152, result);
+  // Patch 13-0 # 153
+  result = (start < initial_read);
+  uni_klee_add_patch(patch_results, 153, result);
+  // Patch 14-0 # 154
+  result = (bufsize < initial_read);
+  uni_klee_add_patch(patch_results, 154, result);
+  // Patch 15-0 # 155
+  constant_a = -10;
+  result = (constant_a < initial_read);
+  uni_klee_add_patch(patch_results, 155, result);
+  // Patch 15-1 # 156
+  constant_a = -9;
+  result = (constant_a < initial_read);
+  uni_klee_add_patch(patch_results, 156, result);
+  // Patch 15-2 # 157
+  constant_a = -8;
+  result = (constant_a < initial_read);
+  uni_klee_add_patch(patch_results, 157, result);
+  // Patch 15-3 # 158
+  constant_a = -7;
+  result = (constant_a < initial_read);
+  uni_klee_add_patch(patch_results, 158, result);
+  // Patch 15-4 # 159
+  constant_a = -6;
+  result = (constant_a < initial_read);
+  uni_klee_add_patch(patch_results, 159, result);
+  // Patch 15-5 # 160
+  constant_a = -5;
+  result = (constant_a < initial_read);
+  uni_klee_add_patch(patch_results, 160, result);
+  // Patch 15-6 # 161
+  constant_a = -4;
+  result = (constant_a < initial_read);
+  uni_klee_add_patch(patch_results, 161, result);
+  // Patch 15-7 # 162
+  constant_a = -3;
+  result = (constant_a < initial_read);
+  uni_klee_add_patch(patch_results, 162, result);
+  // Patch 15-8 # 163
+  constant_a = -2;
+  result = (constant_a < initial_read);
+  uni_klee_add_patch(patch_results, 163, result);
+  // Patch 15-9 # 164
+  constant_a = -1;
+  result = (constant_a < initial_read);
+  uni_klee_add_patch(patch_results, 164, result);
+  // Patch 15-10 # 165
+  constant_a = 0;
+  result = (constant_a < initial_read);
+  uni_klee_add_patch(patch_results, 165, result);
+  // Patch 15-11 # 166
+  constant_a = 1;
+  result = (constant_a < initial_read);
+  uni_klee_add_patch(patch_results, 166, result);
+  // Patch 15-12 # 167
+  constant_a = 2;
+  result = (constant_a < initial_read);
+  uni_klee_add_patch(patch_results, 167, result);
+  // Patch 15-13 # 168
+  constant_a = 3;
+  result = (constant_a < initial_read);
+  uni_klee_add_patch(patch_results, 168, result);
+  // Patch 15-14 # 169
+  constant_a = 4;
+  result = (constant_a < initial_read);
+  uni_klee_add_patch(patch_results, 169, result);
+  // Patch 15-15 # 170
+  constant_a = 5;
+  result = (constant_a < initial_read);
+  uni_klee_add_patch(patch_results, 170, result);
+  // Patch 15-16 # 171
+  constant_a = 6;
+  result = (constant_a < initial_read);
+  uni_klee_add_patch(patch_results, 171, result);
+  // Patch 15-17 # 172
+  constant_a = 7;
+  result = (constant_a < initial_read);
+  uni_klee_add_patch(patch_results, 172, result);
+  // Patch 15-18 # 173
+  constant_a = 8;
+  result = (constant_a < initial_read);
+  uni_klee_add_patch(patch_results, 173, result);
+  // Patch 15-19 # 174
+  constant_a = 9;
+  result = (constant_a < initial_read);
+  uni_klee_add_patch(patch_results, 174, result);
+  // Patch 15-20 # 175
+  constant_a = 10;
+  result = (constant_a < initial_read);
+  uni_klee_add_patch(patch_results, 175, result);
+  // Patch 16-0 # 176
+  constant_a = -10;
+  result = (constant_a < bufsize);
+  uni_klee_add_patch(patch_results, 176, result);
+  // Patch 16-1 # 177
+  constant_a = -9;
+  result = (constant_a < bufsize);
+  uni_klee_add_patch(patch_results, 177, result);
+  // Patch 16-2 # 178
+  constant_a = -8;
+  result = (constant_a < bufsize);
+  uni_klee_add_patch(patch_results, 178, result);
+  // Patch 16-3 # 179
+  constant_a = -7;
+  result = (constant_a < bufsize);
+  uni_klee_add_patch(patch_results, 179, result);
+  // Patch 16-4 # 180
+  constant_a = -6;
+  result = (constant_a < bufsize);
+  uni_klee_add_patch(patch_results, 180, result);
+  // Patch 16-5 # 181
+  constant_a = -5;
+  result = (constant_a < bufsize);
+  uni_klee_add_patch(patch_results, 181, result);
+  // Patch 16-6 # 182
+  constant_a = -4;
+  result = (constant_a < bufsize);
+  uni_klee_add_patch(patch_results, 182, result);
+  // Patch 16-7 # 183
+  constant_a = -3;
+  result = (constant_a < bufsize);
+  uni_klee_add_patch(patch_results, 183, result);
+  // Patch 16-8 # 184
+  constant_a = -2;
+  result = (constant_a < bufsize);
+  uni_klee_add_patch(patch_results, 184, result);
+  // Patch 16-9 # 185
+  constant_a = -1;
+  result = (constant_a < bufsize);
+  uni_klee_add_patch(patch_results, 185, result);
+  // Patch 16-10 # 186
+  constant_a = 0;
+  result = (constant_a < bufsize);
+  uni_klee_add_patch(patch_results, 186, result);
+  // Patch 16-11 # 187
+  constant_a = 1;
+  result = (constant_a < bufsize);
+  uni_klee_add_patch(patch_results, 187, result);
+  // Patch 16-12 # 188
+  constant_a = 2;
+  result = (constant_a < bufsize);
+  uni_klee_add_patch(patch_results, 188, result);
+  // Patch 16-13 # 189
+  constant_a = 3;
+  result = (constant_a < bufsize);
+  uni_klee_add_patch(patch_results, 189, result);
+  // Patch 16-14 # 190
+  constant_a = 4;
+  result = (constant_a < bufsize);
+  uni_klee_add_patch(patch_results, 190, result);
+  // Patch 16-15 # 191
+  constant_a = 5;
+  result = (constant_a < bufsize);
+  uni_klee_add_patch(patch_results, 191, result);
+  // Patch 16-16 # 192
+  constant_a = 6;
+  result = (constant_a < bufsize);
+  uni_klee_add_patch(patch_results, 192, result);
+  // Patch 16-17 # 193
+  constant_a = 7;
+  result = (constant_a < bufsize);
+  uni_klee_add_patch(patch_results, 193, result);
+  // Patch 16-18 # 194
+  constant_a = 8;
+  result = (constant_a < bufsize);
+  uni_klee_add_patch(patch_results, 194, result);
+  // Patch 16-19 # 195
+  constant_a = 9;
+  result = (constant_a < bufsize);
+  uni_klee_add_patch(patch_results, 195, result);
+  // Patch 16-20 # 196
+  constant_a = 10;
+  result = (constant_a < bufsize);
+  uni_klee_add_patch(patch_results, 196, result);
+  // Patch 17-0 # 197
+  constant_a = -10;
+  result = (start < constant_a);
+  uni_klee_add_patch(patch_results, 197, result);
+  // Patch 17-1 # 198
+  constant_a = -9;
+  result = (start < constant_a);
+  uni_klee_add_patch(patch_results, 198, result);
+  // Patch 17-2 # 199
+  constant_a = -8;
+  result = (start < constant_a);
+  uni_klee_add_patch(patch_results, 199, result);
+  // Patch 17-3 # 200
+  constant_a = -7;
+  result = (start < constant_a);
+  uni_klee_add_patch(patch_results, 200, result);
+  // Patch 17-4 # 201
+  constant_a = -6;
+  result = (start < constant_a);
+  uni_klee_add_patch(patch_results, 201, result);
+  // Patch 17-5 # 202
+  constant_a = -5;
+  result = (start < constant_a);
+  uni_klee_add_patch(patch_results, 202, result);
+  // Patch 17-6 # 203
+  constant_a = -4;
+  result = (start < constant_a);
+  uni_klee_add_patch(patch_results, 203, result);
+  // Patch 17-7 # 204
+  constant_a = -3;
+  result = (start < constant_a);
+  uni_klee_add_patch(patch_results, 204, result);
+  // Patch 17-8 # 205
+  constant_a = -2;
+  result = (start < constant_a);
+  uni_klee_add_patch(patch_results, 205, result);
+  // Patch 17-9 # 206
+  constant_a = -1;
+  result = (start < constant_a);
+  uni_klee_add_patch(patch_results, 206, result);
+  // Patch 17-10 # 207
+  constant_a = 0;
+  result = (start < constant_a);
+  uni_klee_add_patch(patch_results, 207, result);
+  // Patch 17-11 # 208
+  constant_a = 1;
+  result = (start < constant_a);
+  uni_klee_add_patch(patch_results, 208, result);
+  // Patch 17-12 # 209
+  constant_a = 2;
+  result = (start < constant_a);
+  uni_klee_add_patch(patch_results, 209, result);
+  // Patch 17-13 # 210
+  constant_a = 3;
+  result = (start < constant_a);
+  uni_klee_add_patch(patch_results, 210, result);
+  // Patch 17-14 # 211
+  constant_a = 4;
+  result = (start < constant_a);
+  uni_klee_add_patch(patch_results, 211, result);
+  // Patch 17-15 # 212
+  constant_a = 5;
+  result = (start < constant_a);
+  uni_klee_add_patch(patch_results, 212, result);
+  // Patch 17-16 # 213
+  constant_a = 6;
+  result = (start < constant_a);
+  uni_klee_add_patch(patch_results, 213, result);
+  // Patch 17-17 # 214
+  constant_a = 7;
+  result = (start < constant_a);
+  uni_klee_add_patch(patch_results, 214, result);
+  // Patch 17-18 # 215
+  constant_a = 8;
+  result = (start < constant_a);
+  uni_klee_add_patch(patch_results, 215, result);
+  // Patch 17-19 # 216
+  constant_a = 9;
+  result = (start < constant_a);
+  uni_klee_add_patch(patch_results, 216, result);
+  // Patch 17-20 # 217
+  constant_a = 10;
+  result = (start < constant_a);
+  uni_klee_add_patch(patch_results, 217, result);
+  // Patch 18-0 # 218
+  constant_a = -10;
+  result = (initial_read < constant_a);
+  uni_klee_add_patch(patch_results, 218, result);
+  // Patch 18-1 # 219
+  constant_a = -9;
+  result = (initial_read < constant_a);
+  uni_klee_add_patch(patch_results, 219, result);
+  // Patch 18-2 # 220
+  constant_a = -8;
+  result = (initial_read < constant_a);
+  uni_klee_add_patch(patch_results, 220, result);
+  // Patch 18-3 # 221
+  constant_a = -7;
+  result = (initial_read < constant_a);
+  uni_klee_add_patch(patch_results, 221, result);
+  // Patch 18-4 # 222
+  constant_a = -6;
+  result = (initial_read < constant_a);
+  uni_klee_add_patch(patch_results, 222, result);
+  // Patch 18-5 # 223
+  constant_a = -5;
+  result = (initial_read < constant_a);
+  uni_klee_add_patch(patch_results, 223, result);
+  // Patch 18-6 # 224
+  constant_a = -4;
+  result = (initial_read < constant_a);
+  uni_klee_add_patch(patch_results, 224, result);
+  // Patch 18-7 # 225
+  constant_a = -3;
+  result = (initial_read < constant_a);
+  uni_klee_add_patch(patch_results, 225, result);
+  // Patch 18-8 # 226
+  constant_a = -2;
+  result = (initial_read < constant_a);
+  uni_klee_add_patch(patch_results, 226, result);
+  // Patch 18-9 # 227
+  constant_a = -1;
+  result = (initial_read < constant_a);
+  uni_klee_add_patch(patch_results, 227, result);
+  // Patch 18-10 # 228
+  constant_a = 0;
+  result = (initial_read < constant_a);
+  uni_klee_add_patch(patch_results, 228, result);
+  // Patch 18-11 # 229
+  constant_a = 1;
+  result = (initial_read < constant_a);
+  uni_klee_add_patch(patch_results, 229, result);
+  // Patch 18-12 # 230
+  constant_a = 2;
+  result = (initial_read < constant_a);
+  uni_klee_add_patch(patch_results, 230, result);
+  // Patch 18-13 # 231
+  constant_a = 3;
+  result = (initial_read < constant_a);
+  uni_klee_add_patch(patch_results, 231, result);
+  // Patch 18-14 # 232
+  constant_a = 4;
+  result = (initial_read < constant_a);
+  uni_klee_add_patch(patch_results, 232, result);
+  // Patch 18-15 # 233
+  constant_a = 5;
+  result = (initial_read < constant_a);
+  uni_klee_add_patch(patch_results, 233, result);
+  // Patch 18-16 # 234
+  constant_a = 6;
+  result = (initial_read < constant_a);
+  uni_klee_add_patch(patch_results, 234, result);
+  // Patch 18-17 # 235
+  constant_a = 7;
+  result = (initial_read < constant_a);
+  uni_klee_add_patch(patch_results, 235, result);
+  // Patch 18-18 # 236
+  constant_a = 8;
+  result = (initial_read < constant_a);
+  uni_klee_add_patch(patch_results, 236, result);
+  // Patch 18-19 # 237
+  constant_a = 9;
+  result = (initial_read < constant_a);
+  uni_klee_add_patch(patch_results, 237, result);
+  // Patch 18-20 # 238
+  constant_a = 10;
+  result = (initial_read < constant_a);
+  uni_klee_add_patch(patch_results, 238, result);
+  // Patch 19-0 # 239
+  constant_a = -10;
+  result = (bufsize < constant_a);
+  uni_klee_add_patch(patch_results, 239, result);
+  // Patch 19-1 # 240
+  constant_a = -9;
+  result = (bufsize < constant_a);
+  uni_klee_add_patch(patch_results, 240, result);
+  // Patch 19-2 # 241
+  constant_a = -8;
+  result = (bufsize < constant_a);
+  uni_klee_add_patch(patch_results, 241, result);
+  // Patch 19-3 # 242
+  constant_a = -7;
+  result = (bufsize < constant_a);
+  uni_klee_add_patch(patch_results, 242, result);
+  // Patch 19-4 # 243
+  constant_a = -6;
+  result = (bufsize < constant_a);
+  uni_klee_add_patch(patch_results, 243, result);
+  // Patch 19-5 # 244
+  constant_a = -5;
+  result = (bufsize < constant_a);
+  uni_klee_add_patch(patch_results, 244, result);
+  // Patch 19-6 # 245
+  constant_a = -4;
+  result = (bufsize < constant_a);
+  uni_klee_add_patch(patch_results, 245, result);
+  // Patch 19-7 # 246
+  constant_a = -3;
+  result = (bufsize < constant_a);
+  uni_klee_add_patch(patch_results, 246, result);
+  // Patch 19-8 # 247
+  constant_a = -2;
+  result = (bufsize < constant_a);
+  uni_klee_add_patch(patch_results, 247, result);
+  // Patch 19-9 # 248
+  constant_a = -1;
+  result = (bufsize < constant_a);
+  uni_klee_add_patch(patch_results, 248, result);
+  // Patch 19-10 # 249
+  constant_a = 0;
+  result = (bufsize < constant_a);
+  uni_klee_add_patch(patch_results, 249, result);
+  // Patch 19-11 # 250
+  constant_a = 1;
+  result = (bufsize < constant_a);
+  uni_klee_add_patch(patch_results, 250, result);
+  // Patch 19-12 # 251
+  constant_a = 2;
+  result = (bufsize < constant_a);
+  uni_klee_add_patch(patch_results, 251, result);
+  // Patch 19-13 # 252
+  constant_a = 3;
+  result = (bufsize < constant_a);
+  uni_klee_add_patch(patch_results, 252, result);
+  // Patch 19-14 # 253
+  constant_a = 4;
+  result = (bufsize < constant_a);
+  uni_klee_add_patch(patch_results, 253, result);
+  // Patch 19-15 # 254
+  constant_a = 5;
+  result = (bufsize < constant_a);
+  uni_klee_add_patch(patch_results, 254, result);
+  // Patch 19-16 # 255
+  constant_a = 6;
+  result = (bufsize < constant_a);
+  uni_klee_add_patch(patch_results, 255, result);
+  // Patch 19-17 # 256
+  constant_a = 7;
+  result = (bufsize < constant_a);
+  uni_klee_add_patch(patch_results, 256, result);
+  // Patch 19-18 # 257
+  constant_a = 8;
+  result = (bufsize < constant_a);
+  uni_klee_add_patch(patch_results, 257, result);
+  // Patch 19-19 # 258
+  constant_a = 9;
+  result = (bufsize < constant_a);
+  uni_klee_add_patch(patch_results, 258, result);
+  // Patch 19-20 # 259
+  constant_a = 10;
+  result = (bufsize < constant_a);
+  uni_klee_add_patch(patch_results, 259, result);
+  // Patch 20-0 # 260
+  result = (bufsize <= start);
+  uni_klee_add_patch(patch_results, 260, result);
+  // Patch 21-0 # 261
+  constant_a = -10;
+  result = (constant_a <= start);
+  uni_klee_add_patch(patch_results, 261, result);
+  // Patch 21-1 # 262
+  constant_a = -9;
+  result = (constant_a <= start);
+  uni_klee_add_patch(patch_results, 262, result);
+  // Patch 21-2 # 263
+  constant_a = -8;
+  result = (constant_a <= start);
+  uni_klee_add_patch(patch_results, 263, result);
+  // Patch 21-3 # 264
+  constant_a = -7;
+  result = (constant_a <= start);
+  uni_klee_add_patch(patch_results, 264, result);
+  // Patch 21-4 # 265
+  constant_a = -6;
+  result = (constant_a <= start);
+  uni_klee_add_patch(patch_results, 265, result);
+  // Patch 21-5 # 266
+  constant_a = -5;
+  result = (constant_a <= start);
+  uni_klee_add_patch(patch_results, 266, result);
+  // Patch 21-6 # 267
+  constant_a = -4;
+  result = (constant_a <= start);
+  uni_klee_add_patch(patch_results, 267, result);
+  // Patch 21-7 # 268
+  constant_a = -3;
+  result = (constant_a <= start);
+  uni_klee_add_patch(patch_results, 268, result);
+  // Patch 21-8 # 269
+  constant_a = -2;
+  result = (constant_a <= start);
+  uni_klee_add_patch(patch_results, 269, result);
+  // Patch 21-9 # 270
+  constant_a = -1;
+  result = (constant_a <= start);
+  uni_klee_add_patch(patch_results, 270, result);
+  // Patch 21-10 # 271
+  constant_a = 0;
+  result = (constant_a <= start);
+  uni_klee_add_patch(patch_results, 271, result);
+  // Patch 21-11 # 272
+  constant_a = 1;
+  result = (constant_a <= start);
+  uni_klee_add_patch(patch_results, 272, result);
+  // Patch 21-12 # 273
+  constant_a = 2;
+  result = (constant_a <= start);
+  uni_klee_add_patch(patch_results, 273, result);
+  // Patch 21-13 # 274
+  constant_a = 3;
+  result = (constant_a <= start);
+  uni_klee_add_patch(patch_results, 274, result);
+  // Patch 21-14 # 275
+  constant_a = 4;
+  result = (constant_a <= start);
+  uni_klee_add_patch(patch_results, 275, result);
+  // Patch 21-15 # 276
+  constant_a = 5;
+  result = (constant_a <= start);
+  uni_klee_add_patch(patch_results, 276, result);
+  // Patch 21-16 # 277
+  constant_a = 6;
+  result = (constant_a <= start);
+  uni_klee_add_patch(patch_results, 277, result);
+  // Patch 21-17 # 278
+  constant_a = 7;
+  result = (constant_a <= start);
+  uni_klee_add_patch(patch_results, 278, result);
+  // Patch 21-18 # 279
+  constant_a = 8;
+  result = (constant_a <= start);
+  uni_klee_add_patch(patch_results, 279, result);
+  // Patch 21-19 # 280
+  constant_a = 9;
+  result = (constant_a <= start);
+  uni_klee_add_patch(patch_results, 280, result);
+  // Patch 21-20 # 281
+  constant_a = 10;
+  result = (constant_a <= start);
+  uni_klee_add_patch(patch_results, 281, result);
+  // Patch 22-0 # 282
+  result = (start <= initial_read);
+  uni_klee_add_patch(patch_results, 282, result);
+  // Patch 23-0 # 283
+  result = (bufsize <= initial_read);
+  uni_klee_add_patch(patch_results, 283, result);
+  // Patch 24-0 # 284
+  constant_a = -10;
+  result = (constant_a <= initial_read);
+  uni_klee_add_patch(patch_results, 284, result);
+  // Patch 24-1 # 285
+  constant_a = -9;
+  result = (constant_a <= initial_read);
+  uni_klee_add_patch(patch_results, 285, result);
+  // Patch 24-2 # 286
+  constant_a = -8;
+  result = (constant_a <= initial_read);
+  uni_klee_add_patch(patch_results, 286, result);
+  // Patch 24-3 # 287
+  constant_a = -7;
+  result = (constant_a <= initial_read);
+  uni_klee_add_patch(patch_results, 287, result);
+  // Patch 24-4 # 288
+  constant_a = -6;
+  result = (constant_a <= initial_read);
+  uni_klee_add_patch(patch_results, 288, result);
+  // Patch 24-5 # 289
+  constant_a = -5;
+  result = (constant_a <= initial_read);
+  uni_klee_add_patch(patch_results, 289, result);
+  // Patch 24-6 # 290
+  constant_a = -4;
+  result = (constant_a <= initial_read);
+  uni_klee_add_patch(patch_results, 290, result);
+  // Patch 24-7 # 291
+  constant_a = -3;
+  result = (constant_a <= initial_read);
+  uni_klee_add_patch(patch_results, 291, result);
+  // Patch 24-8 # 292
+  constant_a = -2;
+  result = (constant_a <= initial_read);
+  uni_klee_add_patch(patch_results, 292, result);
+  // Patch 24-9 # 293
+  constant_a = -1;
+  result = (constant_a <= initial_read);
+  uni_klee_add_patch(patch_results, 293, result);
+  // Patch 24-10 # 294
+  constant_a = 0;
+  result = (constant_a <= initial_read);
+  uni_klee_add_patch(patch_results, 294, result);
+  // Patch 24-11 # 295
+  constant_a = 1;
+  result = (constant_a <= initial_read);
+  uni_klee_add_patch(patch_results, 295, result);
+  // Patch 24-12 # 296
+  constant_a = 2;
+  result = (constant_a <= initial_read);
+  uni_klee_add_patch(patch_results, 296, result);
+  // Patch 24-13 # 297
+  constant_a = 3;
+  result = (constant_a <= initial_read);
+  uni_klee_add_patch(patch_results, 297, result);
+  // Patch 24-14 # 298
+  constant_a = 4;
+  result = (constant_a <= initial_read);
+  uni_klee_add_patch(patch_results, 298, result);
+  // Patch 24-15 # 299
+  constant_a = 5;
+  result = (constant_a <= initial_read);
+  uni_klee_add_patch(patch_results, 299, result);
+  // Patch 24-16 # 300
+  constant_a = 6;
+  result = (constant_a <= initial_read);
+  uni_klee_add_patch(patch_results, 300, result);
+  // Patch 24-17 # 301
+  constant_a = 7;
+  result = (constant_a <= initial_read);
+  uni_klee_add_patch(patch_results, 301, result);
+  // Patch 24-18 # 302
+  constant_a = 8;
+  result = (constant_a <= initial_read);
+  uni_klee_add_patch(patch_results, 302, result);
+  // Patch 24-19 # 303
+  constant_a = 9;
+  result = (constant_a <= initial_read);
+  uni_klee_add_patch(patch_results, 303, result);
+  // Patch 24-20 # 304
+  constant_a = 10;
+  result = (constant_a <= initial_read);
+  uni_klee_add_patch(patch_results, 304, result);
+  // Patch 25-0 # 305
+  constant_a = -10;
+  result = (constant_a <= bufsize);
+  uni_klee_add_patch(patch_results, 305, result);
+  // Patch 25-1 # 306
+  constant_a = -9;
+  result = (constant_a <= bufsize);
+  uni_klee_add_patch(patch_results, 306, result);
+  // Patch 25-2 # 307
+  constant_a = -8;
+  result = (constant_a <= bufsize);
+  uni_klee_add_patch(patch_results, 307, result);
+  // Patch 25-3 # 308
+  constant_a = -7;
+  result = (constant_a <= bufsize);
+  uni_klee_add_patch(patch_results, 308, result);
+  // Patch 25-4 # 309
+  constant_a = -6;
+  result = (constant_a <= bufsize);
+  uni_klee_add_patch(patch_results, 309, result);
+  // Patch 25-5 # 310
+  constant_a = -5;
+  result = (constant_a <= bufsize);
+  uni_klee_add_patch(patch_results, 310, result);
+  // Patch 25-6 # 311
+  constant_a = -4;
+  result = (constant_a <= bufsize);
+  uni_klee_add_patch(patch_results, 311, result);
+  // Patch 25-7 # 312
+  constant_a = -3;
+  result = (constant_a <= bufsize);
+  uni_klee_add_patch(patch_results, 312, result);
+  // Patch 25-8 # 313
+  constant_a = -2;
+  result = (constant_a <= bufsize);
+  uni_klee_add_patch(patch_results, 313, result);
+  // Patch 25-9 # 314
+  constant_a = -1;
+  result = (constant_a <= bufsize);
+  uni_klee_add_patch(patch_results, 314, result);
+  // Patch 25-10 # 315
+  constant_a = 0;
+  result = (constant_a <= bufsize);
+  uni_klee_add_patch(patch_results, 315, result);
+  // Patch 25-11 # 316
+  constant_a = 1;
+  result = (constant_a <= bufsize);
+  uni_klee_add_patch(patch_results, 316, result);
+  // Patch 25-12 # 317
+  constant_a = 2;
+  result = (constant_a <= bufsize);
+  uni_klee_add_patch(patch_results, 317, result);
+  // Patch 25-13 # 318
+  constant_a = 3;
+  result = (constant_a <= bufsize);
+  uni_klee_add_patch(patch_results, 318, result);
+  // Patch 25-14 # 319
+  constant_a = 4;
+  result = (constant_a <= bufsize);
+  uni_klee_add_patch(patch_results, 319, result);
+  // Patch 25-15 # 320
+  constant_a = 5;
+  result = (constant_a <= bufsize);
+  uni_klee_add_patch(patch_results, 320, result);
+  // Patch 25-16 # 321
+  constant_a = 6;
+  result = (constant_a <= bufsize);
+  uni_klee_add_patch(patch_results, 321, result);
+  // Patch 25-17 # 322
+  constant_a = 7;
+  result = (constant_a <= bufsize);
+  uni_klee_add_patch(patch_results, 322, result);
+  // Patch 25-18 # 323
+  constant_a = 8;
+  result = (constant_a <= bufsize);
+  uni_klee_add_patch(patch_results, 323, result);
+  // Patch 25-19 # 324
+  constant_a = 9;
+  result = (constant_a <= bufsize);
+  uni_klee_add_patch(patch_results, 324, result);
+  // Patch 25-20 # 325
+  constant_a = 10;
+  result = (constant_a <= bufsize);
+  uni_klee_add_patch(patch_results, 325, result);
+  // Patch 26-0 # 326
+  constant_a = -10;
+  result = (start <= constant_a);
+  uni_klee_add_patch(patch_results, 326, result);
+  // Patch 26-1 # 327
+  constant_a = -9;
+  result = (start <= constant_a);
+  uni_klee_add_patch(patch_results, 327, result);
+  // Patch 26-2 # 328
+  constant_a = -8;
+  result = (start <= constant_a);
+  uni_klee_add_patch(patch_results, 328, result);
+  // Patch 26-3 # 329
+  constant_a = -7;
+  result = (start <= constant_a);
+  uni_klee_add_patch(patch_results, 329, result);
+  // Patch 26-4 # 330
+  constant_a = -6;
+  result = (start <= constant_a);
+  uni_klee_add_patch(patch_results, 330, result);
+  // Patch 26-5 # 331
+  constant_a = -5;
+  result = (start <= constant_a);
+  uni_klee_add_patch(patch_results, 331, result);
+  // Patch 26-6 # 332
+  constant_a = -4;
+  result = (start <= constant_a);
+  uni_klee_add_patch(patch_results, 332, result);
+  // Patch 26-7 # 333
+  constant_a = -3;
+  result = (start <= constant_a);
+  uni_klee_add_patch(patch_results, 333, result);
+  // Patch 26-8 # 334
+  constant_a = -2;
+  result = (start <= constant_a);
+  uni_klee_add_patch(patch_results, 334, result);
+  // Patch 26-9 # 335
+  constant_a = -1;
+  result = (start <= constant_a);
+  uni_klee_add_patch(patch_results, 335, result);
+  // Patch 26-10 # 336
+  constant_a = 0;
+  result = (start <= constant_a);
+  uni_klee_add_patch(patch_results, 336, result);
+  // Patch 26-11 # 337
+  constant_a = 1;
+  result = (start <= constant_a);
+  uni_klee_add_patch(patch_results, 337, result);
+  // Patch 26-12 # 338
+  constant_a = 2;
+  result = (start <= constant_a);
+  uni_klee_add_patch(patch_results, 338, result);
+  // Patch 26-13 # 339
+  constant_a = 3;
+  result = (start <= constant_a);
+  uni_klee_add_patch(patch_results, 339, result);
+  // Patch 26-14 # 340
+  constant_a = 4;
+  result = (start <= constant_a);
+  uni_klee_add_patch(patch_results, 340, result);
+  // Patch 26-15 # 341
+  constant_a = 5;
+  result = (start <= constant_a);
+  uni_klee_add_patch(patch_results, 341, result);
+  // Patch 26-16 # 342
+  constant_a = 6;
+  result = (start <= constant_a);
+  uni_klee_add_patch(patch_results, 342, result);
+  // Patch 26-17 # 343
+  constant_a = 7;
+  result = (start <= constant_a);
+  uni_klee_add_patch(patch_results, 343, result);
+  // Patch 26-18 # 344
+  constant_a = 8;
+  result = (start <= constant_a);
+  uni_klee_add_patch(patch_results, 344, result);
+  // Patch 26-19 # 345
+  constant_a = 9;
+  result = (start <= constant_a);
+  uni_klee_add_patch(patch_results, 345, result);
+  // Patch 26-20 # 346
+  constant_a = 10;
+  result = (start <= constant_a);
+  uni_klee_add_patch(patch_results, 346, result);
+  // Patch 27-0 # 347
+  constant_a = -10;
+  result = (initial_read <= constant_a);
+  uni_klee_add_patch(patch_results, 347, result);
+  // Patch 27-1 # 348
+  constant_a = -9;
+  result = (initial_read <= constant_a);
+  uni_klee_add_patch(patch_results, 348, result);
+  // Patch 27-2 # 349
+  constant_a = -8;
+  result = (initial_read <= constant_a);
+  uni_klee_add_patch(patch_results, 349, result);
+  // Patch 27-3 # 350
+  constant_a = -7;
+  result = (initial_read <= constant_a);
+  uni_klee_add_patch(patch_results, 350, result);
+  // Patch 27-4 # 351
+  constant_a = -6;
+  result = (initial_read <= constant_a);
+  uni_klee_add_patch(patch_results, 351, result);
+  // Patch 27-5 # 352
+  constant_a = -5;
+  result = (initial_read <= constant_a);
+  uni_klee_add_patch(patch_results, 352, result);
+  // Patch 27-6 # 353
+  constant_a = -4;
+  result = (initial_read <= constant_a);
+  uni_klee_add_patch(patch_results, 353, result);
+  // Patch 27-7 # 354
+  constant_a = -3;
+  result = (initial_read <= constant_a);
+  uni_klee_add_patch(patch_results, 354, result);
+  // Patch 27-8 # 355
+  constant_a = -2;
+  result = (initial_read <= constant_a);
+  uni_klee_add_patch(patch_results, 355, result);
+  // Patch 27-9 # 356
+  constant_a = -1;
+  result = (initial_read <= constant_a);
+  uni_klee_add_patch(patch_results, 356, result);
+  // Patch 27-10 # 357
+  constant_a = 0;
+  result = (initial_read <= constant_a);
+  uni_klee_add_patch(patch_results, 357, result);
+  // Patch 27-11 # 358
+  constant_a = 1;
+  result = (initial_read <= constant_a);
+  uni_klee_add_patch(patch_results, 358, result);
+  // Patch 27-12 # 359
+  constant_a = 2;
+  result = (initial_read <= constant_a);
+  uni_klee_add_patch(patch_results, 359, result);
+  // Patch 27-13 # 360
+  constant_a = 3;
+  result = (initial_read <= constant_a);
+  uni_klee_add_patch(patch_results, 360, result);
+  // Patch 27-14 # 361
+  constant_a = 4;
+  result = (initial_read <= constant_a);
+  uni_klee_add_patch(patch_results, 361, result);
+  // Patch 27-15 # 362
+  constant_a = 5;
+  result = (initial_read <= constant_a);
+  uni_klee_add_patch(patch_results, 362, result);
+  // Patch 27-16 # 363
+  constant_a = 6;
+  result = (initial_read <= constant_a);
+  uni_klee_add_patch(patch_results, 363, result);
+  // Patch 27-17 # 364
+  constant_a = 7;
+  result = (initial_read <= constant_a);
+  uni_klee_add_patch(patch_results, 364, result);
+  // Patch 27-18 # 365
+  constant_a = 8;
+  result = (initial_read <= constant_a);
+  uni_klee_add_patch(patch_results, 365, result);
+  // Patch 27-19 # 366
+  constant_a = 9;
+  result = (initial_read <= constant_a);
+  uni_klee_add_patch(patch_results, 366, result);
+  // Patch 27-20 # 367
+  constant_a = 10;
+  result = (initial_read <= constant_a);
+  uni_klee_add_patch(patch_results, 367, result);
+  // Patch 28-0 # 368
+  constant_a = -10;
+  result = (bufsize <= constant_a);
+  uni_klee_add_patch(patch_results, 368, result);
+  // Patch 28-1 # 369
+  constant_a = -9;
+  result = (bufsize <= constant_a);
+  uni_klee_add_patch(patch_results, 369, result);
+  // Patch 28-2 # 370
+  constant_a = -8;
+  result = (bufsize <= constant_a);
+  uni_klee_add_patch(patch_results, 370, result);
+  // Patch 28-3 # 371
+  constant_a = -7;
+  result = (bufsize <= constant_a);
+  uni_klee_add_patch(patch_results, 371, result);
+  // Patch 28-4 # 372
+  constant_a = -6;
+  result = (bufsize <= constant_a);
+  uni_klee_add_patch(patch_results, 372, result);
+  // Patch 28-5 # 373
+  constant_a = -5;
+  result = (bufsize <= constant_a);
+  uni_klee_add_patch(patch_results, 373, result);
+  // Patch 28-6 # 374
+  constant_a = -4;
+  result = (bufsize <= constant_a);
+  uni_klee_add_patch(patch_results, 374, result);
+  // Patch 28-7 # 375
+  constant_a = -3;
+  result = (bufsize <= constant_a);
+  uni_klee_add_patch(patch_results, 375, result);
+  // Patch 28-8 # 376
+  constant_a = -2;
+  result = (bufsize <= constant_a);
+  uni_klee_add_patch(patch_results, 376, result);
+  // Patch 28-9 # 377
+  constant_a = -1;
+  result = (bufsize <= constant_a);
+  uni_klee_add_patch(patch_results, 377, result);
+  // Patch 28-10 # 378
+  constant_a = 0;
+  result = (bufsize <= constant_a);
+  uni_klee_add_patch(patch_results, 378, result);
+  // Patch 28-11 # 379
+  constant_a = 1;
+  result = (bufsize <= constant_a);
+  uni_klee_add_patch(patch_results, 379, result);
+  // Patch 28-12 # 380
+  constant_a = 2;
+  result = (bufsize <= constant_a);
+  uni_klee_add_patch(patch_results, 380, result);
+  // Patch 28-13 # 381
+  constant_a = 3;
+  result = (bufsize <= constant_a);
+  uni_klee_add_patch(patch_results, 381, result);
+  // Patch 28-14 # 382
+  constant_a = 4;
+  result = (bufsize <= constant_a);
+  uni_klee_add_patch(patch_results, 382, result);
+  // Patch 28-15 # 383
+  constant_a = 5;
+  result = (bufsize <= constant_a);
+  uni_klee_add_patch(patch_results, 383, result);
+  // Patch 28-16 # 384
+  constant_a = 6;
+  result = (bufsize <= constant_a);
+  uni_klee_add_patch(patch_results, 384, result);
+  // Patch 28-17 # 385
+  constant_a = 7;
+  result = (bufsize <= constant_a);
+  uni_klee_add_patch(patch_results, 385, result);
+  // Patch 28-18 # 386
+  constant_a = 8;
+  result = (bufsize <= constant_a);
+  uni_klee_add_patch(patch_results, 386, result);
+  // Patch 28-19 # 387
+  constant_a = 9;
+  result = (bufsize <= constant_a);
+  uni_klee_add_patch(patch_results, 387, result);
+  // Patch 28-20 # 388
+  constant_a = 10;
+  result = (bufsize <= constant_a);
+  uni_klee_add_patch(patch_results, 388, result);
+  // Patch correct # 389
+  result = (start < initial_read);
+  uni_klee_add_patch(patch_results, 389, result);
+  klee_select_patch(&uni_klee_patch_id);
+  return uni_klee_choice(patch_results, uni_klee_patch_id);
+}
+// UNI_KLEE_END
+
+int __cpr_output(char* id, char* typestr, int value){
+  return value;
+}

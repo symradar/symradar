@@ -1,0 +1,36 @@
+# libxml2
+## CVE-2012-5134
+url=https://gitlab.gnome.org/GNOME/libxml2/-/commit/6a36fbe
+binary=xmllint
+file=parser.c
+target=xmlParseAttValueComplex
+correct=(x>0)
+buggy=(1)
+### not prepared... no result
+
+## CVE-2016-1834
+url=https://gitlab.gnome.org/GNOME/libxml2/-/commit/8fbbf5513d609c1770b391b99e33314cd0742704
+binary=build/poc
+file=xmlstring.c
+target=xmlStrncat
+correct=(x<0)
+buggy=(0)
+
+## CVE-2016-1838
+url=https://gitlab.gnome.org/GNOME/libxml2/commit/db07dd6
+binary=xmllint
+file=parser.c
+target=xmlParseEndTag2
+correct=(x>=y)
+buggy=(1)
+
+## CVE-2016-1839
+url=https://gitlab.gnome.org/GNOME/libxml2/-/commit/a820dbe
+binary=xmllint
+file=HTMLparser.c
+target=htmlParseNameComplex
+correct=(y>x-z)
+buggy=(0)
+
+## CVE-2017-5969
+

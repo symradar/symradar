@@ -1,0 +1,20 @@
+# Large files
+data.rar
+**/pytorch_model.bin
+
+# Model checkpoints: there're too large
+checkpoint_final/final_model/*
+
+# Temporary ignore pre-process scripts
+# TODO: Remove this when the pre-process scripts are stable
+setup/extractfix.json
+setup/test.csv
+setup/train.csv
+setup/valid.csv
+
+# Evaluation results
+benchmarks/**/result/*.log
+
+**/__pycache__
+**/train.json
+.vscode

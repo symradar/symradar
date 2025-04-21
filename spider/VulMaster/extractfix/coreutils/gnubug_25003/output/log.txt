@@ -1,0 +1,28 @@
+ERROR StatusLogger No log4j2 configuration file found. Using default configuration: logging only errors to the console.
+Specified option VERBOSE
+Specified option OUTPUT_PATH
+Oldfile: coreutils/gnubug_25003/buggy-split.c
+Newfile: coreutils/gnubug_25003/patches/split-1.c
+Preprocessing...
+Parsing files...
+Extracting textual diff from the two files...
+
+Finding common functions...
+
+> FUNCTION:
+bytes_chunk_extract - Oldfile: at line 960 - Newfile: at line 960
+
+> Generating function graphs...
+> Applying heuristics...
+modified_conditions: false: no modified conditions
+inserted_if: true: no else and single init statement
+inserted_if: true: no else and single init statement
+flow_restrictive: true: matches all heuristics
+> Security-related: true
+> {OFF_BY_ONE=false, FLOW_RESTRICTIVE=true, KERNEL_SYNCH=false, MODIFIED_CONDITIONS=false, INIT_OR_ERROR=false, REMOVED_STUFF=false, C_SENS_FUN=false, INSERTED_IFS=true, KNOWN_PATCHES=false, CONDITIONS=false, INSERTED_STMT=false}
+> {RESTRICTED_CONDITIONS_COUNT=0, WIDENED_CONDITIONS_COUNT=0, INSERTED_STMTS_COUNT=0, BI_IMPLICATIONS_COUNT=0, CHANGED_CONDITIONS_COUNT=0, INSERTED_IFS_COUNT=1}
+> END_FUNCTION.
+AFFECTED_FUNCTIONS=1
+Done.
+
+[{"function":"bytes_chunk_extract","originalLine":960,"newLine":960,"heuristics":{"OFF_BY_ONE":false,"FLOW_RESTRICTIVE":true,"KERNEL_SYNCH":false,"MODIFIED_CONDITIONS":false,"INIT_OR_ERROR":false,"REMOVED_STUFF":false,"C_SENS_FUN":false,"INSERTED_IFS":true,"KNOWN_PATCHES":false,"CONDITIONS":false,"INSERTED_STMT":false},"features":{"RESTRICTED_CONDITIONS_COUNT":0,"WIDENED_CONDITIONS_COUNT":0,"INSERTED_STMTS_COUNT":0,"BI_IMPLICATIONS_COUNT":0,"CHANGED_CONDITIONS_COUNT":0,"INSERTED_IFS_COUNT":1},"security":true}]

@@ -1,0 +1,14 @@
+executable.jar
+
+# benchmarks
+CPR/extractfix/**/**/patches
+CPR/**/**/**/output
+**/preprocessed*
+**/*.csv
+**/*.json
+!CPR/extractfix/filtered.json
+!CPR/extractfix/**/**/meta-program*.json
+!CPR/extractfix/**/**/group-patches*.json
+
+# vscode stuffs
+.vscode/

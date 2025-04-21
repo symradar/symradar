@@ -1,0 +1,140 @@
+ERROR StatusLogger No log4j2 configuration file found. Using default configuration: logging only errors to the console.
+Specified option VERBOSE
+Specified option OUTPUT_PATH
+Oldfile: binutils/cve_2018_10372/buggy-dwarf.c
+Newfile: binutils/cve_2018_10372/patches/dwarf-5.c
+Preprocessing...
+Parsing files...
+Extracting textual diff from the two files...
+
+Finding common functions...
+
+> FUNCTION:
+process_cu_tu_index - Oldfile: at line 9065 - Newfile: at line 9065
+
+> Generating function graphs...
+> Applying heuristics...
+modified_conditions: false: no modified conditions
+inserted_if: true: no else and error handling block
+inserted_if: true: no else and error handling block
+flow_restrictive: true: matches all heuristics
+> Security-related: true
+> {INIT_OR_ERROR=false, KERNEL_SYNCH=false, CONDITIONS=false, FLOW_RESTRICTIVE=true, INSERTED_STMT=false, INSERTED_IFS=true, OFF_BY_ONE=false, C_SENS_FUN=false, MODIFIED_CONDITIONS=false, REMOVED_STUFF=false, KNOWN_PATCHES=false}
+> {RESTRICTED_CONDITIONS_COUNT=0, BI_IMPLICATIONS_COUNT=0, INSERTED_IFS_COUNT=1, CHANGED_CONDITIONS_COUNT=0, WIDENED_CONDITIONS_COUNT=0, INSERTED_STMTS_COUNT=0}
+> END_FUNCTION.
+AFFECTED_FUNCTIONS=1
+Done.
+
+[{"function":"process_cu_tu_index","originalLine":9065,"newLine":9065,"heuristics":{"INIT_OR_ERROR":false,"KERNEL_SYNCH":false,"CONDITIONS":false,"FLOW_RESTRICTIVE":true,"INSERTED_STMT":false,"INSERTED_IFS":true,"OFF_BY_ONE":false,"C_SENS_FUN":false,"MODIFIED_CONDITIONS":false,"REMOVED_STUFF":false,"KNOWN_PATCHES":false},"features":{"RESTRICTED_CONDITIONS_COUNT":0,"BI_IMPLICATIONS_COUNT":0,"INSERTED_IFS_COUNT":1,"CHANGED_CONDITIONS_COUNT":0,"WIDENED_CONDITIONS_COUNT":0,"INSERTED_STMTS_COUNT":0},"security":true}]
+ERROR StatusLogger No log4j2 configuration file found. Using default configuration: logging only errors to the console.
+Specified option VERBOSE
+Specified option OUTPUT_PATH
+Oldfile: binutils/cve_2018_10372/buggy-dwarf.c
+Newfile: binutils/cve_2018_10372/patches/dwarf-4.c
+Preprocessing...
+Parsing files...
+Extracting textual diff from the two files...
+
+Finding common functions...
+
+> FUNCTION:
+process_cu_tu_index - Oldfile: at line 9065 - Newfile: at line 9065
+
+> Generating function graphs...
+> Applying heuristics...
+modified_conditions: false: no modified conditions
+inserted_if: true: no else and error handling block
+inserted_if: true: no else and error handling block
+flow_restrictive: true: matches all heuristics
+> Security-related: true
+> {KNOWN_PATCHES=false, CONDITIONS=false, C_SENS_FUN=false, FLOW_RESTRICTIVE=true, REMOVED_STUFF=false, KERNEL_SYNCH=false, INIT_OR_ERROR=false, INSERTED_STMT=false, INSERTED_IFS=true, OFF_BY_ONE=false, MODIFIED_CONDITIONS=false}
+> {WIDENED_CONDITIONS_COUNT=0, CHANGED_CONDITIONS_COUNT=0, INSERTED_STMTS_COUNT=0, RESTRICTED_CONDITIONS_COUNT=0, INSERTED_IFS_COUNT=1, BI_IMPLICATIONS_COUNT=0}
+> END_FUNCTION.
+AFFECTED_FUNCTIONS=1
+Done.
+
+[{"function":"process_cu_tu_index","originalLine":9065,"newLine":9065,"heuristics":{"KNOWN_PATCHES":false,"CONDITIONS":false,"C_SENS_FUN":false,"FLOW_RESTRICTIVE":true,"REMOVED_STUFF":false,"KERNEL_SYNCH":false,"INIT_OR_ERROR":false,"INSERTED_STMT":false,"INSERTED_IFS":true,"OFF_BY_ONE":false,"MODIFIED_CONDITIONS":false},"features":{"WIDENED_CONDITIONS_COUNT":0,"CHANGED_CONDITIONS_COUNT":0,"INSERTED_STMTS_COUNT":0,"RESTRICTED_CONDITIONS_COUNT":0,"INSERTED_IFS_COUNT":1,"BI_IMPLICATIONS_COUNT":0},"security":true}]
+ERROR StatusLogger No log4j2 configuration file found. Using default configuration: logging only errors to the console.
+Specified option VERBOSE
+Specified option OUTPUT_PATH
+Oldfile: binutils/cve_2018_10372/buggy-dwarf.c
+Newfile: binutils/cve_2018_10372/patches/dwarf-2.c
+Preprocessing...
+Parsing files...
+Extracting textual diff from the two files...
+
+Finding common functions...
+
+> FUNCTION:
+process_cu_tu_index - Oldfile: at line 9065 - Newfile: at line 9065
+
+> Generating function graphs...
+> Applying heuristics...
+modified_conditions: false: no modified conditions
+inserted_if: true: no else and error handling block
+inserted_if: true: no else and error handling block
+flow_restrictive: true: matches all heuristics
+> Security-related: true
+> {REMOVED_STUFF=false, KNOWN_PATCHES=false, INSERTED_STMT=false, FLOW_RESTRICTIVE=true, INIT_OR_ERROR=false, INSERTED_IFS=true, OFF_BY_ONE=false, MODIFIED_CONDITIONS=false, C_SENS_FUN=false, CONDITIONS=false, KERNEL_SYNCH=false}
+> {INSERTED_STMTS_COUNT=0, CHANGED_CONDITIONS_COUNT=0, INSERTED_IFS_COUNT=1, BI_IMPLICATIONS_COUNT=0, WIDENED_CONDITIONS_COUNT=0, RESTRICTED_CONDITIONS_COUNT=0}
+> END_FUNCTION.
+AFFECTED_FUNCTIONS=1
+Done.
+
+[{"function":"process_cu_tu_index","originalLine":9065,"newLine":9065,"heuristics":{"REMOVED_STUFF":false,"KNOWN_PATCHES":false,"INSERTED_STMT":false,"FLOW_RESTRICTIVE":true,"INIT_OR_ERROR":false,"INSERTED_IFS":true,"OFF_BY_ONE":false,"MODIFIED_CONDITIONS":false,"C_SENS_FUN":false,"CONDITIONS":false,"KERNEL_SYNCH":false},"features":{"INSERTED_STMTS_COUNT":0,"CHANGED_CONDITIONS_COUNT":0,"INSERTED_IFS_COUNT":1,"BI_IMPLICATIONS_COUNT":0,"WIDENED_CONDITIONS_COUNT":0,"RESTRICTED_CONDITIONS_COUNT":0},"security":true}]
+ERROR StatusLogger No log4j2 configuration file found. Using default configuration: logging only errors to the console.
+Specified option VERBOSE
+Specified option OUTPUT_PATH
+Oldfile: binutils/cve_2018_10372/buggy-dwarf.c
+Newfile: binutils/cve_2018_10372/patches/dwarf-1.c
+Preprocessing...
+Parsing files...
+Extracting textual diff from the two files...
+
+Finding common functions...
+
+> FUNCTION:
+process_cu_tu_index - Oldfile: at line 9065 - Newfile: at line 9065
+
+> Generating function graphs...
+> Applying heuristics...
+modified_conditions: false: no modified conditions
+inserted_ifs: false: labels
+inserted_if: true: no else and error handling block
+flow_restrictive: true: matches all heuristics
+> Security-related: true
+> {MODIFIED_CONDITIONS=false, REMOVED_STUFF=false, INIT_OR_ERROR=false, FLOW_RESTRICTIVE=true, KERNEL_SYNCH=false, KNOWN_PATCHES=false, INSERTED_STMT=true, C_SENS_FUN=false, INSERTED_IFS=true, CONDITIONS=false, OFF_BY_ONE=false}
+> {INSERTED_IFS_COUNT=1, RESTRICTED_CONDITIONS_COUNT=0, CHANGED_CONDITIONS_COUNT=0, WIDENED_CONDITIONS_COUNT=0, BI_IMPLICATIONS_COUNT=0, INSERTED_STMTS_COUNT=1}
+> END_FUNCTION.
+AFFECTED_FUNCTIONS=1
+Done.
+
+[{"function":"process_cu_tu_index","originalLine":9065,"newLine":9065,"heuristics":{"MODIFIED_CONDITIONS":false,"REMOVED_STUFF":false,"INIT_OR_ERROR":false,"FLOW_RESTRICTIVE":true,"KERNEL_SYNCH":false,"KNOWN_PATCHES":false,"INSERTED_STMT":true,"C_SENS_FUN":false,"INSERTED_IFS":true,"CONDITIONS":false,"OFF_BY_ONE":false},"features":{"INSERTED_IFS_COUNT":1,"RESTRICTED_CONDITIONS_COUNT":0,"CHANGED_CONDITIONS_COUNT":0,"WIDENED_CONDITIONS_COUNT":0,"BI_IMPLICATIONS_COUNT":0,"INSERTED_STMTS_COUNT":1},"security":true}]
+ERROR StatusLogger No log4j2 configuration file found. Using default configuration: logging only errors to the console.
+Specified option VERBOSE
+Specified option OUTPUT_PATH
+Oldfile: binutils/cve_2018_10372/buggy-dwarf.c
+Newfile: binutils/cve_2018_10372/patches/dwarf-3.c
+Preprocessing...
+Parsing files...
+Extracting textual diff from the two files...
+
+Finding common functions...
+
+> FUNCTION:
+process_cu_tu_index - Oldfile: at line 9065 - Newfile: at line 9065
+
+> Generating function graphs...
+> Applying heuristics...
+modified_conditions: false: no modified conditions
+inserted_if: true: no else and error handling block
+inserted_if: true: no else and error handling block
+flow_restrictive: true: matches all heuristics
+> Security-related: true
+> {KNOWN_PATCHES=false, CONDITIONS=false, C_SENS_FUN=false, FLOW_RESTRICTIVE=true, REMOVED_STUFF=false, KERNEL_SYNCH=false, INIT_OR_ERROR=false, INSERTED_STMT=false, INSERTED_IFS=true, OFF_BY_ONE=false, MODIFIED_CONDITIONS=false}
+> {WIDENED_CONDITIONS_COUNT=0, CHANGED_CONDITIONS_COUNT=0, INSERTED_STMTS_COUNT=0, RESTRICTED_CONDITIONS_COUNT=0, INSERTED_IFS_COUNT=1, BI_IMPLICATIONS_COUNT=0}
+> END_FUNCTION.
+AFFECTED_FUNCTIONS=1
+Done.
+
+[{"function":"process_cu_tu_index","originalLine":9065,"newLine":9065,"heuristics":{"KNOWN_PATCHES":false,"CONDITIONS":false,"C_SENS_FUN":false,"FLOW_RESTRICTIVE":true,"REMOVED_STUFF":false,"KERNEL_SYNCH":false,"INIT_OR_ERROR":false,"INSERTED_STMT":false,"INSERTED_IFS":true,"OFF_BY_ONE":false,"MODIFIED_CONDITIONS":false},"features":{"WIDENED_CONDITIONS_COUNT":0,"CHANGED_CONDITIONS_COUNT":0,"INSERTED_STMTS_COUNT":0,"RESTRICTED_CONDITIONS_COUNT":0,"INSERTED_IFS_COUNT":1,"BI_IMPLICATIONS_COUNT":0},"security":true}]

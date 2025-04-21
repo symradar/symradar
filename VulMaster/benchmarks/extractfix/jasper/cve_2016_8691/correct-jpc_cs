@@ -1,0 +1,1 @@
+<vul-start> 1 ; } if ((siz->comps[i].hsamp == 0) || (siz->comps[i].hsamp > 255) || (siz->comps[i].vsamp == 0) || (siz->comps[i].vsamp > 255)) return -1;

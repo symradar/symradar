@@ -1,0 +1,4 @@
+<its:rules xmlns:its="http://www.w3.org/2005/11/its" xmlns:h="http://www.w3.org/ml" ion="2.0">
+<its:eRule selector="//h:*" translate="no"/>
+<its:trateRule selector="//h:p" translate="yes"/>
+</its:rules>

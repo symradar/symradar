@@ -1,0 +1,1 @@
+<vul-start> uint32 nstrips ; if (td->td_nstrip != 0) return td->td_nstrips;

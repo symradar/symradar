@@ -1,0 +1,328 @@
+[
+  {
+    "num": 1,
+    "lid": "L290",
+    "patch": "(constant_a != initial_read)",
+    "codes": [
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 0;\n  result = (constant_a != initial_read);\n"
+    ]
+  },
+  {
+    "num": 2,
+    "lid": "L290",
+    "patch": "(start != start)",
+    "codes": [
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  result = (start != start);\n"
+    ]
+  },
+  {
+    "num": 3,
+    "lid": "L290",
+    "patch": "(bufsize == start)",
+    "codes": [
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  result = (bufsize == start);\n"
+    ]
+  },
+  {
+    "num": 4,
+    "lid": "L290",
+    "patch": "(bufsize < start)",
+    "codes": [
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  result = (bufsize < start);\n"
+    ]
+  },
+  {
+    "num": 5,
+    "lid": "L290",
+    "patch": "(bufsize <= start)",
+    "codes": [
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  result = (bufsize <= start);\n"
+    ]
+  },
+  {
+    "num": 6,
+    "lid": "L290",
+    "patch": "(start < initial_read)",
+    "codes": [
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  result = (start < initial_read);\n"
+    ]
+  },
+  {
+    "num": 7,
+    "lid": "L290",
+    "patch": "(bufsize == initial_read)",
+    "codes": [
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  result = (bufsize == initial_read);\n"
+    ]
+  },
+  {
+    "num": 8,
+    "lid": "L290",
+    "patch": "(bufsize < initial_read)",
+    "codes": [
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  result = (bufsize < initial_read);\n"
+    ]
+  },
+  {
+    "num": 9,
+    "lid": "L290",
+    "patch": "(bufsize <= initial_read)",
+    "codes": [
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  result = (bufsize <= initial_read);\n"
+    ]
+  },
+  {
+    "num": 10,
+    "lid": "L290",
+    "patch": "(constant_a <= start)",
+    "codes": [
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 9;\n  result = (constant_a <= start);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 10;\n  result = (constant_a <= start);\n"
+    ]
+  },
+  {
+    "num": 11,
+    "lid": "L290",
+    "patch": "(constant_a < start)",
+    "codes": [
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 8;\n  result = (constant_a < start);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 9;\n  result = (constant_a < start);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 10;\n  result = (constant_a < start);\n"
+    ]
+  },
+  {
+    "num": 12,
+    "lid": "L290",
+    "patch": "(start <= constant_a)",
+    "codes": [
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -10;\n  result = (start <= constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -9;\n  result = (start <= constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -8;\n  result = (start <= constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -7;\n  result = (start <= constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -6;\n  result = (start <= constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -5;\n  result = (start <= constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -4;\n  result = (start <= constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -3;\n  result = (start <= constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -2;\n  result = (start <= constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -1;\n  result = (start <= constant_a);\n"
+    ]
+  },
+  {
+    "num": 13,
+    "lid": "L290",
+    "patch": "(constant_a <= initial_read)",
+    "codes": [
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 1;\n  result = (constant_a <= initial_read);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 2;\n  result = (constant_a <= initial_read);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 3;\n  result = (constant_a <= initial_read);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 4;\n  result = (constant_a <= initial_read);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 5;\n  result = (constant_a <= initial_read);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 6;\n  result = (constant_a <= initial_read);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 7;\n  result = (constant_a <= initial_read);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 8;\n  result = (constant_a <= initial_read);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 9;\n  result = (constant_a <= initial_read);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 10;\n  result = (constant_a <= initial_read);\n"
+    ]
+  },
+  {
+    "num": 14,
+    "lid": "L290",
+    "patch": "(initial_read <= constant_a)",
+    "codes": [
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -10;\n  result = (initial_read <= constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -9;\n  result = (initial_read <= constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -8;\n  result = (initial_read <= constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -7;\n  result = (initial_read <= constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -6;\n  result = (initial_read <= constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -5;\n  result = (initial_read <= constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -4;\n  result = (initial_read <= constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -3;\n  result = (initial_read <= constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -2;\n  result = (initial_read <= constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -1;\n  result = (initial_read <= constant_a);\n"
+    ]
+  },
+  {
+    "num": 15,
+    "lid": "L290",
+    "patch": "(start < constant_a)",
+    "codes": [
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -10;\n  result = (start < constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -9;\n  result = (start < constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -8;\n  result = (start < constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -7;\n  result = (start < constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -6;\n  result = (start < constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -5;\n  result = (start < constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -4;\n  result = (start < constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -3;\n  result = (start < constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -2;\n  result = (start < constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -1;\n  result = (start < constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 0;\n  result = (start < constant_a);\n"
+    ]
+  },
+  {
+    "num": 16,
+    "lid": "L290",
+    "patch": "(constant_a < initial_read)",
+    "codes": [
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 0;\n  result = (constant_a < initial_read);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 1;\n  result = (constant_a < initial_read);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 2;\n  result = (constant_a < initial_read);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 3;\n  result = (constant_a < initial_read);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 4;\n  result = (constant_a < initial_read);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 5;\n  result = (constant_a < initial_read);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 6;\n  result = (constant_a < initial_read);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 7;\n  result = (constant_a < initial_read);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 8;\n  result = (constant_a < initial_read);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 9;\n  result = (constant_a < initial_read);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 10;\n  result = (constant_a < initial_read);\n"
+    ]
+  },
+  {
+    "num": 17,
+    "lid": "L290",
+    "patch": "(initial_read < constant_a)",
+    "codes": [
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -10;\n  result = (initial_read < constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -9;\n  result = (initial_read < constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -8;\n  result = (initial_read < constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -7;\n  result = (initial_read < constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -6;\n  result = (initial_read < constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -5;\n  result = (initial_read < constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -4;\n  result = (initial_read < constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -3;\n  result = (initial_read < constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -2;\n  result = (initial_read < constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -1;\n  result = (initial_read < constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 0;\n  result = (initial_read < constant_a);\n"
+    ]
+  },
+  {
+    "num": 18,
+    "lid": "L290",
+    "patch": "(constant_a == start)",
+    "codes": [
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -10;\n  result = (constant_a == start);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -9;\n  result = (constant_a == start);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -8;\n  result = (constant_a == start);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -7;\n  result = (constant_a == start);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -6;\n  result = (constant_a == start);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -5;\n  result = (constant_a == start);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -4;\n  result = (constant_a == start);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -3;\n  result = (constant_a == start);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -2;\n  result = (constant_a == start);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -1;\n  result = (constant_a == start);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 9;\n  result = (constant_a == start);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 10;\n  result = (constant_a == start);\n"
+    ]
+  },
+  {
+    "num": 19,
+    "lid": "L290",
+    "patch": "(constant_a == initial_read)",
+    "codes": [
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -10;\n  result = (constant_a == initial_read);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -9;\n  result = (constant_a == initial_read);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -8;\n  result = (constant_a == initial_read);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -7;\n  result = (constant_a == initial_read);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -6;\n  result = (constant_a == initial_read);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -5;\n  result = (constant_a == initial_read);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -4;\n  result = (constant_a == initial_read);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -3;\n  result = (constant_a == initial_read);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -2;\n  result = (constant_a == initial_read);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -1;\n  result = (constant_a == initial_read);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 1;\n  result = (constant_a == initial_read);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 2;\n  result = (constant_a == initial_read);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 3;\n  result = (constant_a == initial_read);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 4;\n  result = (constant_a == initial_read);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 5;\n  result = (constant_a == initial_read);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 6;\n  result = (constant_a == initial_read);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 7;\n  result = (constant_a == initial_read);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 8;\n  result = (constant_a == initial_read);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 9;\n  result = (constant_a == initial_read);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 10;\n  result = (constant_a == initial_read);\n"
+    ]
+  },
+  {
+    "num": 20,
+    "lid": "L290",
+    "patch": "(constant_a == bufsize)",
+    "codes": [
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -10;\n  result = (constant_a == bufsize);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -9;\n  result = (constant_a == bufsize);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -8;\n  result = (constant_a == bufsize);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -7;\n  result = (constant_a == bufsize);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -6;\n  result = (constant_a == bufsize);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -5;\n  result = (constant_a == bufsize);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -4;\n  result = (constant_a == bufsize);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -3;\n  result = (constant_a == bufsize);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -2;\n  result = (constant_a == bufsize);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -1;\n  result = (constant_a == bufsize);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 0;\n  result = (constant_a == bufsize);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 1;\n  result = (constant_a == bufsize);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 2;\n  result = (constant_a == bufsize);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 3;\n  result = (constant_a == bufsize);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 4;\n  result = (constant_a == bufsize);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 5;\n  result = (constant_a == bufsize);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 6;\n  result = (constant_a == bufsize);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 7;\n  result = (constant_a == bufsize);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 8;\n  result = (constant_a == bufsize);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 9;\n  result = (constant_a == bufsize);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 10;\n  result = (constant_a == bufsize);\n"
+    ]
+  },
+  {
+    "num": 21,
+    "lid": "L290",
+    "patch": "(bufsize < constant_a)",
+    "codes": [
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -10;\n  result = (bufsize < constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -9;\n  result = (bufsize < constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -8;\n  result = (bufsize < constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -7;\n  result = (bufsize < constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -6;\n  result = (bufsize < constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -5;\n  result = (bufsize < constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -4;\n  result = (bufsize < constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -3;\n  result = (bufsize < constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -2;\n  result = (bufsize < constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -1;\n  result = (bufsize < constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 0;\n  result = (bufsize < constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 1;\n  result = (bufsize < constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 2;\n  result = (bufsize < constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 3;\n  result = (bufsize < constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 4;\n  result = (bufsize < constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 5;\n  result = (bufsize < constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 6;\n  result = (bufsize < constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 7;\n  result = (bufsize < constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 8;\n  result = (bufsize < constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 9;\n  result = (bufsize < constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 10;\n  result = (bufsize < constant_a);\n"
+    ]
+  },
+  {
+    "num": 22,
+    "lid": "L290",
+    "patch": "(bufsize <= constant_a)",
+    "codes": [
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -10;\n  result = (bufsize <= constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -9;\n  result = (bufsize <= constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -8;\n  result = (bufsize <= constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -7;\n  result = (bufsize <= constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -6;\n  result = (bufsize <= constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -5;\n  result = (bufsize <= constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -4;\n  result = (bufsize <= constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -3;\n  result = (bufsize <= constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -2;\n  result = (bufsize <= constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = -1;\n  result = (bufsize <= constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 0;\n  result = (bufsize <= constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 1;\n  result = (bufsize <= constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 2;\n  result = (bufsize <= constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 3;\n  result = (bufsize <= constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 4;\n  result = (bufsize <= constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 5;\n  result = (bufsize <= constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 6;\n  result = (bufsize <= constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 7;\n  result = (bufsize <= constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 8;\n  result = (bufsize <= constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 9;\n  result = (bufsize <= constant_a);\n",
+      "  long long start = rvals[0];\n  long long initial_read = rvals[1];\n  long long bufsize = rvals[2];\n  long long constant_a = 10;\n  result = (bufsize <= constant_a);\n"
+    ]
+  }
+]

@@ -1,0 +1,30 @@
+ERROR StatusLogger No log4j2 configuration file found. Using default configuration: logging only errors to the console.
+Specified option VERBOSE
+Specified option OUTPUT_PATH
+Oldfile: libtiff/bugzilla_2611/buggy-tif_ojpeg.c
+Newfile: libtiff/bugzilla_2611/patches/tif_ojpeg-1.c
+Preprocessing...
+Parsing files...
+Error parsing function OJPEGReadHeaderInfo. skipping.
+Error parsing function OJPEGReadHeaderInfo. skipping.
+Extracting textual diff from the two files...
+
+Finding common functions...
+
+> FUNCTION:
+OJPEGDecodeRaw - Oldfile: at line 776 - Newfile: at line 776
+
+> Generating function graphs...
+> Applying heuristics...
+modified_conditions: false: no modified conditions
+inserted_if: true: no else and error handling block
+inserted_if: true: no else and error handling block
+flow_restrictive: true: matches all heuristics
+> Security-related: true
+> {KNOWN_PATCHES=false, OFF_BY_ONE=false, INIT_OR_ERROR=false, FLOW_RESTRICTIVE=true, KERNEL_SYNCH=false, C_SENS_FUN=false, MODIFIED_CONDITIONS=false, REMOVED_STUFF=false, INSERTED_STMT=false, INSERTED_IFS=true, CONDITIONS=false}
+> {RESTRICTED_CONDITIONS_COUNT=0, INSERTED_IFS_COUNT=1, BI_IMPLICATIONS_COUNT=0, INSERTED_STMTS_COUNT=0, CHANGED_CONDITIONS_COUNT=0, WIDENED_CONDITIONS_COUNT=0}
+> END_FUNCTION.
+AFFECTED_FUNCTIONS=1
+Done.
+
+[{"function":"OJPEGDecodeRaw","originalLine":776,"newLine":776,"heuristics":{"KNOWN_PATCHES":false,"OFF_BY_ONE":false,"INIT_OR_ERROR":false,"FLOW_RESTRICTIVE":true,"KERNEL_SYNCH":false,"C_SENS_FUN":false,"MODIFIED_CONDITIONS":false,"REMOVED_STUFF":false,"INSERTED_STMT":false,"INSERTED_IFS":true,"CONDITIONS":false},"features":{"RESTRICTED_CONDITIONS_COUNT":0,"INSERTED_IFS_COUNT":1,"BI_IMPLICATIONS_COUNT":0,"INSERTED_STMTS_COUNT":0,"CHANGED_CONDITIONS_COUNT":0,"WIDENED_CONDITIONS_COUNT":0},"security":true}]

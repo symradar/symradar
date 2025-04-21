@@ -1,0 +1,168 @@
+ERROR StatusLogger No log4j2 configuration file found. Using default configuration: logging only errors to the console.
+Specified option VERBOSE
+Specified option OUTPUT_PATH
+Oldfile: libtiff/cve_2017_7595/buggy-tif_jpeg.c
+Newfile: libtiff/cve_2017_7595/patches/tif_jpeg-2.c
+Preprocessing...
+Parsing files...
+Extracting textual diff from the two files...
+
+Finding common functions...
+
+> FUNCTION:
+JPEGSetupEncode - Oldfile: at line 1076 - Newfile: at line 1076
+
+> Generating function graphs...
+> Applying heuristics...
+modified_conditions: false: no modified conditions
+inserted_if: true: no else and error handling block
+inserted_if: true: no else and error handling block
+flow_restrictive: true: matches all heuristics
+> Security-related: true
+> {OFF_BY_ONE=false, REMOVED_STUFF=false, INIT_OR_ERROR=false, FLOW_RESTRICTIVE=true, CONDITIONS=false, MODIFIED_CONDITIONS=false, KNOWN_PATCHES=false, INSERTED_IFS=true, INSERTED_STMT=false, KERNEL_SYNCH=false, C_SENS_FUN=false}
+> {INSERTED_STMTS_COUNT=0, RESTRICTED_CONDITIONS_COUNT=0, INSERTED_IFS_COUNT=1, CHANGED_CONDITIONS_COUNT=0, BI_IMPLICATIONS_COUNT=0, WIDENED_CONDITIONS_COUNT=0}
+> END_FUNCTION.
+AFFECTED_FUNCTIONS=1
+Done.
+
+[{"function":"JPEGSetupEncode","originalLine":1076,"newLine":1076,"heuristics":{"OFF_BY_ONE":false,"REMOVED_STUFF":false,"INIT_OR_ERROR":false,"FLOW_RESTRICTIVE":true,"CONDITIONS":false,"MODIFIED_CONDITIONS":false,"KNOWN_PATCHES":false,"INSERTED_IFS":true,"INSERTED_STMT":false,"KERNEL_SYNCH":false,"C_SENS_FUN":false},"features":{"INSERTED_STMTS_COUNT":0,"RESTRICTED_CONDITIONS_COUNT":0,"INSERTED_IFS_COUNT":1,"CHANGED_CONDITIONS_COUNT":0,"BI_IMPLICATIONS_COUNT":0,"WIDENED_CONDITIONS_COUNT":0},"security":true}]
+ERROR StatusLogger No log4j2 configuration file found. Using default configuration: logging only errors to the console.
+Specified option VERBOSE
+Specified option OUTPUT_PATH
+Oldfile: libtiff/cve_2017_7595/buggy-tif_jpeg.c
+Newfile: libtiff/cve_2017_7595/patches/tif_jpeg-4.c
+Preprocessing...
+Parsing files...
+Extracting textual diff from the two files...
+
+Finding common functions...
+
+> FUNCTION:
+JPEGSetupEncode - Oldfile: at line 1076 - Newfile: at line 1076
+
+> Generating function graphs...
+> Applying heuristics...
+modified_conditions: false: no modified conditions
+inserted_if: true: no else and error handling block
+inserted_if: true: no else and error handling block
+flow_restrictive: true: matches all heuristics
+> Security-related: true
+> {FLOW_RESTRICTIVE=true, KERNEL_SYNCH=false, INSERTED_IFS=true, C_SENS_FUN=false, OFF_BY_ONE=false, INIT_OR_ERROR=false, CONDITIONS=false, KNOWN_PATCHES=false, MODIFIED_CONDITIONS=false, REMOVED_STUFF=false, INSERTED_STMT=false}
+> {CHANGED_CONDITIONS_COUNT=0, INSERTED_STMTS_COUNT=0, BI_IMPLICATIONS_COUNT=0, INSERTED_IFS_COUNT=1, RESTRICTED_CONDITIONS_COUNT=0, WIDENED_CONDITIONS_COUNT=0}
+> END_FUNCTION.
+AFFECTED_FUNCTIONS=1
+Done.
+
+[{"function":"JPEGSetupEncode","originalLine":1076,"newLine":1076,"heuristics":{"FLOW_RESTRICTIVE":true,"KERNEL_SYNCH":false,"INSERTED_IFS":true,"C_SENS_FUN":false,"OFF_BY_ONE":false,"INIT_OR_ERROR":false,"CONDITIONS":false,"KNOWN_PATCHES":false,"MODIFIED_CONDITIONS":false,"REMOVED_STUFF":false,"INSERTED_STMT":false},"features":{"CHANGED_CONDITIONS_COUNT":0,"INSERTED_STMTS_COUNT":0,"BI_IMPLICATIONS_COUNT":0,"INSERTED_IFS_COUNT":1,"RESTRICTED_CONDITIONS_COUNT":0,"WIDENED_CONDITIONS_COUNT":0},"security":true}]
+ERROR StatusLogger No log4j2 configuration file found. Using default configuration: logging only errors to the console.
+Specified option VERBOSE
+Specified option OUTPUT_PATH
+Oldfile: libtiff/cve_2017_7595/buggy-tif_jpeg.c
+Newfile: libtiff/cve_2017_7595/patches/tif_jpeg-5.c
+Preprocessing...
+Parsing files...
+Extracting textual diff from the two files...
+
+Finding common functions...
+
+> FUNCTION:
+JPEGSetupEncode - Oldfile: at line 1076 - Newfile: at line 1076
+
+> Generating function graphs...
+> Applying heuristics...
+modified_conditions: false: no modified conditions
+inserted_if: true: no else and error handling block
+inserted_if: true: no else and error handling block
+flow_restrictive: true: matches all heuristics
+> Security-related: true
+> {KNOWN_PATCHES=false, MODIFIED_CONDITIONS=false, INSERTED_STMT=false, FLOW_RESTRICTIVE=true, INSERTED_IFS=true, C_SENS_FUN=false, REMOVED_STUFF=false, OFF_BY_ONE=false, INIT_OR_ERROR=false, CONDITIONS=false, KERNEL_SYNCH=false}
+> {WIDENED_CONDITIONS_COUNT=0, RESTRICTED_CONDITIONS_COUNT=0, INSERTED_IFS_COUNT=1, CHANGED_CONDITIONS_COUNT=0, BI_IMPLICATIONS_COUNT=0, INSERTED_STMTS_COUNT=0}
+> END_FUNCTION.
+AFFECTED_FUNCTIONS=1
+Done.
+
+[{"function":"JPEGSetupEncode","originalLine":1076,"newLine":1076,"heuristics":{"KNOWN_PATCHES":false,"MODIFIED_CONDITIONS":false,"INSERTED_STMT":false,"FLOW_RESTRICTIVE":true,"INSERTED_IFS":true,"C_SENS_FUN":false,"REMOVED_STUFF":false,"OFF_BY_ONE":false,"INIT_OR_ERROR":false,"CONDITIONS":false,"KERNEL_SYNCH":false},"features":{"WIDENED_CONDITIONS_COUNT":0,"RESTRICTED_CONDITIONS_COUNT":0,"INSERTED_IFS_COUNT":1,"CHANGED_CONDITIONS_COUNT":0,"BI_IMPLICATIONS_COUNT":0,"INSERTED_STMTS_COUNT":0},"security":true}]
+ERROR StatusLogger No log4j2 configuration file found. Using default configuration: logging only errors to the console.
+Specified option VERBOSE
+Specified option OUTPUT_PATH
+Oldfile: libtiff/cve_2017_7595/buggy-tif_jpeg.c
+Newfile: libtiff/cve_2017_7595/patches/tif_jpeg-1.c
+Preprocessing...
+Parsing files...
+Extracting textual diff from the two files...
+
+Finding common functions...
+
+> FUNCTION:
+JPEGSetupEncode - Oldfile: at line 1076 - Newfile: at line 1076
+
+> Generating function graphs...
+> Applying heuristics...
+modified_conditions: false: no modified conditions
+inserted_if: true: no else and error handling block
+inserted_if: true: no else and error handling block
+flow_restrictive: true: matches all heuristics
+> Security-related: true
+> {C_SENS_FUN=false, INSERTED_IFS=true, KERNEL_SYNCH=false, REMOVED_STUFF=false, INSERTED_STMT=false, OFF_BY_ONE=false, CONDITIONS=false, KNOWN_PATCHES=false, MODIFIED_CONDITIONS=false, INIT_OR_ERROR=false, FLOW_RESTRICTIVE=true}
+> {INSERTED_STMTS_COUNT=0, RESTRICTED_CONDITIONS_COUNT=0, INSERTED_IFS_COUNT=1, BI_IMPLICATIONS_COUNT=0, WIDENED_CONDITIONS_COUNT=0, CHANGED_CONDITIONS_COUNT=0}
+> END_FUNCTION.
+AFFECTED_FUNCTIONS=1
+Done.
+
+[{"function":"JPEGSetupEncode","originalLine":1076,"newLine":1076,"heuristics":{"C_SENS_FUN":false,"INSERTED_IFS":true,"KERNEL_SYNCH":false,"REMOVED_STUFF":false,"INSERTED_STMT":false,"OFF_BY_ONE":false,"CONDITIONS":false,"KNOWN_PATCHES":false,"MODIFIED_CONDITIONS":false,"INIT_OR_ERROR":false,"FLOW_RESTRICTIVE":true},"features":{"INSERTED_STMTS_COUNT":0,"RESTRICTED_CONDITIONS_COUNT":0,"INSERTED_IFS_COUNT":1,"BI_IMPLICATIONS_COUNT":0,"WIDENED_CONDITIONS_COUNT":0,"CHANGED_CONDITIONS_COUNT":0},"security":true}]
+ERROR StatusLogger No log4j2 configuration file found. Using default configuration: logging only errors to the console.
+Specified option VERBOSE
+Specified option OUTPUT_PATH
+Oldfile: libtiff/cve_2017_7595/buggy-tif_jpeg.c
+Newfile: libtiff/cve_2017_7595/patches/tif_jpeg-3.c
+Preprocessing...
+Parsing files...
+Extracting textual diff from the two files...
+
+Finding common functions...
+
+> FUNCTION:
+JPEGSetupEncode - Oldfile: at line 1076 - Newfile: at line 1076
+
+> Generating function graphs...
+> Applying heuristics...
+modified_conditions: false: no modified conditions
+inserted_if: true: no else and error handling block
+inserted_if: true: no else and error handling block
+flow_restrictive: true: matches all heuristics
+> Security-related: true
+> {KNOWN_PATCHES=false, MODIFIED_CONDITIONS=false, INSERTED_STMT=false, FLOW_RESTRICTIVE=true, INSERTED_IFS=true, C_SENS_FUN=false, REMOVED_STUFF=false, OFF_BY_ONE=false, INIT_OR_ERROR=false, CONDITIONS=false, KERNEL_SYNCH=false}
+> {WIDENED_CONDITIONS_COUNT=0, RESTRICTED_CONDITIONS_COUNT=0, INSERTED_IFS_COUNT=1, CHANGED_CONDITIONS_COUNT=0, BI_IMPLICATIONS_COUNT=0, INSERTED_STMTS_COUNT=0}
+> END_FUNCTION.
+AFFECTED_FUNCTIONS=1
+Done.
+
+[{"function":"JPEGSetupEncode","originalLine":1076,"newLine":1076,"heuristics":{"KNOWN_PATCHES":false,"MODIFIED_CONDITIONS":false,"INSERTED_STMT":false,"FLOW_RESTRICTIVE":true,"INSERTED_IFS":true,"C_SENS_FUN":false,"REMOVED_STUFF":false,"OFF_BY_ONE":false,"INIT_OR_ERROR":false,"CONDITIONS":false,"KERNEL_SYNCH":false},"features":{"WIDENED_CONDITIONS_COUNT":0,"RESTRICTED_CONDITIONS_COUNT":0,"INSERTED_IFS_COUNT":1,"CHANGED_CONDITIONS_COUNT":0,"BI_IMPLICATIONS_COUNT":0,"INSERTED_STMTS_COUNT":0},"security":true}]
+ERROR StatusLogger No log4j2 configuration file found. Using default configuration: logging only errors to the console.
+Specified option VERBOSE
+Specified option OUTPUT_PATH
+Oldfile: libtiff/cve_2017_7595/buggy-tif_jpeg.c
+Newfile: libtiff/cve_2017_7595/patches/tif_jpeg-6.c
+Preprocessing...
+Parsing files...
+Extracting textual diff from the two files...
+
+Finding common functions...
+
+> FUNCTION:
+JPEGSetupEncode - Oldfile: at line 1076 - Newfile: at line 1076
+
+> Generating function graphs...
+> Applying heuristics...
+modified_conditions: false: no modified conditions
+inserted_if: true: no else and error handling block
+inserted_if: true: no else and error handling block
+flow_restrictive: true: matches all heuristics
+> Security-related: true
+> {C_SENS_FUN=false, INSERTED_IFS=true, KERNEL_SYNCH=false, REMOVED_STUFF=false, INSERTED_STMT=false, OFF_BY_ONE=false, CONDITIONS=false, KNOWN_PATCHES=false, MODIFIED_CONDITIONS=false, INIT_OR_ERROR=false, FLOW_RESTRICTIVE=true}
+> {INSERTED_STMTS_COUNT=0, RESTRICTED_CONDITIONS_COUNT=0, INSERTED_IFS_COUNT=1, BI_IMPLICATIONS_COUNT=0, WIDENED_CONDITIONS_COUNT=0, CHANGED_CONDITIONS_COUNT=0}
+> END_FUNCTION.
+AFFECTED_FUNCTIONS=1
+Done.
+
+[{"function":"JPEGSetupEncode","originalLine":1076,"newLine":1076,"heuristics":{"C_SENS_FUN":false,"INSERTED_IFS":true,"KERNEL_SYNCH":false,"REMOVED_STUFF":false,"INSERTED_STMT":false,"OFF_BY_ONE":false,"CONDITIONS":false,"KNOWN_PATCHES":false,"MODIFIED_CONDITIONS":false,"INIT_OR_ERROR":false,"FLOW_RESTRICTIVE":true},"features":{"INSERTED_STMTS_COUNT":0,"RESTRICTED_CONDITIONS_COUNT":0,"INSERTED_IFS_COUNT":1,"BI_IMPLICATIONS_COUNT":0,"WIDENED_CONDITIONS_COUNT":0,"CHANGED_CONDITIONS_COUNT":0},"security":true}]

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/aid">
+
+    <item android:e_end="false" android:color="#999" />
+    <item android:r="#000"/>
+
+</selector>

@@ -1,0 +1,10 @@
+<its:rules xmlns:its="http://www.w3.org/2005/11/its" xmlns:h="http://www.w3.org/ml" ion="2.0">
+  <its:locQualityIssueRule selector="//h:span[@id='q1']"
+    locQualityIssueType="typal"
+    locQualityIssueComment="ence capitalization"
+    locQualityIssueEnabled="yes"/>
+  <its:locQualityIssueRule selector="//h:span[@id='q2']"
+    locQualityIssueType="mig"
+    locQualityIssueComment="sd be 'Music can'"
+    locQualityIssueEnabled="yes"/>
+</its:rules>

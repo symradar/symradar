@@ -1,0 +1,32 @@
+/*
+ * Install the specified image.  The
+ * image is resized to fit the display page using
+ * a box filter.  The resultant pixels are mapped
+ * with a user-selectable contrast curve.
+ */
+static void
+setImage1(const uint8* br, uint32 rw, uint32 rh)
+{
+    int step = rh;
+    int limit = tnh;
+    int err = 0;
+    int bpr = TIFFhowmany8(rw);
+    int sy = 0;
+    uint8* row = thumbnail;
+    uint32 dy;
+    for (dy = 0; dy < tnh; dy++) {
+	const uint8* rows[256];
+	uint32 nrows = 1;
+	fprintf(stderr, "bpr=%d, sy=%d, bpr*sy=%d\n", bpr, sy, bpr*sy);
+	rows[0] = br + bpr*sy;
+	err += step;
+	while (err >= limit) {
+	    err -= limit;
+	    sy++;
+	    if (err >= limit)
+		<vul-start>rows[nrows++] = br + bpr*sy;<vul-end>
+	}
+	setrow(row, nrows, rows);
+	row += tnw;
+    }
+}

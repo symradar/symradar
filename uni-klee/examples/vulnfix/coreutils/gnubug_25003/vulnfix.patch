@@ -1,0 +1,11 @@
+--- /home/yuntong/vulnfix/data/coreutils/gnubug_25003/source/src/fix-file-backup.c	2022-12-08 03:22:04.734996138 +0000
++++ /home/yuntong/vulnfix/data/coreutils/gnubug_25003/source/src/split.c	2022-12-08 05:42:34.401515362 +0000
+@@ -983,7 +983,7 @@
+   start = (k - 1) * (file_size / n);
+   end = (k == n) ? file_size : k * (file_size / n);
+ 
+-  if (initial_read != SIZE_MAX || start < initial_read)
++  if (initial_read >= start && (initial_read != SIZE_MAX || start < initial_read))
+     {
+       memmove (buf, buf + start, initial_read - start);
+       initial_read -= start;

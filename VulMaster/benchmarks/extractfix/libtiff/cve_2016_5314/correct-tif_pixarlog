@@ -1,0 +1,1 @@
+<vul-start> ) ; } if (sp->stream.avail_out > sp->tbuf_size) return 0;

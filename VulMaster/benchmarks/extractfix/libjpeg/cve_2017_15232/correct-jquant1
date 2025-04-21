@@ -1,0 +1,1 @@
+<vul-start> -> output_width ; if ((output_buf == 0) && (num_rows > 0)) ERREXIT(cinfo, JERR_BAD_STATE);

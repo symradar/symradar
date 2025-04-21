@@ -1,0 +1,1 @@
+<vul-start> * buf ; if (horizSubSampling == 0 || vertSubSampling == 0) usage(-1);

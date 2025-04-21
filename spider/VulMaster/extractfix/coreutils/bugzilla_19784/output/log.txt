@@ -1,0 +1,26 @@
+ERROR StatusLogger No log4j2 configuration file found. Using default configuration: logging only errors to the console.
+Specified option VERBOSE
+Specified option OUTPUT_PATH
+Oldfile: coreutils/bugzilla_19784/buggy-make-prime-list.c
+Newfile: coreutils/bugzilla_19784/patches/make-prime-list-1.c
+Preprocessing...
+Parsing files...
+Extracting textual diff from the two files...
+
+Finding common functions...
+
+> FUNCTION:
+main - Oldfile: at line 165 - Newfile: at line 165
+
+> Generating function graphs...
+> Applying heuristics...
+modified_conditions: false: no modified conditions
+flow_restrictive: false: inserted_ifs is false
+> Security-related: false
+> {CONDITIONS=false, INSERTED_STMT=true, C_SENS_FUN=false, KNOWN_PATCHES=false, REMOVED_STUFF=false, OFF_BY_ONE=false, INIT_OR_ERROR=false, KERNEL_SYNCH=false, MODIFIED_CONDITIONS=false, INSERTED_IFS=false, FLOW_RESTRICTIVE=false}
+> {INSERTED_STMTS_COUNT=1, RESTRICTED_CONDITIONS_COUNT=0, WIDENED_CONDITIONS_COUNT=0, BI_IMPLICATIONS_COUNT=0, INSERTED_IFS_COUNT=1, CHANGED_CONDITIONS_COUNT=0}
+> END_FUNCTION.
+AFFECTED_FUNCTIONS=1
+Done.
+
+[{"function":"main","originalLine":165,"newLine":165,"heuristics":{"CONDITIONS":false,"INSERTED_STMT":true,"C_SENS_FUN":false,"KNOWN_PATCHES":false,"REMOVED_STUFF":false,"OFF_BY_ONE":false,"INIT_OR_ERROR":false,"KERNEL_SYNCH":false,"MODIFIED_CONDITIONS":false,"INSERTED_IFS":false,"FLOW_RESTRICTIVE":false},"features":{"INSERTED_STMTS_COUNT":1,"RESTRICTED_CONDITIONS_COUNT":0,"WIDENED_CONDITIONS_COUNT":0,"BI_IMPLICATIONS_COUNT":0,"INSERTED_IFS_COUNT":1,"CHANGED_CONDITIONS_COUNT":0},"security":false}]
