@@ -12,13 +12,13 @@ sympatch.py compile patches
 # 2. Build the target program
 symutil.py build 14498 # Or run ./init.sh
 
-# 3. Run the filter step
+# 3. Obtain plausible patches
 symradar.py filter 14498
-# (Optional) Analyze filter results: symradar.py analyze 14498 -p filter
 
-# 4. Run SymRadar analysis
-symradar.py rerun 14498 --sym-level=high -s high
-symradar.py analyze 14498 -s high
+# 4. Run SymRadar and analyze the result
+symradar.py snapshot 14498 -p high
+symradar.py run 14498 --sym-level=high -p high
+symradar.py analyze 14498 -p high
 
 # 5. The output table can be found in:
 #    patches/extractfix/libjpeg/CVE-2018-14498/patched/high-*/table_v3.sbsv
@@ -72,7 +72,8 @@ This is the main script for running the `SymRadar` analysis. It invokes `uni-kle
 ```shell
 # Usage: symradar.py <cmd> <subject> [options]
 symradar.py filter <subject>
-symradar.py rerun <subject> --sym-level=high -p high
+symradar.py snapshot <subject> -p high
+symradar.py run <subject> --sym-level=high -p high
 symradar.py uc <subject> -p uc
 symradar.py analyze <subject> -p high
 ```
@@ -103,7 +104,7 @@ experiments.py analyze -s high
 experiments.py final -s high
 ```
 #### `experiments.py` Main Options:
-- `--extra <value>`: Provides necessary arguments to the underlying script command being called (e.g., build type, sym-level). The required value depends on the specific <cmd>.
+- `--extra <value>`: Provides necessary arguments to the underlying script command being called (e.g., build type, sym-level). The required value depends on the specific `<cmd>`.
 - `-s <prefix>`: Specifies the directory prefix used for SymRadar outputs and snapshots when calling symradar.py.
 - `--mode <mode>`: Selects the mode (symradar or extractfix) for relevant commands.
 - `--vulmaster`: Enables VulMaster mode for relevant commands.
@@ -118,7 +119,7 @@ experiments.py final -s high
 
 * `filter`: Calls `symradar.py`. The `--extra` option is not needed.
 
-* `run`/`exp`: Calls `symradar.py run` or `symradar.py rerun`. `run` reuses existing snapshot and `exp` deletes existing snapshot before running.
+* `run`/`exp`: Calls `symradar.py run` or `symradar.py rerun` for snapshot extraction and symbolic execution. These commands automatically run `snapshot` to extract concrete snapshot if they do not exists. If there is an existing snapshot, `run` reuses the snapshot and `exp` deletes and recreates the snapshot before running symbolic execution.
   - Values for `--extra`:
     - `high`: We used this option, which corresponds to `--sym-level=high`.
     - `none`: This one is used in `--mode=extractfix`. (`--sym-level=none`)
