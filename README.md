@@ -18,7 +18,6 @@ This directory contains benchmarks and scripts for experiments.
 #### VulMaster
 [VulMaster](https://github.com/soarsmu/VulMaster_) is another automated vulnerability repair tool based on machine learning.
 VulMaster's output is our secondary patch validation target.
-Check this directory to generate patches for experiments.
 
 
 ## Getting Started
@@ -44,8 +43,8 @@ symradar.py snapshot 14498 -p high
 symradar.py run 14498 -p high
 ```
 1. CPR generated patches are stored in `CPR/patches/extractfix/libjpeg/CVE-2018-14498/concrete/uni_klee_runtime_new.c`. Use `sympatch.py` to compile them.
-2. You also need to build target programs into LLVM bitcode, which is required for symbolic execution. This can be done by `symutil.py`.
-3. Before running experiment, you need to classify plausible patches from given patches. `symradar.py filter` will do the work.
+2. You also need to build target programs into LLVM bitcode, which is required for symbolic execution. This can be done by `symutil.py build`.
+3. Before running experiment, you need to identify plausible patches from given patches. `symradar.py filter` will do the work.
 4. Use `symradar.py snapshot` to extract concrete snapshot from given exploit.
 5. Run `symradar.py run` to execute SymRadar. It first construct abstract snapshot from concrete snapshot, and run symbolic execution.
 

@@ -1,4 +1,9 @@
-# UNI-KLEE
+# SymRadar
+<!-- ![fig](./etc/symradar.png) -->
+SymRadar is a patch verification tool with under-constrained symbolic execution on the patched function.
+SymRadar performs patch verification by covering near the ciritical input-space area by extracting concrete snapshot and construct abstract snapshot to enable symbolic execution.
+
+## UNI-KLEE
 UNI-KLEE (**UN**der-constra**I**ned [KLEE](https://github.com/klee/klee)) is our implementation of KLEE-based symbolic execution tool, which supports under-constrained symbolic execution and lazy initialization.
 It supports concrete snapshot extraction, abstract snapshot construction from concrete snapshot, and patch verification based on UC-SE and lazy initialization. Several optimizations and heuristics are applied to support such features.
 
